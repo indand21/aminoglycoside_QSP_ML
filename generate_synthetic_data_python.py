@@ -543,11 +543,15 @@ def generate_outcomes(patient_data, concentrations, dosing_records):
     outcomes['estimated_auc24'] = outcomes['first_dose'] / outcomes['CL_individual']
     outcomes['achieved_auc_mic'] = outcomes['estimated_auc24'] / outcomes['mic']
 
-    # Clinical cure
-    cure_logit = (-2 +
-                  1.5 * np.log(outcomes['achieved_cmax_mic'] + 0.1) -
-                  0.03 * outcomes['apache_ii'] -
-                  0.5 * (outcomes['pathogen'] == 'acinetobacter').astype(int))
+    # Clinical cure - ENHANCED with stronger PK/PD correlations
+    cure_logit = (-3.5 +
+                  3.5 * np.log(outcomes['achieved_cmax_mic'] + 0.1) +     # Stronger Cmax/MIC effect
+                  2.5 * np.log(outcomes['achieved_auc_mic'] + 0.1) +      # Strong AUC/MIC effect
+                  -0.08 * outcomes['apache_ii'] +                         # Stronger severity penalty
+                  -1.8 * (outcomes['pathogen'] == 'acinetobacter').astype(int) +  # Stronger pathogen effect
+                  0.6 * outcomes['baseline_albumin'] +                    # Nutritional status
+                  -0.8 * (outcomes['mean_trough'] > 2).astype(int) +     # High trough reduces cure
+                  0.5 * (outcomes['baseline_crcl'] > 60).astype(int))    # Good renal function helps
     cure_prob = 1 / (1 + np.exp(-cure_logit))
     outcomes['clinical_cure'] = np.random.binomial(1, cure_prob).astype(bool)
     outcomes['microbiological_eradication'] = np.random.binomial(1, cure_prob * 0.9).astype(bool)
@@ -557,12 +561,16 @@ def generate_outcomes(patient_data, concentrations, dosing_records):
         np.nan
     )
 
-    # Nephrotoxicity
-    nephrotox_logit = (-3 +
-                       1.2 * np.log(outcomes['mean_trough'].fillna(1) + 0.1) +
-                       0.02 * outcomes['age'] +
-                       0.5 * outcomes['diabetes'].astype(int) +
-                       0.4 * (outcomes['baseline_scr'] > 1.5).astype(int))
+    # Nephrotoxicity - ENHANCED with stronger correlations
+    nephrotox_logit = (-4.5 +
+                       2.5 * np.log(outcomes['mean_trough'].fillna(1) + 0.1) +  # Stronger trough effect
+                       0.06 * outcomes['age'] +                                  # Stronger age effect
+                       1.2 * outcomes['diabetes'].astype(int) +                  # Stronger diabetes effect
+                       1.0 * (outcomes['baseline_scr'] > 1.5).astype(int) +     # Stronger baseline renal
+                       0.8 * outcomes['mechanical_ventilation'].astype(int) +   # Ventilation increases risk
+                       0.6 * outcomes['vasopressor_use'].astype(int) +          # Vasopressors increase risk
+                       -0.5 * outcomes['baseline_albumin'] +                     # Low albumin increases risk
+                       0.05 * outcomes['sofa_score'])                            # Severity increases risk
     nephrotox_prob = 1 / (1 + np.exp(-nephrotox_logit))
     outcomes['nephrotoxicity'] = np.random.binomial(1, nephrotox_prob).astype(bool)
 
@@ -620,7 +628,7 @@ def main():
     print("=" * 80)
     print()
 
-    n_patients = 300
+    n_patients = 1500  # ENHANCED: Increased from 300 to 1500 for better ML training
     study_duration_days = 7
 
     # Generate data

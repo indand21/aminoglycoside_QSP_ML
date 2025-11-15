@@ -1,8 +1,8 @@
 {
-  "preprocessing_date": "2025-11-15T11:38:35.616827",
-  "n_patients": 300,
-  "n_concentrations": 2199,
-  "n_outliers": 0,
+  "preprocessing_date": "2025-11-15T18:41:28.785939",
+  "n_patients": 1500,
+  "n_concentrations": 10972,
+  "n_outliers": 8,
   "quality_report": {
     "negative_times": 0,
     "missing_weight": 0,
