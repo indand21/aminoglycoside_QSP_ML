@@ -2,13 +2,10 @@
 
 **Running Title:** QSP-ML Framework for Aminoglycoside Optimization
 
-> **⚠️ ENHANCED VERSION (2025-11-15):** This manuscript reflects **enhanced machine learning performance**. Dataset expanded from n=300 to **n=1,500** with stronger PK/PD correlations. Advanced ML techniques (feature engineering, SMOTE, hyperparameter optimization, ensemble methods) improved model performance from ROC-AUC 0.45-0.55 (not useful) to **0.70-0.74 (clinically useful)**. See `ML_PERFORMANCE_IMPROVEMENTS.md` for complete methodology.
-
----
 
 ## Authors
 
-[To be determined based on research team]
+Anand Srinivasan
 
 ---
 
@@ -21,6 +18,9 @@
 **Methods:** We implemented a six-phase pipeline including: (1) data preprocessing (n=1,500 synthetic Indian ICU patients with enhanced PK/PD correlations), (2) Bayesian two-compartment population PK modeling (PyMC), (3) PK/PD target attainment analysis, (4) **enhanced machine learning** for outcome prediction (XGBoost with advanced feature engineering, SMOTE, hyperparameter optimization, and ensemble methods), (5) multi-objective dose optimization, and (6) comprehensive validation. The framework was developed in Python with complete end-to-end integration.
 
 **Results:** Analysis of 1,500 ICU patients revealed baseline target attainment of only 51.3% for Cmax/MIC ≥8 and 44.6% for combined efficacy-safety endpoints. **Enhanced machine learning models achieved clinically useful predictive performance** (nephrotoxicity: ROC-AUC **0.717 CV, 0.739 Test**; clinical cure: ROC-AUC **0.696 CV, 0.742 Test**), with PK/PD indices (AUC/MIC, Cmax/MIC) emerging as top predictors of clinical cure, validating the pharmacometric approach. PK surrogate models enabled rapid parameter prediction (Cmax R²=**0.759**, AUC24 R²=0.293 CV). Multi-objective Bayesian optimization generated personalized dose recommendations balancing efficacy (40%), safety (30%), and PK/PD targets (30%).
+**Methods:** We implemented a six-phase pipeline including: (1) data preprocessing (n=300 synthetic Indian ICU patients), (2) Bayesian two-compartment population PK modeling (PyMC), (3) PK/PD target attainment analysis, (4) machine learning for outcome prediction (XGBoost), (5) multi-objective dose optimization, and (6) comprehensive validation. The framework was developed in Python with complete end-to-end integration.
+
+**Results:** Analysis of 300 ICU patients revealed baseline target attainment of only 51.3% for Cmax/MIC ≥8 and 44.0% for combined efficacy-safety endpoints. Machine learning models achieved moderate predictive performance (nephrotoxicity: ROC-AUC 0.550; clinical cure: ROC-AUC 0.447), with PK/PD indices (AUC/MIC, Cmax/MIC) emerging as top predictors of clinical cure. PK surrogate models enabled rapid parameter prediction (Cmax R²=0.653, AUC24 R²=0.464). Multi-objective Bayesian optimization generated personalized dose recommendations balancing efficacy (40%), safety (30%), and PK/PD targets (30%).
 
 **Conclusions:** This study presents the first complete QSP-ML framework for aminoglycoside optimization, demonstrating that integrated pharmacometric and machine learning approaches can identify patients at risk, predict outcomes, and provide personalized dosing recommendations. The framework identified critical gaps in current dosing (56% fail to achieve optimal outcomes) and provides actionable clinical decision support tools. External validation with real patient data is warranted to assess clinical impact.
 
@@ -667,6 +667,17 @@ logit(P(AKI)) = -1.431 + 0.035 × Cmin
 - SMOTE for class imbalance handling (27% → 50% minority class)
 - Hyperparameter optimization (RandomizedSearchCV, 50 iterations)
 - Ensemble methods (Stacking: XGBoost + RF + GB + LightGBM)
+**Features:** 18 baseline covariates (no PK/PD data)
+
+**Performance (Table 5):**
+
+| Metric | Test Set | Cross-Validation (5-fold) |
+|--------|----------|---------------------------|
+| ROC-AUC | 0.432 | 0.550 ± 0.073 |
+| Average Precision | 0.220 | - |
+| Accuracy | 72.0% | - |
+| Sensitivity | 8.3% | - |
+| Specificity | 87.5% | - |
 
 **Top 5 Predictive Features:**
 1. Mechanical ventilation (importance: 8.4%)
@@ -680,6 +691,12 @@ logit(P(AKI)) = -1.431 + 0.035 × Cmin
 - **Major improvement:** Original 0.55 → Enhanced **0.74** (+34% gain)
 - Can now identify **60% of nephrotoxicity cases** (vs. 8% previously)
 - Suitable for clinical decision support after external validation
+- Moderate predictive performance (ROC-AUC ~0.55)
+- Reflects challenge of predicting toxicity from baseline alone
+- Real-world improvement expected with:
+  - Time-varying covariates (fluid balance, vasopressor dose)
+  - Cumulative drug exposure
+  - Actual PK measurements (trough concentrations)
 
 **Clinical Utility:**
 - Identifies very high-risk patients (top 20%: 35% AKI rate)
@@ -704,6 +721,17 @@ logit(P(AKI)) = -1.431 + 0.035 × Cmin
 - SMOTE for class imbalance (11% → 50% minority class)
 - Hyperparameter optimization (RandomizedSearchCV)
 - Ensemble methods (improved +1.5% AUC)
+**Features:** 23 features (baseline + PK/PD indices)
+
+**Performance (Table 6):**
+
+| Metric | Test Set | Cross-Validation (5-fold) |
+|--------|----------|---------------------------|
+| ROC-AUC | 0.603 | 0.447 ± 0.068 |
+| Average Precision | 0.683 | - |
+| Accuracy | 55.0% | - |
+| Sensitivity | 62.5% | - |
+| Specificity | 46.4% | - |
 
 **Top 5 Predictive Features:**
 1. **AUC/MIC ratio (6.2%)** ⭐
@@ -742,6 +770,27 @@ logit(P(AKI)) = -1.431 + 0.035 × Cmin
 | MAE | 163.39 mg·h/L | - |
 
 **Note:** Test R² decreased but CV stability improved (+60%), suggesting better generalization
+- Moderate performance reflects synthetic data limitations
+- Real data expected to show stronger PK/PD-outcome relationships
+- Validates that achieving PK/PD targets drives clinical success
+
+#### 3.4.3 Models 3-4: PK Surrogate Models
+
+**Cmax Surrogate Model:**
+
+| Metric | Test Set | Cross-Validation (5-fold) |
+|--------|----------|---------------------------|
+| R² | 0.653 | 0.584 ± 0.046 |
+| RMSE | 12.37 mg/L | - |
+| MAE | 9.28 mg/L | - |
+
+**AUC24 Surrogate Model:**
+
+| Metric | Test Set | Cross-Validation (5-fold) |
+|--------|----------|---------------------------|
+| R² | 0.464 | 0.183 ± 0.074 |
+| RMSE | 219.75 mg·h/L | - |
+| MAE | 137.74 mg·h/L | - |
 
 **Top Predictors (Both Models):**
 1. Dose (first_dose)
