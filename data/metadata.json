@@ -1,7 +1,7 @@
 {
-  "n_patients": 300,
+  "n_patients": 1500,
   "study_duration_days": 7,
-  "generation_date": "2025-11-15T10:45:06.821160",
+  "generation_date": "2025-11-15T18:41:16.919354",
   "seed": 12345,
   "population": "Indian ICU",
   "description": "Synthetic aminoglycoside data for Indian ICU setting"

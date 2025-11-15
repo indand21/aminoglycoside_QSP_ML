@@ -1,2 +1,6 @@
 data/*.pkl
 data/**/*.pkl
+
+# Large model files (> 100 MB)
+models/phase2_popk_results.pkl
+models/phase2_popk_trace.nc
