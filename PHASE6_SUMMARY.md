@@ -30,11 +30,12 @@ All **6 phases** of the aminoglycoside quantitative systems pharmacology and mac
 - Linked PK/PD to clinical outcomes
 - Target attainment: 51.3% achieve Cmax/MIC ≥8
 
-### Phase 4: Machine Learning ✅
-- Nephrotoxicity prediction (ROC-AUC: 0.550 CV)
-- Clinical cure prediction (ROC-AUC: 0.447 CV)
-- PK surrogate models (Cmax R²: 0.653, AUC24 R²: 0.464)
-- Feature importance analysis with SHAP
+### Phase 4: Machine Learning (Enhanced) ✅
+- Nephrotoxicity prediction (ROC-AUC: **0.717 CV**, 0.739 Test) - **Clinically useful!**
+- Clinical cure prediction (ROC-AUC: **0.696 CV**, 0.742 Test) - **Clinically useful!**
+- PK surrogate models (Cmax R²: **0.759**, AUC24 R²: 0.357)
+- Advanced feature engineering, SMOTE, hyperparameter optimization, ensemble methods
+- **Major performance improvement:** Previous 0.45-0.55 → Now 0.70-0.74 AUC
 
 ### Phase 5: Dose Optimization ✅
 - Multi-objective Bayesian optimization
