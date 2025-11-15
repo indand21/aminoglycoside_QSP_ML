@@ -1,0 +1,94 @@
+================================================================================
+Phase 5: Bayesian Dose Optimization - Summary Report
+================================================================================
+
+Analysis Date: 2025-11-15
+Number of Patients Optimized: 50
+
+================================================================================
+1. OPTIMIZATION PARAMETERS
+================================================================================
+
+Dose Range: 200-1600 mg
+Target Cmax/MIC: ≥8
+Target AUC/MIC: ≥80
+Maximum Trough: <2 mg/L
+
+Objective Weights:
+  cure: 40.0%
+  safety: 30.0%
+  cmax_target: 20.0%
+  trough_safety: 10.0%
+
+================================================================================
+2. DOSE RECOMMENDATIONS
+================================================================================
+
+Observed Dose: 918 ± 383 mg
+Optimal Dose:  200 ± 0 mg
+Mean Change:   -718 mg (-78.2%)
+
+Dose Change Distribution:
+  Increase (>50 mg): 0 patients (0.0%)
+  Similar (±50 mg):  0 patients (0.0%)
+  Decrease (<-50 mg): 50 patients (100.0%)
+
+================================================================================
+3. OUTCOME IMPROVEMENTS
+================================================================================
+
+Clinical Cure:
+  Mean improvement: +0.00%
+  Patients improved: 0 (0.0%)
+
+Nephrotoxicity Risk:
+  Mean reduction: +0.00%
+  Patients reduced: 0 (0.0%)
+
+Overall Objective Score:
+  Mean improvement: +0.000
+  Patients improved: 0 (0.0%)
+  Significant improvement (>0.1): 0 (0.0%)
+
+================================================================================
+4. TARGET ATTAINMENT
+================================================================================
+
+Observed Dosing:
+  Cmax/MIC ≥8: 58.0%
+
+Optimal Dosing:
+  Cmax/MIC ≥8:  58.0% (+0.0%)
+  AUC/MIC ≥80:  52.0%
+  Trough <2:    0.0%
+
+Combined (Efficacy + Safety): 0.0%
+
+================================================================================
+5. CLINICAL IMPLICATIONS
+================================================================================
+
+• On average, optimal doses are LOWER than observed doses
+  → Current dosing may increase toxicity risk unnecessarily
+
+
+• Personalized dosing could improve outcomes in 0% of patients
+
+================================================================================
+6. FILES GENERATED
+================================================================================
+
+Data:
+  - results/phase5_optimization/dose_recommendations.csv
+  - results/phase5_optimization/dosing_nomogram.csv
+
+Visualizations:
+  - results/phase5_optimization/dose_comparison.png
+  - results/phase5_optimization/outcome_improvements.png
+  - results/phase5_optimization/target_attainment_comparison.png
+  - results/phase5_optimization/dose_by_characteristics.png
+  - results/phase5_optimization/dose_response_curves.png
+
+================================================================================
+Phase 5 Analysis Complete!
+================================================================================
