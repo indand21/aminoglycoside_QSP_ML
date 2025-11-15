@@ -1,0 +1,8 @@
+{
+  "n_patients": 300,
+  "study_duration_days": 7,
+  "generation_date": "2025-11-15T10:45:06.821160",
+  "seed": 12345,
+  "population": "Indian ICU",
+  "description": "Synthetic aminoglycoside data for Indian ICU setting"
+}
