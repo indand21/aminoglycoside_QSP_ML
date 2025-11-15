@@ -1,0 +1,14 @@
+{
+  "clinical_cure": {
+    "predictors": "Cmax/MIC",
+    "beta0": 0.16198284488676873,
+    "beta1": -0.000833369023850592,
+    "interpretation": "Higher Cmax/MIC increases cure probability"
+  },
+  "nephrotoxicity": {
+    "predictors": "Trough concentration",
+    "beta0": -1.4310074108378363,
+    "beta1": 0.035091183751333035,
+    "interpretation": "Higher trough increases AKI risk"
+  }
+}
