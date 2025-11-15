@@ -1,0 +1,16 @@
+{
+  "preprocessing_date": "2025-11-15T11:38:35.616827",
+  "n_patients": 300,
+  "n_concentrations": 2199,
+  "n_outliers": 0,
+  "quality_report": {
+    "negative_times": 0,
+    "missing_weight": 0,
+    "missing_age": 0,
+    "missing_scr": 0,
+    "extreme_doses": 0,
+    "duplicate_patients": 0,
+    "age_out_of_range": 0,
+    "weight_out_of_range": 0
+  }
+}

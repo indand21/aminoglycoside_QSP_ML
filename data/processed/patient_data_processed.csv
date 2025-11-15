@@ -1,0 +1,301 @@
+patient_id,age,sex,weight,height,bmi,apache_ii,sofa_score,sepsis_type,baseline_crcl,baseline_scr,baseline_egfr,baseline_albumin,baseline_bilirubin,infection_site,pathogen,mic_gentamicin,mic_amikacin,diabetes,ckd_stage,mechanical_ventilation,vasopressor_use,hospital_id,icu_type,bsa,ibw,abw,obesity_class,arc
+IND_0001,48.7,M,51.3,149.1,23.1,10,16,severe sepsis,94.9,0.69,94.3,1.7,0.9,uti,klebsiella,8.37,10.89,False,0,True,False,AIIMS_Delhi,mixed,1.46,47.0,48.7,normal,False
+IND_0002,59.7,M,89.6,165.9,32.6,27,5,septic shock,86.2,1.16,86.1,4.3,0.6,pneumonia,klebsiella,0.37,3.36,False,1,False,False,CMC_Vellore,medical,2.03,62.2,73.2,obese_class1,False
+IND_0003,43.7,F,52.2,144.8,24.9,7,15,severe sepsis,90.7,0.65,91.3,2.9,1.4,iai,e_coli,12.7,256.0,True,0,True,True,AIIMS_Delhi,surgical,1.45,38.6,44.0,normal,False
+IND_0004,43.1,M,68.2,151.8,29.6,29,10,sepsis,71.7,1.28,71.7,2.1,1.1,pneumonia,e_coli,4.52,20.85,True,1,True,False,SGPGI_Lucknow,medical,1.7,49.5,57.0,overweight,False
+IND_0005,83.5,M,69.5,162.5,26.3,25,11,severe sepsis,76.0,0.72,75.7,2.1,1.0,uti,pseudomonas,9.24,0.5,False,1,True,True,PGIMER_Chandigarh,mixed,1.77,59.1,63.3,overweight,False
+IND_0006,74.3,M,79.9,167.0,28.6,14,6,septic shock,124.0,0.59,123.6,3.1,1.3,bloodstream,pseudomonas,9.2,10.56,False,0,True,True,JIPMER_Puducherry,surgical,1.93,63.2,69.9,overweight,False
+IND_0007,53.5,F,85.3,156.6,34.8,29,17,septic shock,128.8,0.68,128.1,2.5,1.1,iai,pseudomonas,2.3,56.84,True,0,True,True,PGIMER_Chandigarh,mixed,1.93,49.3,63.7,obese_class1,False
+IND_0008,56.5,F,68.5,156.9,27.8,18,9,severe sepsis,87.0,0.78,86.6,2.4,2.2,bloodstream,acinetobacter,30.71,13.66,False,1,True,False,SGPGI_Lucknow,medical,1.73,49.6,57.2,overweight,False
+IND_0009,64.3,M,68.1,169.3,23.8,25,8,septic shock,122.6,0.58,123.4,4.1,5.4,pneumonia,pseudomonas,4.38,19.65,False,0,True,False,SGPGI_Lucknow,mixed,1.79,65.3,66.4,normal,False
+IND_0010,71.9,M,81.9,166.3,29.6,14,12,sepsis,50.0,1.55,50.0,2.6,0.8,uti,klebsiella,2.26,44.45,False,2,False,False,PGIMER_Chandigarh,mixed,1.95,62.6,70.3,overweight,False
+IND_0011,68.1,M,47.7,150.7,21.0,19,3,severe sepsis,115.4,0.41,116.2,2.7,1.6,bloodstream,other,3.5,60.3,False,0,False,True,AIIMS_Delhi,mixed,1.41,48.5,48.2,normal,False
+IND_0012,31.3,M,63.1,176.2,20.3,19,3,severe sepsis,56.9,1.67,57.0,2.7,1.5,bloodstream,e_coli,2.84,27.45,False,2,False,True,AIIMS_Delhi,mixed,1.76,71.6,68.2,normal,False
+IND_0013,56.4,F,55.5,164.7,20.5,19,13,septic shock,115.6,0.47,116.5,2.1,1.1,pneumonia,other,3.4,24.11,False,0,False,False,JIPMER_Puducherry,surgical,1.59,56.6,56.2,normal,False
+IND_0014,55.7,F,44.8,153.5,19.0,5,14,severe sepsis,122.3,0.36,123.8,3.5,1.3,bloodstream,pseudomonas,28.06,27.66,False,0,True,False,AIIMS_Delhi,surgical,1.38,46.5,45.8,normal,False
+IND_0015,73.6,F,64.3,156.5,26.3,26,9,sepsis,72.4,0.7,72.0,3.0,2.4,pneumonia,pseudomonas,14.82,3.28,False,1,True,False,SGPGI_Lucknow,surgical,1.67,49.2,55.2,overweight,False
+IND_0016,66.2,M,56.6,155.8,23.3,18,2,sepsis,61.4,0.94,61.7,2.7,1.9,bloodstream,pseudomonas,6.4,20.93,False,1,True,False,CMC_Vellore,surgical,1.57,53.1,54.5,normal,False
+IND_0017,20.0,F,55.8,172.4,18.8,18,8,septic shock,75.5,1.05,75.3,4.0,1.1,pneumonia,klebsiella,2.61,17.96,True,1,True,False,AIIMS_Delhi,surgical,1.63,63.6,60.5,normal,False
+IND_0018,46.1,F,60.9,152.9,26.0,16,2,septic shock,44.1,1.53,44.1,2.4,1.4,pneumonia,pseudomonas,15.5,1.01,False,3a,False,False,CMC_Vellore,medical,1.61,46.0,52.0,overweight,False
+IND_0019,78.7,M,65.8,167.3,23.5,9,15,septic shock,80.6,0.7,80.0,3.6,1.9,pneumonia,e_coli,18.47,23.76,False,1,True,True,PGIMER_Chandigarh,medical,1.75,63.5,64.4,normal,False
+IND_0020,45.0,F,69.2,161.9,26.4,21,7,septic shock,126.0,0.62,125.2,3.1,1.3,iai,klebsiella,5.29,26.34,True,0,False,False,AIIMS_Delhi,medical,1.76,54.1,60.1,overweight,False
+IND_0021,43.4,M,44.1,150.7,19.4,18,12,sepsis,76.8,0.77,76.8,2.3,4.7,iai,acinetobacter,1.65,8.62,True,1,True,True,JIPMER_Puducherry,mixed,1.36,48.5,46.7,normal,False
+IND_0022,59.6,F,60.7,167.7,21.6,38,4,severe sepsis,90.7,0.64,90.0,3.5,0.6,pneumonia,klebsiella,21.36,15.37,True,1,True,False,JIPMER_Puducherry,surgical,1.68,59.4,59.9,normal,False
+IND_0023,90.0,M,64.9,153.4,27.6,18,12,septic shock,129.4,0.35,128.8,2.2,1.5,pneumonia,klebsiella,5.99,15.11,False,0,True,True,AIIMS_Delhi,medical,1.66,50.9,56.5,overweight,False
+IND_0024,35.7,M,55.0,148.4,25.0,17,11,septic shock,29.4,2.71,29.4,2.3,0.4,bloodstream,klebsiella,8.27,10.31,False,3b,False,False,JIPMER_Puducherry,surgical,1.51,46.4,49.8,normal,False
+IND_0025,42.8,F,59.1,161.4,22.7,18,10,septic shock,119.9,0.57,119.0,3.1,5.1,bloodstream,klebsiella,9.0,14.18,False,0,False,False,PGIMER_Chandigarh,medical,1.63,53.6,55.8,normal,False
+IND_0026,54.0,M,64.8,160.9,25.0,21,16,sepsis,129.5,0.6,129.0,2.7,1.1,bloodstream,klebsiella,3.72,3.02,False,0,False,False,JIPMER_Puducherry,medical,1.7,57.7,60.5,normal,False
+IND_0027,56.8,M,63.5,178.5,19.9,32,16,sepsis,60.2,1.22,60.1,2.4,3.6,bloodstream,klebsiella,34.77,10.89,False,1,False,False,JIPMER_Puducherry,medical,1.77,73.6,69.6,normal,False
+IND_0028,60.4,F,74.6,148.5,33.8,30,2,severe sepsis,37.6,1.86,37.7,2.6,0.5,other,pseudomonas,4.01,40.76,True,3a,False,True,PGIMER_Chandigarh,surgical,1.75,42.0,55.0,obese_class1,False
+IND_0029,52.0,M,58.7,156.5,24.0,5,7,severe sepsis,90.4,0.79,90.8,1.9,2.6,pneumonia,klebsiella,1.62,1.21,True,0,True,True,SGPGI_Lucknow,medical,1.6,53.7,55.7,normal,False
+IND_0030,73.5,M,55.6,171.9,18.8,23,8,septic shock,193.9,0.26,180.0,1.6,1.2,bloodstream,pseudomonas,13.1,30.63,False,0,True,True,CMC_Vellore,surgical,1.63,67.7,62.9,normal,True
+IND_0031,40.6,M,58.3,184.0,17.2,9,5,severe sepsis,132.2,0.61,131.9,3.1,1.5,pneumonia,pseudomonas,9.3,1.28,False,0,True,True,AIIMS_Delhi,medical,1.73,78.6,70.5,underweight,True
+IND_0032,38.7,M,60.1,166.3,21.7,26,13,severe sepsis,84.5,1.0,84.6,1.5,1.8,bloodstream,acinetobacter,41.27,89.22,False,1,False,True,PGIMER_Chandigarh,mixed,1.67,62.6,61.6,normal,False
+IND_0033,18.0,F,49.0,164.9,18.0,11,2,septic shock,64.3,1.1,64.2,2.3,0.7,bloodstream,klebsiella,3.52,24.45,False,1,True,True,JIPMER_Puducherry,medical,1.5,56.8,53.7,underweight,False
+IND_0034,22.2,M,70.5,168.1,24.9,23,8,septic shock,74.0,1.56,73.9,1.6,1.2,pneumonia,klebsiella,3.99,5.13,False,1,True,True,CMC_Vellore,surgical,1.81,64.2,66.7,normal,False
+IND_0035,38.2,M,80.2,156.9,32.6,12,5,septic shock,92.2,1.23,92.2,3.2,2.6,iai,e_coli,5.85,13.23,False,0,True,True,JIPMER_Puducherry,medical,1.87,54.1,64.5,obese_class1,False
+IND_0036,61.0,M,65.5,154.8,27.3,20,3,severe sepsis,92.9,0.77,93.3,4.0,0.8,uti,e_coli,2.16,5.07,False,0,True,False,JIPMER_Puducherry,medical,1.68,52.2,57.5,overweight,False
+IND_0037,31.7,M,53.8,178.9,16.8,19,14,severe sepsis,169.0,0.48,168.6,2.6,4.1,pneumonia,pseudomonas,5.63,4.52,False,0,True,True,PGIMER_Chandigarh,mixed,1.64,74.0,65.9,underweight,True
+IND_0038,53.9,M,50.6,159.0,20.0,32,13,severe sepsis,110.9,0.55,110.0,3.0,1.4,uti,klebsiella,2.31,5.42,True,0,True,False,PGIMER_Chandigarh,mixed,1.49,56.0,53.8,normal,False
+IND_0039,35.0,M,66.8,177.7,21.2,5,2,sepsis,72.3,1.35,72.2,3.1,0.6,other,pseudomonas,113.88,16.31,True,1,True,False,JIPMER_Puducherry,surgical,1.82,72.9,70.5,normal,False
+IND_0040,57.3,M,60.5,166.6,21.8,17,10,sepsis,115.7,0.6,115.8,2.3,1.6,pneumonia,klebsiella,1.13,3.09,False,0,False,True,PGIMER_Chandigarh,medical,1.67,62.9,61.9,normal,False
+IND_0041,18.0,M,66.8,155.3,27.7,33,4,severe sepsis,117.3,0.96,117.9,4.2,1.0,bloodstream,klebsiella,3.25,4.8,True,0,True,True,JIPMER_Puducherry,surgical,1.7,52.6,58.3,overweight,False
+IND_0042,48.8,M,63.7,150.6,28.1,31,16,sepsis,47.4,1.7,47.5,1.9,1.3,pneumonia,klebsiella,11.13,3.34,True,2,False,True,PGIMER_Chandigarh,surgical,1.63,48.4,54.5,overweight,False
+IND_0043,27.3,M,58.8,149.7,26.2,27,10,severe sepsis,159.2,0.58,158.7,2.5,0.9,bloodstream,acinetobacter,5.22,9.21,False,0,True,True,PGIMER_Chandigarh,medical,1.56,47.6,52.1,overweight,True
+IND_0044,36.5,F,56.6,150.4,25.0,24,15,sepsis,131.1,0.53,130.5,3.1,2.1,iai,e_coli,2.51,1.84,True,0,True,False,JIPMER_Puducherry,mixed,1.54,43.7,48.9,normal,True
+IND_0045,31.1,F,71.1,158.8,28.2,25,8,septic shock,59.9,1.53,59.7,2.5,2.9,uti,pseudomonas,17.28,3.42,False,2,True,False,CMC_Vellore,medical,1.77,51.3,59.2,overweight,False
+IND_0046,56.6,F,55.8,172.9,18.7,26,10,severe sepsis,77.7,0.71,77.4,3.1,1.7,pneumonia,klebsiella,14.4,25.61,False,1,True,False,CMC_Vellore,surgical,1.64,64.1,60.8,normal,False
+IND_0047,58.0,F,54.9,152.9,23.5,21,7,septic shock,117.4,0.45,118.1,2.0,0.9,pneumonia,acinetobacter,29.23,97.2,False,0,True,False,SGPGI_Lucknow,medical,1.53,46.0,49.6,normal,False
+IND_0048,39.9,F,72.8,157.4,29.4,18,11,septic shock,78.2,1.1,78.2,2.5,1.5,iai,klebsiella,28.71,3.22,False,1,False,False,AIIMS_Delhi,medical,1.78,50.0,59.1,overweight,False
+IND_0049,57.3,M,50.3,156.9,20.4,16,11,severe sepsis,105.6,0.55,105.0,3.9,0.3,bloodstream,klebsiella,3.53,6.81,False,0,False,False,JIPMER_Puducherry,medical,1.48,54.1,52.6,normal,False
+IND_0050,73.6,F,84.1,178.2,26.5,21,14,septic shock,113.0,0.58,113.7,1.8,2.2,bloodstream,klebsiella,1.39,6.12,False,0,False,False,CMC_Vellore,medical,2.04,68.9,75.0,overweight,False
+IND_0051,53.1,F,63.8,153.8,27.0,19,8,sepsis,93.4,0.7,93.5,3.0,0.9,bloodstream,e_coli,3.16,2.24,True,0,True,False,SGPGI_Lucknow,mixed,1.65,46.8,53.6,overweight,False
+IND_0052,55.9,M,58.7,164.4,21.7,16,15,sepsis,104.0,0.66,103.9,3.7,0.5,pneumonia,klebsiella,19.89,5.1,True,0,True,True,PGIMER_Chandigarh,surgical,1.64,60.9,60.0,normal,False
+IND_0053,51.8,F,40.6,148.9,18.3,23,17,sepsis,73.9,0.57,74.2,3.3,0.9,pneumonia,klebsiella,12.16,0.67,True,1,True,True,CMC_Vellore,mixed,1.3,42.3,41.6,underweight,False
+IND_0054,68.1,M,73.8,165.9,26.8,21,2,septic shock,117.1,0.63,117.0,3.6,1.3,bloodstream,acinetobacter,4.25,41.03,True,0,True,False,AIIMS_Delhi,surgical,1.84,62.2,66.8,overweight,False
+IND_0055,73.2,F,51.5,177.9,16.3,11,7,severe sepsis,105.0,0.39,104.1,3.2,1.7,other,acinetobacter,17.12,8.91,True,0,True,False,AIIMS_Delhi,surgical,1.6,68.6,61.8,underweight,False
+IND_0056,37.3,F,49.8,170.7,17.1,15,8,severe sepsis,110.6,0.55,109.8,3.3,4.1,bloodstream,pseudomonas,7.22,10.81,False,0,True,False,SGPGI_Lucknow,surgical,1.54,62.1,57.2,underweight,False
+IND_0057,27.2,M,57.1,165.4,20.9,25,4,severe sepsis,191.7,0.47,180.0,4.0,0.9,pneumonia,acinetobacter,4.25,34.9,False,0,True,True,JIPMER_Puducherry,mixed,1.62,61.8,59.9,normal,True
+IND_0058,52.4,F,79.6,168.5,28.0,18,9,sepsis,76.6,1.07,76.9,2.3,1.2,other,klebsiella,10.64,0.5,False,1,False,True,JIPMER_Puducherry,medical,1.93,60.1,67.9,overweight,False
+IND_0059,64.1,M,49.9,160.2,19.4,30,10,septic shock,60.6,0.87,60.5,2.5,3.1,pneumonia,e_coli,1.77,11.15,False,1,True,False,PGIMER_Chandigarh,surgical,1.49,57.1,54.2,normal,False
+IND_0060,41.4,M,51.2,167.0,18.4,20,7,septic shock,80.9,0.87,80.6,3.1,1.2,pneumonia,e_coli,0.69,3.92,False,1,True,True,JIPMER_Puducherry,surgical,1.54,63.2,58.4,underweight,False
+IND_0061,65.8,M,71.0,175.7,23.0,26,12,severe sepsis,187.7,0.39,180.0,3.3,1.4,bloodstream,klebsiella,12.61,0.67,False,0,True,True,SGPGI_Lucknow,surgical,1.86,71.1,71.1,normal,True
+IND_0062,51.8,M,56.1,171.0,19.2,28,6,septic shock,62.2,1.1,62.5,2.4,1.6,uti,klebsiella,6.29,14.1,False,1,False,True,JIPMER_Puducherry,mixed,1.63,66.8,62.5,normal,False
+IND_0063,52.8,F,55.7,168.5,19.6,25,4,severe sepsis,92.6,0.62,92.5,1.9,1.4,pneumonia,klebsiella,2.53,19.34,True,0,True,True,CMC_Vellore,medical,1.61,60.1,58.3,normal,False
+IND_0064,62.7,F,53.6,156.3,21.9,30,8,septic shock,112.2,0.44,111.2,2.7,1.5,bloodstream,klebsiella,15.01,2.22,True,0,True,False,JIPMER_Puducherry,mixed,1.53,49.0,50.8,normal,False
+IND_0065,65.6,F,66.2,156.2,27.1,5,9,severe sepsis,95.5,0.61,95.3,3.5,0.9,uti,e_coli,17.31,32.04,False,0,True,True,AIIMS_Delhi,medical,1.69,48.9,55.8,overweight,False
+IND_0066,36.7,F,62.8,154.5,26.3,26,14,severe sepsis,208.7,0.37,180.0,2.9,1.4,pneumonia,pseudomonas,4.06,1.28,False,0,True,False,SGPGI_Lucknow,medical,1.64,47.4,53.6,overweight,True
+IND_0067,51.6,F,50.8,172.8,17.0,22,8,septic shock,163.3,0.32,165.7,2.5,2.4,uti,pseudomonas,14.76,26.61,False,0,True,False,JIPMER_Puducherry,medical,1.56,64.0,58.7,underweight,True
+IND_0068,18.0,M,72.1,155.8,29.7,5,9,septic shock,78.3,1.56,78.3,3.1,0.5,pneumonia,klebsiella,8.26,0.83,False,1,True,True,SGPGI_Lucknow,mixed,1.77,53.1,60.7,overweight,False
+IND_0069,41.6,M,62.2,180.8,19.0,14,10,septic shock,174.6,0.49,173.5,2.1,1.9,bloodstream,pseudomonas,22.17,5.62,True,0,True,True,SGPGI_Lucknow,medical,1.77,75.7,70.3,normal,True
+IND_0070,32.5,M,72.1,174.6,23.7,17,7,severe sepsis,68.4,1.57,68.6,3.3,0.8,pneumonia,pseudomonas,8.11,3.26,True,1,True,False,JIPMER_Puducherry,medical,1.87,70.1,70.9,normal,False
+IND_0071,30.7,M,84.2,165.1,30.9,17,11,severe sepsis,159.6,0.8,159.8,3.3,1.8,iai,e_coli,0.7,14.63,False,0,True,True,AIIMS_Delhi,medical,1.97,61.5,70.6,obese_class1,True
+IND_0072,69.2,F,62.3,163.1,23.4,22,8,severe sepsis,84.6,0.62,84.0,2.6,2.2,bloodstream,klebsiella,29.08,8.13,False,1,True,True,PGIMER_Chandigarh,surgical,1.68,55.2,58.0,normal,False
+IND_0073,63.6,F,45.6,164.5,16.9,14,10,severe sepsis,77.4,0.53,77.6,2.2,1.7,bloodstream,klebsiella,2.25,68.06,False,1,True,False,CMC_Vellore,medical,1.44,56.5,52.1,underweight,False
+IND_0074,63.0,M,72.6,148.1,33.1,21,7,septic shock,92.5,0.84,92.4,3.2,3.2,uti,other,3.95,7.23,False,0,True,False,PGIMER_Chandigarh,medical,1.73,46.1,56.7,obese_class1,False
+IND_0075,68.0,M,62.2,155.3,25.8,18,20,septic shock,107.1,0.58,107.2,3.0,1.2,uti,acinetobacter,2.24,104.21,True,0,False,True,CMC_Vellore,medical,1.64,52.6,56.4,overweight,False
+IND_0076,44.0,F,61.1,156.3,25.0,32,2,septic shock,75.5,0.92,75.3,2.9,1.4,bloodstream,acinetobacter,1.32,73.37,True,1,True,False,SGPGI_Lucknow,medical,1.63,49.0,53.8,normal,False
+IND_0077,42.0,M,61.4,158.2,24.5,17,8,sepsis,90.6,0.92,90.8,2.7,2.1,pneumonia,klebsiella,0.39,16.93,False,0,True,True,PGIMER_Chandigarh,medical,1.64,55.3,57.7,normal,False
+IND_0078,37.3,F,76.8,152.5,33.0,19,7,septic shock,91.1,1.02,91.3,2.4,1.0,pneumonia,e_coli,13.5,10.58,True,0,True,True,CMC_Vellore,medical,1.8,45.6,58.1,obese_class1,False
+IND_0079,40.4,M,56.8,151.3,24.8,22,10,sepsis,84.1,0.93,84.5,2.9,1.4,pneumonia,klebsiella,4.18,0.73,True,1,True,False,CMC_Vellore,surgical,1.55,49.0,52.1,normal,False
+IND_0080,55.6,M,78.7,148.7,35.6,21,16,septic shock,140.3,0.66,139.8,2.2,1.1,iai,acinetobacter,9.39,20.02,False,0,False,True,JIPMER_Puducherry,medical,1.8,46.6,59.4,obese_class2,True
+IND_0081,52.8,F,71.8,152.1,31.0,25,12,severe sepsis,61.6,1.2,61.6,2.3,1.0,bloodstream,klebsiella,0.85,46.17,True,1,False,True,AIIMS_Delhi,surgical,1.74,45.2,55.8,obese_class1,False
+IND_0082,33.5,M,59.0,158.2,23.6,21,6,septic shock,128.8,0.68,128.3,3.3,0.3,uti,klebsiella,2.72,1.39,False,0,True,True,PGIMER_Chandigarh,surgical,1.61,55.3,56.8,normal,False
+IND_0083,65.1,M,65.6,169.6,22.8,18,11,severe sepsis,106.6,0.64,106.6,2.6,3.0,pneumonia,acinetobacter,3.13,5.05,True,0,False,True,JIPMER_Puducherry,mixed,1.76,65.6,65.6,normal,False
+IND_0084,58.9,M,68.5,162.6,25.9,24,13,septic shock,57.1,1.35,57.2,2.7,0.3,iai,pseudomonas,4.17,2.01,True,2,False,False,PGIMER_Chandigarh,surgical,1.76,59.2,62.9,overweight,False
+IND_0085,68.2,M,50.7,168.2,17.9,15,11,severe sepsis,206.4,0.24,180.0,2.3,2.6,uti,acinetobacter,8.91,16.12,True,0,True,False,SGPGI_Lucknow,mixed,1.54,64.3,58.9,underweight,True
+IND_0086,81.2,F,46.8,157.2,18.9,21,9,sepsis,61.0,0.53,61.3,2.3,0.5,uti,acinetobacter,11.36,256.0,True,1,True,False,JIPMER_Puducherry,mixed,1.43,49.8,48.6,normal,False
+IND_0087,36.0,M,73.2,159.2,28.9,27,9,sepsis,55.0,1.92,55.1,2.1,2.5,pneumonia,e_coli,16.44,139.53,True,2,True,True,JIPMER_Puducherry,surgical,1.8,56.2,63.0,overweight,False
+IND_0088,65.6,M,53.4,166.1,19.4,12,8,septic shock,44.6,1.24,44.5,1.8,0.9,bloodstream,klebsiella,11.54,3.14,True,3a,True,False,SGPGI_Lucknow,medical,1.57,62.4,58.8,normal,False
+IND_0089,49.9,M,42.9,172.3,14.5,23,9,sepsis,56.9,0.94,57.1,3.5,1.6,pneumonia,klebsiella,15.91,1.96,False,2,True,True,CMC_Vellore,medical,1.43,68.0,58.0,underweight,False
+IND_0090,66.6,F,57.5,164.5,21.2,29,10,sepsis,53.8,0.93,53.6,2.2,0.9,bloodstream,acinetobacter,2.42,1.36,False,2,True,False,CMC_Vellore,mixed,1.62,56.5,56.9,normal,False
+IND_0091,55.0,M,50.5,162.9,19.0,31,8,severe sepsis,62.6,0.95,62.8,1.5,2.3,pneumonia,klebsiella,4.23,6.46,True,1,False,True,PGIMER_Chandigarh,surgical,1.51,59.5,55.9,normal,False
+IND_0092,86.7,M,71.5,162.7,27.0,19,12,severe sepsis,152.3,0.35,151.2,2.4,0.5,bloodstream,e_coli,1.92,6.8,False,0,False,False,PGIMER_Chandigarh,medical,1.8,59.3,64.2,overweight,True
+IND_0093,50.2,M,42.7,156.3,17.5,34,7,septic shock,184.6,0.29,180.0,3.4,1.6,iai,e_coli,2.49,8.47,True,0,True,False,CMC_Vellore,medical,1.36,53.5,49.2,underweight,True
+IND_0094,84.1,M,68.5,174.3,22.5,26,13,sepsis,136.7,0.39,136.4,3.6,0.9,bloodstream,pseudomonas,25.32,39.58,False,0,True,True,SGPGI_Lucknow,surgical,1.82,69.8,69.3,normal,True
+IND_0095,52.5,M,73.1,152.4,31.5,27,15,severe sepsis,15.0,5.92,15.0,2.2,1.9,bloodstream,pseudomonas,3.49,93.37,True,4,True,True,CMC_Vellore,medical,1.76,50.0,59.2,obese_class1,False
+IND_0096,64.7,M,44.4,177.3,14.1,25,14,severe sepsis,119.2,0.39,119.1,3.0,1.8,bloodstream,e_coli,3.32,6.5,True,0,True,True,JIPMER_Puducherry,medical,1.48,72.5,61.3,underweight,False
+IND_0097,53.9,M,57.2,170.3,19.7,20,10,septic shock,58.1,1.18,58.0,3.5,1.2,other,pseudomonas,4.99,17.43,False,2,True,False,SGPGI_Lucknow,medical,1.64,66.2,62.6,normal,False
+IND_0098,40.0,M,79.0,171.1,27.0,28,5,sepsis,131.9,0.83,132.2,3.5,0.8,bloodstream,pseudomonas,6.08,3.44,False,0,True,False,AIIMS_Delhi,surgical,1.94,66.9,71.7,overweight,True
+IND_0099,61.4,M,51.2,160.7,19.8,18,11,sepsis,40.8,1.37,40.8,3.4,1.4,pneumonia,e_coli,3.76,9.42,False,3a,True,True,CMC_Vellore,surgical,1.51,57.5,55.0,normal,False
+IND_0100,54.4,F,84.1,168.3,29.7,33,9,sepsis,79.4,1.07,79.4,2.2,1.7,pneumonia,pseudomonas,9.93,19.94,False,1,False,False,PGIMER_Chandigarh,medical,1.98,59.9,69.6,overweight,False
+IND_0101,26.9,M,77.0,146.7,35.8,26,2,septic shock,99.4,1.22,99.1,2.4,1.1,iai,klebsiella,16.7,31.4,False,0,False,True,SGPGI_Lucknow,medical,1.77,44.8,57.7,obese_class2,False
+IND_0102,43.0,M,44.1,149.1,19.8,27,15,septic shock,51.8,1.15,51.7,1.7,1.3,other,other,26.05,59.02,False,2,True,True,SGPGI_Lucknow,surgical,1.35,47.0,45.8,normal,False
+IND_0103,51.5,M,61.7,156.7,25.1,24,16,sepsis,199.9,0.38,180.0,2.9,1.4,pneumonia,e_coli,1.03,7.76,True,0,True,False,SGPGI_Lucknow,surgical,1.64,53.9,57.0,overweight,True
+IND_0104,37.1,M,78.5,150.7,34.6,26,12,severe sepsis,69.5,1.61,69.7,2.1,1.0,pneumonia,klebsiella,4.49,41.5,False,1,False,True,AIIMS_Delhi,medical,1.81,48.5,60.5,obese_class1,False
+IND_0105,44.3,F,61.7,157.0,25.0,32,7,severe sepsis,73.6,0.95,73.4,3.1,0.3,pneumonia,pseudomonas,1.74,16.2,False,1,True,False,AIIMS_Delhi,surgical,1.64,49.7,54.5,normal,False
+IND_0106,51.4,M,54.0,154.7,22.6,27,12,septic shock,196.5,0.34,180.0,2.4,0.5,iai,acinetobacter,7.58,16.19,False,0,False,True,CMC_Vellore,medical,1.52,52.1,52.9,normal,True
+IND_0107,69.5,M,35.0,156.2,14.3,25,13,sepsis,75.2,0.46,74.5,3.4,5.8,pneumonia,acinetobacter,6.16,9.3,True,1,False,False,PGIMER_Chandigarh,mixed,1.23,53.4,46.0,underweight,False
+IND_0108,67.7,M,64.5,165.3,23.6,16,2,sepsis,61.9,1.05,61.7,3.7,1.0,uti,acinetobacter,20.23,228.34,False,1,True,False,CMC_Vellore,surgical,1.72,61.7,62.8,normal,False
+IND_0109,42.6,F,77.4,153.7,32.8,12,2,severe sepsis,92.7,0.96,92.7,2.8,0.8,iai,acinetobacter,3.34,79.84,False,0,True,False,JIPMER_Puducherry,surgical,1.82,46.7,59.0,obese_class1,False
+IND_0110,77.3,M,55.1,156.6,22.5,18,5,septic shock,62.8,0.76,63.1,2.1,2.5,bloodstream,acinetobacter,10.36,142.59,False,1,True,False,PGIMER_Chandigarh,mixed,1.55,53.8,54.3,normal,False
+IND_0111,43.5,M,67.9,156.4,27.8,37,12,septic shock,215.4,0.42,180.0,3.3,1.1,iai,klebsiella,0.34,24.45,False,0,True,True,SGPGI_Lucknow,medical,1.72,53.6,59.3,overweight,True
+IND_0112,59.3,M,66.8,171.2,22.8,15,9,severe sepsis,120.6,0.62,120.8,3.2,0.5,bloodstream,klebsiella,0.89,29.39,False,0,False,True,CMC_Vellore,medical,1.78,67.0,66.9,normal,False
+IND_0113,66.9,F,69.1,161.2,26.6,21,9,severe sepsis,88.2,0.68,87.7,2.2,0.9,uti,klebsiella,18.3,12.93,False,1,True,False,CMC_Vellore,medical,1.76,53.5,59.7,overweight,False
+IND_0114,26.9,M,46.6,159.2,18.4,23,9,sepsis,190.9,0.38,180.0,2.7,3.7,pneumonia,klebsiella,9.51,38.52,True,0,True,True,SGPGI_Lucknow,medical,1.44,56.2,52.4,underweight,True
+IND_0115,35.6,F,86.4,160.7,33.5,30,13,septic shock,187.7,0.57,180.0,3.1,2.2,pneumonia,other,1.27,29.83,False,0,False,False,AIIMS_Delhi,mixed,1.96,53.0,66.4,obese_class1,True
+IND_0116,45.6,M,56.0,148.0,25.6,13,11,septic shock,109.8,0.67,109.6,2.7,0.8,pneumonia,e_coli,12.41,9.11,False,0,True,True,SGPGI_Lucknow,surgical,1.52,46.0,50.0,overweight,False
+IND_0117,55.5,F,60.1,159.6,23.6,21,6,septic shock,145.6,0.41,146.2,3.3,0.9,bloodstream,klebsiella,16.74,30.03,False,0,True,False,SGPGI_Lucknow,medical,1.63,52.0,55.2,normal,True
+IND_0118,48.9,M,44.0,170.3,15.2,38,11,severe sepsis,82.8,0.67,83.1,3.9,2.5,bloodstream,pseudomonas,20.8,2.91,True,1,True,True,CMC_Vellore,medical,1.44,66.2,57.3,underweight,False
+IND_0119,62.7,F,62.1,164.4,23.0,20,8,severe sepsis,91.5,0.62,91.4,3.1,1.7,pneumonia,pseudomonas,20.69,28.7,True,0,True,False,SGPGI_Lucknow,medical,1.68,56.4,58.7,normal,False
+IND_0120,25.6,M,67.0,152.8,28.7,23,15,septic shock,82.8,1.29,82.5,2.9,1.2,uti,e_coli,4.96,19.67,False,1,False,False,SGPGI_Lucknow,mixed,1.69,50.4,57.0,overweight,False
+IND_0121,18.0,F,86.6,140.0,44.2,23,15,severe sepsis,100.5,1.24,100.6,3.4,1.8,pneumonia,klebsiella,1.89,12.86,True,0,False,False,JIPMER_Puducherry,surgical,1.84,34.3,55.2,obese_class3,False
+IND_0122,33.3,F,57.6,155.4,23.9,20,4,septic shock,54.5,1.33,54.6,3.2,1.2,uti,e_coli,32.83,60.5,False,2,True,False,AIIMS_Delhi,medical,1.58,48.2,52.0,normal,False
+IND_0123,57.7,M,41.7,158.8,16.5,16,11,sepsis,91.8,0.52,91.7,3.2,1.4,bloodstream,klebsiella,8.89,16.65,False,0,False,False,AIIMS_Delhi,medical,1.36,55.8,50.2,underweight,False
+IND_0124,63.2,F,63.8,167.0,22.9,42,15,sepsis,17.7,3.27,17.7,1.9,0.9,other,e_coli,13.22,10.97,True,3b,True,False,SGPGI_Lucknow,medical,1.72,58.7,60.7,normal,False
+IND_0125,47.6,M,59.8,165.8,21.8,24,7,sepsis,171.7,0.45,170.5,4.3,0.8,pneumonia,klebsiella,18.01,14.63,False,0,False,True,CMC_Vellore,surgical,1.66,62.1,61.2,normal,True
+IND_0126,49.8,F,63.9,151.3,27.9,22,12,severe sepsis,91.6,0.74,92.0,2.6,0.5,uti,klebsiella,3.67,13.23,True,0,False,False,JIPMER_Puducherry,medical,1.64,44.5,52.3,overweight,False
+IND_0127,53.7,F,57.2,164.6,21.1,22,10,severe sepsis,125.6,0.46,126.7,2.5,1.0,pneumonia,pseudomonas,23.57,7.82,False,0,True,True,CMC_Vellore,surgical,1.62,56.5,56.8,normal,False
+IND_0128,42.3,F,57.2,183.1,17.1,26,12,sepsis,107.1,0.62,106.4,3.0,0.7,other,acinetobacter,6.77,15.02,True,0,False,True,PGIMER_Chandigarh,surgical,1.71,73.3,66.9,underweight,False
+IND_0129,45.3,F,52.1,155.7,21.5,20,14,septic shock,46.1,1.26,46.2,2.0,0.8,pneumonia,klebsiella,4.68,17.14,False,2,True,True,JIPMER_Puducherry,medical,1.5,48.5,49.9,normal,False
+IND_0130,51.7,F,59.1,175.7,19.1,16,14,sepsis,28.7,2.15,28.7,3.8,2.8,bloodstream,e_coli,8.97,9.46,False,3b,False,True,SGPGI_Lucknow,surgical,1.7,66.6,63.6,normal,False
+IND_0131,32.4,M,76.6,152.3,33.0,18,8,sepsis,165.6,0.69,165.9,3.9,1.3,pneumonia,acinetobacter,4.72,99.33,True,0,False,False,SGPGI_Lucknow,surgical,1.8,49.9,60.6,obese_class1,True
+IND_0132,23.2,F,56.8,168.5,20.0,44,9,severe sepsis,131.7,0.59,132.7,3.3,0.7,other,other,2.33,2.97,True,0,False,True,CMC_Vellore,mixed,1.63,60.1,58.8,normal,True
+IND_0133,78.2,M,72.3,150.3,32.0,29,7,severe sepsis,57.3,1.08,57.5,2.1,0.7,bloodstream,klebsiella,25.5,4.53,False,2,True,True,SGPGI_Lucknow,surgical,1.74,48.1,57.8,obese_class1,False
+IND_0134,67.8,M,58.0,162.0,22.1,34,5,sepsis,147.8,0.39,149.1,2.9,1.8,pneumonia,pseudomonas,4.86,14.07,True,0,True,False,SGPGI_Lucknow,surgical,1.62,58.7,58.4,normal,True
+IND_0135,59.3,M,63.9,154.5,26.8,26,11,septic shock,77.6,0.92,77.8,2.3,2.5,bloodstream,klebsiella,0.48,16.14,False,1,True,False,CMC_Vellore,medical,1.66,51.9,56.7,overweight,False
+IND_0136,60.9,M,50.2,178.0,15.8,32,10,severe sepsis,100.3,0.55,100.3,2.8,0.6,pneumonia,pseudomonas,32.01,4.85,False,0,True,True,SGPGI_Lucknow,mixed,1.58,73.2,64.0,underweight,False
+IND_0137,72.9,M,71.0,152.9,30.4,27,5,sepsis,102.2,0.65,101.8,2.4,0.4,iai,klebsiella,1.7,44.07,False,0,True,True,CMC_Vellore,surgical,1.74,50.5,58.7,obese_class1,False
+IND_0138,45.0,M,58.6,186.0,16.9,14,14,severe sepsis,103.6,0.75,103.1,3.2,1.9,bloodstream,klebsiella,8.43,1.56,False,0,False,False,SGPGI_Lucknow,mixed,1.74,80.4,71.7,underweight,False
+IND_0139,47.2,M,65.9,156.1,27.0,35,2,septic shock,122.8,0.69,123.1,3.3,1.4,other,pseudomonas,3.33,67.37,True,0,True,True,SGPGI_Lucknow,medical,1.69,53.4,58.4,overweight,False
+IND_0140,60.0,M,51.4,163.1,19.3,15,2,severe sepsis,171.1,0.33,173.1,2.5,0.6,uti,e_coli,0.73,4.28,False,0,True,True,JIPMER_Puducherry,surgical,1.53,59.7,56.4,normal,True
+IND_0141,38.8,M,46.6,160.6,18.1,22,9,sepsis,91.5,0.72,91.0,2.8,0.7,pneumonia,klebsiella,5.29,5.75,False,0,False,True,AIIMS_Delhi,surgical,1.44,57.4,53.1,underweight,False
+IND_0142,73.1,M,64.4,150.4,28.5,38,13,septic shock,100.7,0.59,101.4,2.4,1.4,pneumonia,klebsiella,53.58,5.55,False,0,False,False,SGPGI_Lucknow,surgical,1.64,48.2,54.7,overweight,False
+IND_0143,60.1,M,73.5,168.2,26.0,45,13,septic shock,123.2,0.66,123.6,2.0,1.2,other,klebsiella,1.72,3.56,False,0,False,False,AIIMS_Delhi,mixed,1.85,64.3,68.0,overweight,False
+IND_0144,41.5,M,52.4,175.7,17.0,30,18,septic shock,81.2,0.88,81.5,3.3,2.9,iai,pseudomonas,2.58,13.97,False,1,False,True,JIPMER_Puducherry,mixed,1.6,71.1,63.6,underweight,False
+IND_0145,55.0,M,62.2,152.2,26.9,32,10,septic shock,169.0,0.43,170.8,3.1,1.1,iai,e_coli,10.59,7.77,True,0,False,False,JIPMER_Puducherry,surgical,1.62,49.8,54.8,overweight,True
+IND_0146,45.7,M,75.1,171.3,25.6,7,11,severe sepsis,69.3,1.42,69.3,3.0,2.5,bloodstream,pseudomonas,13.64,4.97,True,1,True,True,PGIMER_Chandigarh,medical,1.89,67.1,70.3,overweight,False
+IND_0147,47.6,F,54.4,153.9,23.0,41,8,sepsis,200.1,0.3,180.0,3.3,3.4,other,klebsiella,0.8,4.99,False,0,True,True,SGPGI_Lucknow,surgical,1.52,46.9,49.9,normal,True
+IND_0148,51.7,M,61.7,143.7,29.9,29,2,severe sepsis,104.9,0.72,105.1,4.0,3.8,bloodstream,other,38.21,1.77,False,0,False,True,SGPGI_Lucknow,medical,1.57,42.1,49.9,overweight,False
+IND_0149,62.9,F,70.2,160.6,27.2,16,3,septic shock,153.0,0.42,152.1,3.1,1.1,bloodstream,klebsiella,19.69,13.77,False,0,False,False,SGPGI_Lucknow,mixed,1.77,52.9,59.8,overweight,True
+IND_0150,62.2,M,68.2,165.3,25.0,5,8,severe sepsis,122.8,0.6,122.8,2.3,2.0,iai,e_coli,2.63,10.45,False,0,True,True,SGPGI_Lucknow,medical,1.77,61.7,64.3,normal,False
+IND_0151,39.9,F,64.2,166.9,23.0,12,6,severe sepsis,98.3,0.77,98.5,3.5,2.6,bloodstream,klebsiella,2.06,62.62,True,0,True,False,SGPGI_Lucknow,medical,1.73,58.6,60.8,normal,False
+IND_0152,63.5,F,64.5,160.2,25.1,8,14,severe sepsis,112.3,0.52,112.0,2.1,1.8,pneumonia,other,7.31,6.47,True,0,True,True,SGPGI_Lucknow,surgical,1.69,52.6,57.4,overweight,False
+IND_0153,47.1,M,58.8,183.2,17.5,43,6,septic shock,71.5,1.06,71.6,2.6,0.8,pneumonia,pseudomonas,38.27,26.82,False,1,True,False,PGIMER_Chandigarh,medical,1.73,77.9,70.3,underweight,False
+IND_0154,25.2,M,62.0,162.6,23.5,19,13,severe sepsis,99.6,0.99,99.9,2.6,0.5,bloodstream,klebsiella,2.01,13.38,False,0,True,False,AIIMS_Delhi,medical,1.67,59.2,60.3,normal,False
+IND_0155,58.8,F,76.9,170.8,26.4,11,7,septic shock,43.1,1.71,43.1,3.2,1.1,bloodstream,e_coli,11.65,1.62,False,3a,False,False,PGIMER_Chandigarh,mixed,1.91,62.2,68.1,overweight,False
+IND_0156,27.0,F,52.2,155.9,21.5,22,14,severe sepsis,236.8,0.29,180.0,2.8,2.4,bloodstream,other,1.24,21.22,False,0,True,False,CMC_Vellore,medical,1.5,48.7,50.1,normal,True
+IND_0157,46.1,F,58.9,161.3,22.6,18,16,sepsis,36.4,1.79,36.5,2.3,0.7,bloodstream,pseudomonas,18.47,15.56,False,3a,False,False,PGIMER_Chandigarh,mixed,1.62,53.6,55.7,normal,False
+IND_0158,68.7,M,68.2,167.4,24.3,30,14,septic shock,192.4,0.35,180.0,3.8,1.2,iai,klebsiella,4.2,3.5,False,0,True,False,AIIMS_Delhi,surgical,1.78,63.6,65.4,normal,True
+IND_0159,71.5,M,63.7,165.2,23.3,16,12,septic shock,180.3,0.34,178.2,2.5,0.8,uti,klebsiella,2.29,7.59,False,0,True,False,SGPGI_Lucknow,medical,1.71,61.6,62.4,normal,True
+IND_0160,48.0,M,60.6,145.2,28.7,35,8,septic shock,118.9,0.65,119.1,3.1,1.3,pneumonia,klebsiella,2.32,55.89,True,0,True,False,CMC_Vellore,medical,1.56,43.5,50.3,overweight,False
+IND_0161,45.3,F,80.0,167.3,28.6,15,3,septic shock,50.3,1.78,50.2,2.7,1.8,other,pseudomonas,19.92,4.84,False,2,True,True,SGPGI_Lucknow,mixed,1.93,59.0,67.4,overweight,False
+IND_0162,50.1,M,44.2,180.6,13.6,19,15,severe sepsis,80.5,0.69,80.0,2.5,0.5,bloodstream,klebsiella,1.68,17.03,False,1,True,False,PGIMER_Chandigarh,surgical,1.49,75.5,63.0,underweight,False
+IND_0163,22.5,F,41.9,156.5,17.1,21,12,severe sepsis,68.5,0.85,68.4,3.3,0.9,pneumonia,klebsiella,3.07,3.92,True,1,False,False,SGPGI_Lucknow,mixed,1.35,49.2,46.3,underweight,False
+IND_0164,85.1,M,73.0,159.2,28.8,19,3,severe sepsis,183.0,0.3,180.0,2.7,0.7,uti,pseudomonas,86.26,9.19,True,0,True,True,AIIMS_Delhi,mixed,1.8,56.2,62.9,overweight,True
+IND_0165,39.6,M,52.9,161.8,20.2,6,12,septic shock,81.0,0.91,81.1,2.3,0.4,pneumonia,klebsiella,2.71,12.07,False,1,True,True,SGPGI_Lucknow,medical,1.54,58.5,56.3,normal,False
+IND_0166,75.0,M,86.8,159.1,34.3,19,8,sepsis,205.2,0.38,180.0,2.1,4.1,bloodstream,acinetobacter,3.22,16.28,True,0,True,False,CMC_Vellore,surgical,1.96,56.1,68.4,obese_class1,True
+IND_0167,50.2,F,51.8,162.9,19.5,26,13,severe sepsis,96.0,0.57,96.3,3.1,1.1,bloodstream,pseudomonas,0.66,119.76,False,0,True,False,PGIMER_Chandigarh,medical,1.53,55.0,53.7,normal,False
+IND_0168,71.6,M,68.0,167.2,24.3,14,10,sepsis,114.3,0.57,113.3,3.6,1.0,bloodstream,e_coli,1.06,1.06,True,0,False,True,CMC_Vellore,surgical,1.78,63.4,65.2,normal,False
+IND_0169,82.7,F,61.0,167.7,21.7,26,3,septic shock,143.0,0.29,142.3,3.4,1.8,bloodstream,klebsiella,12.69,8.32,True,0,True,True,CMC_Vellore,mixed,1.69,59.4,60.0,normal,True
+IND_0170,63.9,M,45.2,144.4,21.7,22,11,septic shock,114.7,0.42,113.7,2.7,0.8,bloodstream,pseudomonas,4.18,6.76,True,0,True,False,AIIMS_Delhi,medical,1.35,42.8,43.8,normal,False
+IND_0171,87.6,M,80.9,173.3,26.9,34,11,septic shock,114.3,0.52,113.2,3.2,2.1,bloodstream,klebsiella,19.07,60.99,False,0,True,True,AIIMS_Delhi,surgical,1.97,68.9,73.7,overweight,False
+IND_0172,41.1,F,62.0,177.7,19.6,29,12,sepsis,106.0,0.68,106.5,3.4,0.9,bloodstream,e_coli,13.86,8.32,True,0,True,True,JIPMER_Puducherry,surgical,1.75,68.4,65.8,normal,False
+IND_0173,63.6,F,72.8,158.6,28.9,18,2,severe sepsis,77.6,0.85,77.2,3.3,0.6,iai,e_coli,7.1,3.22,False,1,True,False,AIIMS_Delhi,medical,1.79,51.1,59.8,overweight,False
+IND_0174,38.1,M,56.5,161.9,21.6,26,12,septic shock,123.5,0.65,123.0,3.0,1.8,iai,pseudomonas,4.81,11.98,False,0,True,False,JIPMER_Puducherry,surgical,1.59,58.6,57.8,normal,False
+IND_0175,32.6,M,51.6,162.5,19.5,13,7,septic shock,59.1,1.3,59.2,1.8,1.4,pneumonia,acinetobacter,1.54,13.44,True,2,False,True,JIPMER_Puducherry,mixed,1.53,59.1,56.1,normal,False
+IND_0176,44.5,M,75.5,161.6,28.9,18,8,severe sepsis,112.6,0.89,112.5,2.8,0.5,bloodstream,klebsiella,5.92,5.14,False,0,True,True,JIPMER_Puducherry,medical,1.84,58.3,65.2,overweight,False
+IND_0177,37.3,M,62.7,145.1,29.8,28,14,sepsis,82.9,1.08,82.8,2.5,0.6,other,pseudomonas,1.93,3.25,False,1,True,False,AIIMS_Delhi,surgical,1.59,43.4,51.1,overweight,False
+IND_0178,38.6,M,56.8,158.4,22.6,7,6,septic shock,119.9,0.67,119.4,3.4,2.8,bloodstream,klebsiella,0.54,26.91,False,0,False,True,CMC_Vellore,surgical,1.58,55.4,56.0,normal,False
+IND_0179,59.0,F,63.1,173.3,21.0,42,15,septic shock,146.4,0.41,147.2,2.7,1.8,pneumonia,klebsiella,5.91,10.14,False,0,False,True,AIIMS_Delhi,mixed,1.74,64.4,63.9,normal,True
+IND_0180,43.1,F,45.2,183.8,13.4,28,19,severe sepsis,78.6,0.66,78.3,2.5,1.4,bloodstream,e_coli,13.81,7.59,False,1,False,True,AIIMS_Delhi,medical,1.52,73.9,62.4,underweight,False
+IND_0181,42.9,M,79.5,150.1,35.3,28,5,septic shock,72.7,1.47,72.9,2.4,0.3,pneumonia,klebsiella,14.17,9.74,False,1,True,False,SGPGI_Lucknow,medical,1.82,47.9,60.5,obese_class2,False
+IND_0182,46.0,M,59.9,165.3,21.9,8,8,septic shock,44.8,1.75,44.7,2.2,3.5,bloodstream,other,0.86,37.38,False,3a,True,True,SGPGI_Lucknow,medical,1.66,61.7,61.0,normal,False
+IND_0183,37.2,M,58.9,151.7,25.6,25,7,severe sepsis,78.7,1.07,78.6,2.7,0.9,bloodstream,pseudomonas,13.0,17.15,False,1,True,True,JIPMER_Puducherry,surgical,1.58,49.4,53.2,overweight,False
+IND_0184,80.1,M,46.8,160.3,18.2,19,8,sepsis,81.2,0.48,81.1,3.7,1.5,other,acinetobacter,21.06,12.28,True,1,True,True,PGIMER_Chandigarh,medical,1.44,57.2,53.0,underweight,False
+IND_0185,71.4,M,67.4,152.0,29.2,8,10,sepsis,89.2,0.72,89.2,3.3,0.7,pneumonia,klebsiella,2.18,17.21,False,1,False,True,PGIMER_Chandigarh,medical,1.69,49.6,56.7,overweight,False
+IND_0186,72.3,F,51.9,146.7,24.1,20,12,septic shock,67.0,0.62,66.9,2.6,2.1,uti,klebsiella,0.92,5.52,True,1,False,False,JIPMER_Puducherry,mixed,1.45,40.3,44.9,normal,False
+IND_0187,36.4,F,56.0,151.2,24.5,14,8,severe sepsis,64.4,1.06,64.6,2.6,1.5,bloodstream,e_coli,3.89,4.08,True,1,True,False,JIPMER_Puducherry,mixed,1.53,44.4,49.0,normal,False
+IND_0188,41.8,M,68.2,151.0,29.9,25,14,septic shock,96.9,0.96,96.9,2.7,1.9,uti,acinetobacter,2.56,35.39,True,0,True,False,JIPMER_Puducherry,surgical,1.69,48.7,56.5,overweight,False
+IND_0189,45.7,F,81.7,166.1,29.6,34,9,septic shock,70.7,1.29,70.5,2.5,0.4,bloodstream,klebsiella,0.6,24.25,False,1,True,False,AIIMS_Delhi,surgical,1.94,57.9,67.4,overweight,False
+IND_0190,47.4,M,69.0,159.7,27.1,28,9,septic shock,134.8,0.66,134.5,2.6,1.2,bloodstream,klebsiella,13.32,13.31,True,0,True,False,JIPMER_Puducherry,medical,1.75,56.6,61.6,overweight,True
+IND_0191,40.3,M,41.5,147.6,19.0,33,9,septic shock,100.2,0.57,100.8,3.9,0.7,bloodstream,pseudomonas,0.64,0.5,True,0,False,True,CMC_Vellore,medical,1.3,45.7,44.0,normal,False
+IND_0192,40.3,F,59.9,147.8,27.4,13,13,sepsis,198.0,0.36,180.0,3.4,0.8,bloodstream,klebsiella,14.56,19.85,False,0,True,True,PGIMER_Chandigarh,medical,1.57,41.3,48.7,overweight,True
+IND_0193,65.4,M,52.1,150.8,22.9,13,11,septic shock,96.2,0.56,96.4,3.2,1.4,pneumonia,e_coli,1.97,11.51,False,0,False,True,SGPGI_Lucknow,medical,1.48,48.6,50.0,normal,False
+IND_0194,56.3,M,77.4,164.2,28.7,10,9,sepsis,93.0,0.97,92.8,3.3,0.4,pneumonia,klebsiella,2.66,6.83,False,0,False,True,SGPGI_Lucknow,medical,1.88,60.7,67.4,overweight,False
+IND_0195,63.5,M,57.1,157.4,23.0,27,7,septic shock,179.5,0.34,178.4,3.6,0.3,bloodstream,acinetobacter,6.02,21.83,True,0,True,False,JIPMER_Puducherry,medical,1.58,54.5,55.5,normal,True
+IND_0196,66.6,M,63.9,165.3,23.4,26,9,sepsis,140.4,0.46,141.6,2.9,0.5,pneumonia,pseudomonas,1.08,33.62,False,0,True,False,SGPGI_Lucknow,mixed,1.71,61.7,62.6,normal,True
+IND_0197,35.7,M,62.6,159.5,24.6,11,10,septic shock,120.6,0.75,120.9,4.1,1.2,iai,pseudomonas,1.0,10.35,False,0,True,False,AIIMS_Delhi,surgical,1.67,56.4,58.9,normal,False
+IND_0198,29.4,F,73.5,157.5,29.6,29,15,septic shock,103.2,0.93,103.2,3.3,2.0,pneumonia,pseudomonas,1.27,13.55,False,0,False,True,AIIMS_Delhi,medical,1.79,50.1,59.5,overweight,False
+IND_0199,72.7,M,70.9,149.4,31.8,21,9,sepsis,53.6,1.24,53.4,2.4,2.1,pneumonia,acinetobacter,4.99,25.34,True,2,True,False,CMC_Vellore,medical,1.72,47.3,56.7,obese_class1,False
+IND_0200,56.0,F,56.2,173.7,18.6,30,6,sepsis,76.3,0.73,76.3,2.7,1.2,pneumonia,klebsiella,1.28,6.26,True,1,True,False,AIIMS_Delhi,medical,1.65,64.8,61.4,normal,False
+IND_0201,70.0,M,85.0,155.8,35.0,19,8,septic shock,151.4,0.55,150.3,2.3,0.5,uti,pseudomonas,12.62,7.83,True,0,True,True,PGIMER_Chandigarh,surgical,1.92,53.1,65.9,obese_class1,True
+IND_0202,42.9,M,54.2,154.0,22.9,26,8,severe sepsis,197.7,0.37,180.0,2.9,0.3,pneumonia,klebsiella,3.15,8.22,False,0,True,True,SGPGI_Lucknow,mixed,1.52,51.4,52.5,normal,True
+IND_0203,56.9,F,59.9,169.8,20.8,18,10,severe sepsis,139.2,0.42,139.9,2.4,3.1,other,pseudomonas,0.96,15.04,True,0,True,True,CMC_Vellore,medical,1.68,61.3,60.7,normal,True
+IND_0204,42.8,M,57.7,155.9,23.7,24,7,septic shock,219.1,0.36,180.0,3.3,1.0,bloodstream,pseudomonas,2.3,19.77,False,0,True,True,AIIMS_Delhi,medical,1.58,53.2,55.0,normal,True
+IND_0205,33.3,F,57.4,165.2,21.0,21,6,sepsis,102.4,0.71,101.8,2.2,5.0,iai,pseudomonas,3.71,6.78,False,0,True,False,SGPGI_Lucknow,mixed,1.62,57.1,57.2,normal,False
+IND_0206,38.8,F,46.4,170.4,16.0,20,2,severe sepsis,50.1,1.11,49.9,3.3,3.4,pneumonia,pseudomonas,1.7,4.2,True,2,False,False,SGPGI_Lucknow,medical,1.48,61.8,55.6,underweight,False
+IND_0207,18.0,M,68.3,151.7,29.7,17,15,severe sepsis,174.5,0.66,175.3,4.2,0.9,pneumonia,klebsiella,5.24,5.0,True,0,False,True,SGPGI_Lucknow,medical,1.7,49.4,57.0,overweight,True
+IND_0208,49.6,M,60.9,166.3,22.0,14,6,septic shock,118.7,0.64,119.5,3.4,1.9,uti,klebsiella,14.19,37.85,False,0,False,True,CMC_Vellore,surgical,1.68,62.6,61.9,normal,False
+IND_0209,40.0,M,66.8,140.0,34.1,30,11,sepsis,112.5,0.82,113.1,2.9,1.5,bloodstream,pseudomonas,7.77,3.01,False,0,True,False,JIPMER_Puducherry,mixed,1.61,38.8,50.0,obese_class1,False
+IND_0210,49.9,M,60.8,169.6,21.1,30,11,septic shock,64.7,1.18,64.5,3.1,0.6,pneumonia,klebsiella,4.54,135.22,False,1,True,True,PGIMER_Chandigarh,mixed,1.69,65.6,63.7,normal,False
+IND_0211,75.3,F,62.4,167.5,22.2,18,4,sepsis,76.6,0.62,76.9,2.1,3.0,pneumonia,klebsiella,1.54,45.33,False,1,False,True,SGPGI_Lucknow,mixed,1.7,59.2,60.5,normal,False
+IND_0212,61.8,M,93.4,165.4,34.1,11,9,severe sepsis,106.5,0.95,106.8,3.1,1.3,pneumonia,klebsiella,5.91,61.71,False,0,False,True,JIPMER_Puducherry,surgical,2.07,61.8,74.4,obese_class1,False
+IND_0213,44.1,M,52.6,155.1,21.9,28,11,septic shock,61.9,1.13,62.0,2.7,1.3,bloodstream,acinetobacter,12.16,23.75,True,1,True,True,JIPMER_Puducherry,medical,1.51,52.4,52.5,normal,False
+IND_0214,71.8,M,55.9,153.8,23.6,13,15,septic shock,89.3,0.59,89.7,3.1,1.5,bloodstream,pseudomonas,10.81,7.45,False,1,False,True,CMC_Vellore,medical,1.55,51.3,53.1,normal,False
+IND_0215,49.8,M,37.8,158.7,15.0,34,13,septic shock,81.8,0.58,81.6,3.0,2.6,bloodstream,e_coli,3.82,24.08,False,1,False,True,PGIMER_Chandigarh,medical,1.29,55.7,48.5,underweight,False
+IND_0216,74.9,M,53.9,186.1,15.6,24,2,septic shock,108.5,0.45,108.3,3.3,1.4,uti,acinetobacter,20.49,13.52,True,0,True,True,CMC_Vellore,mixed,1.67,80.5,69.9,underweight,False
+IND_0217,38.5,M,94.0,148.4,42.7,28,6,sepsis,85.4,1.55,85.5,2.8,1.2,pneumonia,klebsiella,9.17,14.78,True,1,True,True,JIPMER_Puducherry,surgical,1.97,46.4,65.4,obese_class3,False
+IND_0218,61.7,F,79.4,155.3,32.9,19,7,sepsis,68.4,1.07,68.6,1.8,0.5,bloodstream,acinetobacter,9.94,15.09,False,1,True,False,SGPGI_Lucknow,surgical,1.85,48.1,60.6,obese_class1,False
+IND_0219,72.2,F,69.6,169.8,24.1,26,18,severe sepsis,81.1,0.69,80.7,2.0,1.1,iai,klebsiella,0.61,21.42,True,1,False,True,JIPMER_Puducherry,medical,1.81,61.3,64.6,normal,False
+IND_0220,47.9,M,56.0,158.0,22.4,13,5,septic shock,15.0,4.78,15.0,3.0,2.2,bloodstream,acinetobacter,9.42,5.97,False,4,False,True,PGIMER_Chandigarh,medical,1.57,55.1,55.5,normal,False
+IND_0221,44.9,M,68.2,160.2,26.6,10,18,severe sepsis,108.7,0.83,108.5,1.8,1.1,bloodstream,klebsiella,6.02,11.03,True,0,True,True,JIPMER_Puducherry,surgical,1.74,57.1,61.5,overweight,False
+IND_0222,59.5,M,83.1,175.4,27.0,36,11,sepsis,148.1,0.63,147.5,2.7,0.3,uti,klebsiella,5.91,3.26,False,0,True,False,JIPMER_Puducherry,surgical,2.01,70.8,75.7,overweight,True
+IND_0223,36.6,M,50.3,157.8,20.2,21,9,sepsis,77.7,0.93,77.7,3.3,1.9,bloodstream,klebsiella,14.42,10.93,True,1,True,False,AIIMS_Delhi,surgical,1.48,54.9,53.1,normal,False
+IND_0224,22.8,M,70.2,165.3,25.7,15,7,septic shock,22.7,5.03,22.7,2.2,1.0,pneumonia,klebsiella,91.86,6.09,False,3b,False,False,PGIMER_Chandigarh,medical,1.8,61.7,65.1,overweight,False
+IND_0225,62.0,M,73.5,154.7,30.7,25,16,septic shock,185.3,0.43,180.0,1.9,0.9,iai,other,7.58,161.08,False,0,True,True,PGIMER_Chandigarh,medical,1.78,52.1,60.7,obese_class1,True
+IND_0226,68.4,M,80.0,163.4,30.0,17,8,septic shock,76.4,1.04,76.5,3.1,0.6,other,other,2.74,32.51,True,1,False,True,JIPMER_Puducherry,mixed,1.91,60.0,68.0,overweight,False
+IND_0227,69.7,F,52.9,154.8,22.1,8,11,sepsis,49.3,0.89,49.3,2.2,1.4,bloodstream,klebsiella,1.11,2.78,False,2,True,False,AIIMS_Delhi,mixed,1.51,47.7,49.8,normal,False
+IND_0228,53.5,M,67.7,181.3,20.6,16,8,sepsis,179.4,0.45,180.0,2.6,1.2,iai,acinetobacter,48.26,15.6,False,0,False,True,JIPMER_Puducherry,surgical,1.85,76.2,72.8,normal,True
+IND_0229,46.4,F,82.6,158.8,32.8,25,5,sepsis,59.3,1.54,59.3,2.5,0.9,iai,e_coli,2.13,18.77,False,2,True,False,CMC_Vellore,surgical,1.91,51.3,63.8,obese_class1,False
+IND_0230,55.5,M,48.2,143.3,23.5,36,2,septic shock,112.4,0.5,113.1,2.9,2.7,pneumonia,acinetobacter,1.91,14.18,True,0,True,False,JIPMER_Puducherry,medical,1.39,41.8,44.4,normal,False
+IND_0231,37.7,F,62.0,157.7,24.9,22,10,severe sepsis,29.6,2.53,29.6,2.6,0.9,iai,e_coli,0.52,17.62,False,3b,True,True,PGIMER_Chandigarh,mixed,1.65,50.3,55.0,normal,False
+IND_0232,24.1,M,48.8,161.8,18.6,17,7,septic shock,132.3,0.59,133.1,2.9,0.7,pneumonia,pseudomonas,13.18,2.74,True,0,True,False,JIPMER_Puducherry,medical,1.48,58.5,54.6,normal,True
+IND_0233,35.2,M,58.4,144.8,27.9,10,4,sepsis,75.6,1.12,75.9,1.5,0.6,pneumonia,klebsiella,1.54,0.57,False,1,True,False,AIIMS_Delhi,medical,1.53,43.1,49.2,overweight,False
+IND_0234,75.0,F,68.0,162.1,25.9,22,2,severe sepsis,65.9,0.79,66.1,2.2,1.2,pneumonia,other,4.44,8.29,False,1,False,True,PGIMER_Chandigarh,surgical,1.75,54.3,59.8,overweight,False
+IND_0235,42.8,F,62.0,170.2,21.4,27,9,sepsis,122.5,0.58,122.7,2.7,1.2,pneumonia,e_coli,3.5,3.59,False,0,True,True,SGPGI_Lucknow,medical,1.71,61.6,61.8,normal,False
+IND_0236,18.0,M,53.9,157.1,21.8,14,4,sepsis,116.4,0.78,117.1,3.0,2.2,pneumonia,klebsiella,11.38,2.93,False,0,True,False,JIPMER_Puducherry,medical,1.53,54.3,54.1,normal,False
+IND_0237,35.0,M,65.6,180.3,20.2,7,11,septic shock,127.1,0.75,127.6,3.5,0.7,pneumonia,pseudomonas,1.36,21.14,False,0,True,True,CMC_Vellore,surgical,1.81,75.3,71.4,normal,False
+IND_0238,55.8,M,79.6,178.6,25.0,26,15,severe sepsis,103.1,0.9,103.4,3.4,1.9,pneumonia,other,10.07,3.84,False,0,False,False,JIPMER_Puducherry,surgical,1.99,73.7,76.1,normal,False
+IND_0239,52.0,M,58.4,166.5,21.1,22,17,septic shock,108.5,0.66,108.1,3.5,2.0,pneumonia,e_coli,0.68,2.31,False,0,True,True,PGIMER_Chandigarh,mixed,1.64,62.8,61.0,normal,False
+IND_0240,53.0,M,50.1,160.1,19.5,32,16,septic shock,67.2,0.9,67.3,2.2,0.8,pneumonia,e_coli,1.65,13.99,False,1,True,False,PGIMER_Chandigarh,medical,1.49,57.0,54.2,normal,False
+IND_0241,30.1,M,64.3,152.2,27.8,28,8,sepsis,89.7,1.09,90.0,1.9,0.7,bloodstream,klebsiella,6.35,21.47,True,1,True,True,JIPMER_Puducherry,mixed,1.65,49.8,55.6,overweight,False
+IND_0242,51.5,M,41.8,159.0,16.5,12,14,septic shock,68.6,0.75,68.5,3.8,2.1,bloodstream,klebsiella,0.25,40.25,True,1,False,True,CMC_Vellore,surgical,1.36,56.0,50.3,underweight,False
+IND_0243,67.0,M,56.5,156.2,23.2,10,8,severe sepsis,139.1,0.41,139.7,3.2,3.7,bloodstream,klebsiella,0.92,0.82,False,0,True,False,CMC_Vellore,surgical,1.57,53.4,54.6,normal,True
+IND_0244,41.7,M,68.5,161.8,26.2,26,11,severe sepsis,141.5,0.66,141.7,1.5,1.0,iai,klebsiella,24.88,11.45,False,0,True,False,CMC_Vellore,mixed,1.75,58.5,62.5,overweight,True
+IND_0245,68.6,M,47.8,161.6,18.3,38,6,septic shock,148.1,0.32,148.1,3.1,0.8,bloodstream,acinetobacter,5.79,23.67,True,0,False,False,SGPGI_Lucknow,medical,1.46,58.3,54.1,underweight,True
+IND_0246,34.7,M,57.0,173.9,18.8,26,11,sepsis,70.0,1.19,70.1,1.5,0.9,pneumonia,e_coli,1.39,37.96,True,1,False,True,CMC_Vellore,surgical,1.66,69.5,64.5,normal,False
+IND_0247,58.9,M,76.1,151.0,33.4,20,16,sepsis,121.8,0.7,122.5,2.4,0.6,bloodstream,klebsiella,8.6,1.63,False,0,True,True,AIIMS_Delhi,mixed,1.79,48.7,59.7,obese_class1,False
+IND_0248,48.2,M,58.2,155.7,24.0,23,12,sepsis,157.6,0.47,157.9,2.1,1.8,pneumonia,e_coli,1.54,18.71,True,0,True,False,CMC_Vellore,medical,1.59,53.0,55.1,normal,True
+IND_0249,62.3,F,80.9,170.0,28.0,28,4,septic shock,61.7,1.2,61.8,2.2,0.8,uti,pseudomonas,2.94,10.4,True,1,True,False,PGIMER_Chandigarh,medical,1.95,61.4,69.2,overweight,False
+IND_0250,46.7,M,66.5,161.3,25.6,27,8,severe sepsis,130.7,0.66,130.6,2.5,2.0,iai,other,4.73,5.97,True,0,True,False,PGIMER_Chandigarh,surgical,1.73,58.1,61.5,overweight,True
+IND_0251,74.3,M,43.2,160.5,16.8,21,7,septic shock,79.2,0.5,78.8,3.0,1.6,pneumonia,acinetobacter,4.98,4.95,False,1,True,True,SGPGI_Lucknow,mixed,1.39,57.3,51.7,underweight,False
+IND_0252,34.8,F,51.2,171.2,17.5,29,4,severe sepsis,64.0,0.99,64.2,2.6,1.2,pneumonia,acinetobacter,4.55,64.45,False,1,True,True,SGPGI_Lucknow,medical,1.56,62.5,58.0,underweight,False
+IND_0253,48.9,M,69.8,181.6,21.2,21,4,septic shock,60.7,1.45,60.9,3.5,0.4,pneumonia,e_coli,8.45,4.41,False,1,True,True,SGPGI_Lucknow,mixed,1.88,76.4,73.8,normal,False
+IND_0254,38.1,M,72.5,165.8,26.4,18,17,severe sepsis,157.7,0.65,157.9,3.7,1.7,bloodstream,acinetobacter,13.64,20.12,False,0,True,False,CMC_Vellore,surgical,1.83,62.1,66.3,overweight,True
+IND_0255,58.7,M,65.2,164.7,24.0,21,13,septic shock,65.6,1.12,65.7,2.4,0.5,other,pseudomonas,20.83,10.33,False,1,False,True,AIIMS_Delhi,medical,1.73,61.1,62.7,normal,False
+IND_0256,32.6,F,73.4,150.7,32.3,41,2,septic shock,138.8,0.67,138.9,2.7,0.7,uti,pseudomonas,2.26,10.22,True,0,True,False,AIIMS_Delhi,mixed,1.75,44.0,55.8,obese_class1,True
+IND_0257,47.9,M,63.8,167.3,22.8,15,5,severe sepsis,128.0,0.64,127.5,2.5,2.2,bloodstream,e_coli,0.42,37.4,False,0,True,False,AIIMS_Delhi,surgical,1.72,63.5,63.6,normal,False
+IND_0258,42.7,M,40.7,167.9,14.4,20,13,severe sepsis,137.7,0.4,137.5,3.3,1.8,bloodstream,klebsiella,5.66,3.73,True,0,True,False,SGPGI_Lucknow,surgical,1.38,64.0,54.7,underweight,True
+IND_0259,31.8,F,69.1,173.4,23.0,13,7,severe sepsis,92.8,0.95,92.9,3.2,1.2,pneumonia,klebsiella,3.43,8.97,True,0,True,False,AIIMS_Delhi,medical,1.82,64.5,66.3,normal,False
+IND_0260,59.4,F,63.1,162.5,23.9,26,5,severe sepsis,57.5,1.04,57.7,1.5,1.3,other,pseudomonas,28.68,14.24,False,2,False,True,SGPGI_Lucknow,medical,1.69,54.6,58.0,normal,False
+IND_0261,34.9,F,69.8,167.5,24.9,15,7,severe sepsis,133.2,0.65,133.2,1.8,0.7,other,pseudomonas,7.61,35.7,False,0,True,True,PGIMER_Chandigarh,medical,1.8,59.2,63.4,normal,True
+IND_0262,64.9,F,61.0,163.6,22.8,18,5,septic shock,107.8,0.5,108.2,3.3,2.6,other,acinetobacter,4.29,17.21,False,0,True,False,CMC_Vellore,surgical,1.66,55.6,57.8,normal,False
+IND_0263,49.5,F,71.6,163.6,26.8,25,7,septic shock,62.1,1.23,62.2,3.0,0.9,uti,pseudomonas,7.94,6.12,False,1,False,False,SGPGI_Lucknow,medical,1.8,55.6,62.0,overweight,False
+IND_0264,84.2,F,63.7,154.9,26.5,24,10,septic shock,62.3,0.67,62.6,3.1,1.7,pneumonia,klebsiella,3.54,5.77,False,1,True,True,PGIMER_Chandigarh,surgical,1.66,47.8,54.2,overweight,False
+IND_0265,37.8,M,56.0,158.9,22.2,23,13,septic shock,69.9,1.14,69.7,2.7,1.8,pneumonia,klebsiella,3.61,11.35,False,1,True,False,JIPMER_Puducherry,surgical,1.57,55.9,55.9,normal,False
+IND_0266,36.4,M,60.5,165.2,22.2,25,12,sepsis,150.8,0.58,150.1,3.4,1.1,pneumonia,other,3.52,7.93,False,0,True,False,SGPGI_Lucknow,mixed,1.67,61.6,61.2,normal,True
+IND_0267,47.7,M,67.0,186.6,19.2,23,4,severe sepsis,127.7,0.67,128.2,3.3,0.7,pneumonia,other,3.73,6.34,False,0,True,True,JIPMER_Puducherry,medical,1.86,81.0,75.4,normal,False
+IND_0268,59.7,F,69.3,153.2,29.5,23,14,severe sepsis,66.8,0.98,67.0,3.4,0.8,uti,acinetobacter,42.17,1.2,False,1,False,False,JIPMER_Puducherry,surgical,1.72,46.2,55.4,overweight,False
+IND_0269,45.6,M,87.6,170.5,30.1,12,8,severe sepsis,157.6,0.73,157.3,3.1,0.9,pneumonia,klebsiella,25.05,66.84,False,0,True,False,CMC_Vellore,surgical,2.04,66.4,74.9,obese_class1,True
+IND_0270,59.2,M,73.3,164.1,27.2,30,6,septic shock,142.1,0.58,141.8,3.3,0.9,iai,other,6.63,1.46,True,0,True,False,JIPMER_Puducherry,medical,1.83,60.6,65.7,overweight,True
+IND_0271,58.4,M,50.8,165.0,18.7,29,11,sepsis,135.3,0.43,133.9,2.6,0.7,bloodstream,klebsiella,3.67,2.86,False,0,True,True,CMC_Vellore,surgical,1.53,61.4,57.2,normal,True
+IND_0272,49.6,M,60.5,159.7,23.7,14,3,sepsis,68.2,1.11,68.4,2.6,1.6,pneumonia,pseudomonas,12.07,4.68,False,1,True,True,AIIMS_Delhi,medical,1.64,56.6,58.2,normal,False
+IND_0273,18.0,M,64.4,181.1,19.6,23,13,septic shock,60.5,1.8,60.6,2.9,0.9,uti,pseudomonas,2.72,2.12,False,1,False,True,PGIMER_Chandigarh,medical,1.8,76.0,71.4,normal,False
+IND_0274,54.6,M,64.2,177.0,20.5,32,7,septic shock,172.6,0.44,173.1,1.7,1.1,uti,klebsiella,3.12,1.16,False,0,True,True,AIIMS_Delhi,medical,1.78,72.3,69.1,normal,True
+IND_0275,53.2,M,58.2,163.3,21.8,20,12,severe sepsis,49.8,1.41,49.8,3.0,3.0,bloodstream,e_coli,128.0,3.3,True,2,True,True,PGIMER_Chandigarh,medical,1.62,59.9,59.2,normal,False
+IND_0276,47.2,F,42.8,157.0,17.4,22,16,severe sepsis,73.2,0.64,73.3,3.7,1.3,uti,klebsiella,5.62,13.56,False,1,True,True,AIIMS_Delhi,mixed,1.37,49.7,46.9,underweight,False
+IND_0277,31.3,F,46.6,155.9,19.2,27,6,severe sepsis,46.5,1.29,46.4,3.8,3.0,pneumonia,acinetobacter,15.38,36.04,False,2,False,True,SGPGI_Lucknow,medical,1.42,48.7,47.9,normal,False
+IND_0278,37.8,M,80.0,162.5,30.3,27,10,severe sepsis,187.9,0.6,180.0,2.9,2.3,uti,pseudomonas,10.45,50.06,False,0,True,False,CMC_Vellore,surgical,1.9,59.1,67.5,obese_class1,True
+IND_0279,49.0,F,69.8,172.1,23.6,16,8,septic shock,89.1,0.84,89.3,3.0,2.3,other,klebsiella,2.02,3.27,False,1,True,False,PGIMER_Chandigarh,medical,1.83,63.3,65.9,normal,False
+IND_0280,44.1,F,58.2,171.3,19.8,26,10,sepsis,141.8,0.46,143.2,3.6,0.5,pneumonia,pseudomonas,1.81,1.77,True,0,True,False,AIIMS_Delhi,medical,1.66,62.6,60.8,normal,True
+IND_0281,50.2,M,73.5,160.3,28.6,26,12,severe sepsis,177.7,0.52,176.3,2.7,2.6,bloodstream,pseudomonas,59.9,10.27,False,0,True,False,AIIMS_Delhi,mixed,1.81,57.2,63.7,overweight,True
+IND_0282,46.4,F,65.1,156.0,26.8,18,7,severe sepsis,96.5,0.75,95.9,2.1,2.8,bloodstream,klebsiella,83.19,7.17,True,0,False,False,PGIMER_Chandigarh,mixed,1.68,48.8,55.3,overweight,False
+IND_0283,52.7,M,63.9,157.4,25.8,16,5,septic shock,172.8,0.45,172.2,2.0,0.6,uti,klebsiella,7.79,4.04,False,0,True,True,JIPMER_Puducherry,mixed,1.67,54.5,58.3,overweight,True
+IND_0284,37.6,M,55.1,149.5,24.7,32,7,severe sepsis,133.0,0.59,132.8,3.4,2.0,pneumonia,pseudomonas,4.71,3.39,True,0,False,True,JIPMER_Puducherry,medical,1.51,47.4,50.5,normal,True
+IND_0285,66.3,M,66.2,151.2,29.0,22,4,septic shock,67.4,1.01,67.1,3.2,1.8,pneumonia,pseudomonas,7.85,1.27,False,1,True,True,SGPGI_Lucknow,medical,1.67,48.9,55.8,overweight,False
+IND_0286,33.6,M,75.4,155.9,31.0,25,8,severe sepsis,61.5,1.81,61.6,3.1,2.9,bloodstream,pseudomonas,3.6,13.56,False,1,False,True,CMC_Vellore,mixed,1.81,53.2,62.1,obese_class1,False
+IND_0287,18.0,M,76.2,163.1,28.6,15,3,septic shock,50.1,2.58,50.0,3.9,0.3,other,klebsiella,4.39,6.64,True,2,False,False,AIIMS_Delhi,medical,1.86,59.7,66.3,overweight,False
+IND_0288,70.3,M,74.7,161.2,28.7,25,19,severe sepsis,102.5,0.71,101.9,2.9,1.7,uti,e_coli,2.88,2.45,False,0,True,True,SGPGI_Lucknow,medical,1.83,58.0,64.7,overweight,False
+IND_0289,38.1,F,68.1,157.3,27.5,13,2,severe sepsis,206.9,0.4,180.0,1.7,1.9,bloodstream,klebsiella,2.93,2.35,False,0,True,False,AIIMS_Delhi,surgical,1.72,49.9,57.2,overweight,True
+IND_0290,58.1,F,50.7,164.7,18.7,19,5,severe sepsis,95.1,0.52,94.3,2.7,1.7,bloodstream,klebsiella,0.87,52.73,False,0,True,False,JIPMER_Puducherry,surgical,1.52,56.6,54.2,normal,False
+IND_0291,45.0,M,55.4,143.5,26.9,18,13,sepsis,71.1,1.03,71.0,2.4,0.8,iai,pseudomonas,5.1,30.79,False,1,True,True,AIIMS_Delhi,mixed,1.49,41.9,47.3,overweight,False
+IND_0292,57.6,F,69.1,151.2,30.2,18,13,septic shock,116.3,0.58,115.9,2.2,0.5,iai,acinetobacter,4.3,21.39,False,0,False,False,PGIMER_Chandigarh,medical,1.7,44.4,54.3,obese_class1,False
+IND_0293,32.3,M,79.8,162.0,30.4,16,11,septic shock,66.6,1.79,66.7,3.0,1.2,pneumonia,e_coli,2.66,18.29,False,1,False,True,SGPGI_Lucknow,medical,1.89,58.7,67.1,obese_class1,False
+IND_0294,61.1,M,63.2,155.7,26.1,8,5,severe sepsis,87.5,0.79,87.7,3.1,2.1,iai,acinetobacter,29.56,29.69,False,1,False,False,SGPGI_Lucknow,medical,1.65,53.0,57.1,overweight,False
+IND_0295,53.0,M,65.2,151.0,28.6,21,18,septic shock,164.7,0.48,164.1,2.3,1.0,bloodstream,e_coli,4.67,11.73,False,0,True,False,JIPMER_Puducherry,surgical,1.65,48.7,55.3,overweight,True
+IND_0296,48.4,F,62.0,167.8,22.0,27,11,septic shock,109.7,0.61,109.9,2.0,0.9,pneumonia,e_coli,13.64,13.31,False,0,False,False,AIIMS_Delhi,mixed,1.7,59.4,60.4,normal,False
+IND_0297,73.6,F,35.0,165.3,12.8,35,14,severe sepsis,130.1,0.21,130.6,3.0,0.7,iai,acinetobacter,4.7,35.73,True,0,False,False,CMC_Vellore,medical,1.27,57.2,48.3,underweight,True
+IND_0298,73.6,M,43.3,149.3,19.4,24,11,septic shock,110.3,0.36,110.9,2.7,0.4,iai,pseudomonas,2.74,1.45,True,0,True,True,JIPMER_Puducherry,medical,1.34,47.2,45.6,normal,False
+IND_0299,45.8,F,75.2,155.3,31.2,15,2,sepsis,56.6,1.48,56.5,2.9,1.1,bloodstream,e_coli,6.07,4.4,False,2,True,True,JIPMER_Puducherry,surgical,1.8,48.1,58.9,obese_class1,False
+IND_0300,65.9,M,68.7,156.9,27.9,20,4,sepsis,205.2,0.34,180.0,2.9,1.4,bloodstream,acinetobacter,2.05,6.44,False,0,False,True,PGIMER_Chandigarh,medical,1.73,54.1,59.9,overweight,True
