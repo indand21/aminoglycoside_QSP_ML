@@ -16,7 +16,7 @@
 
 8. Nicolau DP, Freeman CD, Belliveau PP, Nightingale CH, Ross JW, Quintiliani R. Experience with a once-daily aminoglycoside program administered to 2,184 adult patients. *Antimicrob Agents Chemother*. 1995;39(3):650-655. doi:10.1128/AAC.39.3.650
 
-9. Patel N, Desai M, Shah S, Patel P, Gandhi D. Pharmacokinetic and pharmacodynamic evaluation of once daily gentamicin in Indian patients with severe infections. *Indian J Med Res*. 2010;132:42-46.
+9. [REMOVED - Citation could not be verified]
 
 10. Divatia JV, Amin PR, Ramakrishnan N, et al. Intensive care in India: The Indian intensive care case mix and practice patterns study. *Indian J Crit Care Med*. 2016;20(4):216-225. doi:10.4103/0972-5229.180042
 
@@ -26,15 +26,15 @@
 
 13. Buijk SE, Mouton JW, Gyssens IC, Verbrugh HA, Bruining HA. Experience with a once-daily dosing program of aminoglycosides in critically ill patients. *Intensive Care Med*. 2002;28(7):936-942. doi:10.1007/s00134-002-1313-7
 
-14. Dou L, Liu X, Chen Y, Xu C, Zhang W. Machine learning methods for small-sample medical data mining: A review. *Artif Intell Med*. 2020;108:101928. doi:10.1016/j.artmed.2020.101928
+14. [REMOVED - Citation could not be verified]
 
-15. Tang BJ, Brackett A, Bharadwaj U, et al. Model-informed precision dosing of vancomycin. *Antimicrob Agents Chemother*. 2018;62(9):e01281-18. doi:10.1128/AAC.01281-18
+15. Tang Z, Guan J, Li J, Yu Y, Qian M, Cao J, et al. Determination of vancomycin exposure target and individualized dosing recommendations for neonates: model-informed precision dosing. *Int J Antimicrob Agents*. 2021;57(4):106300. doi:10.1016/j.ijantimicag.2021.106300
 
 16. Neely MN, Kato L, Youn G, et al. Prospective trial on the use of trough concentration versus area under the curve to determine therapeutic vancomycin dosing. *Antimicrob Agents Chemother*. 2018;62(2):e02042-17. doi:10.1128/AAC.02042-17
 
 17. Shwartz-Ziv R, Armon A. Tabular data: Deep learning is not all you need. *Information Fusion*. 2022;81:84-90. doi:10.1016/j.inffus.2021.11.011
 
-18. Grinsztajn L, Oyallon E, Varoquaux G. Why do tree-based models still outperform deep learning on typical tabular data? In: *Advances in Neural Information Processing Systems* (NeurIPS). 2022;35:507-520.
+18. Grinsztajn L, Oyallon E, Varoquaux G. Why do tree-based models still outperform deep learning on tabular data? In: *Advances in Neural Information Processing Systems* (NeurIPS). 2022;35:507-520.
 
 19. Chen T, Guestrin C. XGBoost: A scalable tree boosting system. In: *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*. 2016:785-794. doi:10.1145/2939672.2939785
 
