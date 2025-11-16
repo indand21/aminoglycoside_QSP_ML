@@ -16,7 +16,7 @@
 
 8. Nicolau DP, Freeman CD, Belliveau PP, Nightingale CH, Ross JW, Quintiliani R. Experience with a once-daily aminoglycoside program administered to 2,184 adult patients. *Antimicrob Agents Chemother*. 1995;39(3):650-655. doi:10.1128/AAC.39.3.650
 
-9. [REMOVED - Citation could not be verified]
+9. Duffull SB, Kirkpatrick CM, Begg EJ. Comparison of two Bayesian approaches to dose-individualization for once-daily aminoglycoside regimens. *Br J Clin Pharmacol*. 1997;43(2):125-135. doi:10.1046/j.1365-2125.1997.05341.x
 
 10. Divatia JV, Amin PR, Ramakrishnan N, et al. Intensive care in India: The Indian intensive care case mix and practice patterns study. *Indian J Crit Care Med*. 2016;20(4):216-225. doi:10.4103/0972-5229.180042
 
@@ -26,7 +26,7 @@
 
 13. Buijk SE, Mouton JW, Gyssens IC, Verbrugh HA, Bruining HA. Experience with a once-daily dosing program of aminoglycosides in critically ill patients. *Intensive Care Med*. 2002;28(7):936-942. doi:10.1007/s00134-002-1313-7
 
-14. [REMOVED - Citation could not be verified]
+14. Bartal C, Danon A, Schlaeffer F, Reisenberg K, Alkan M, Smoliakov R, Sidi A, Almog Y. Pharmacokinetic dosing of aminoglycosides: a controlled trial. *Am J Med*. 2003;114(3):194-198. doi:10.1016/S0002-9343(02)01476-6
 
 15. Tang Z, Guan J, Li J, Yu Y, Qian M, Cao J, et al. Determination of vancomycin exposure target and individualized dosing recommendations for neonates: model-informed precision dosing. *Int J Antimicrob Agents*. 2021;57(4):106300. doi:10.1016/j.ijantimicag.2021.106300
 
@@ -47,5 +47,3 @@
 23. Wolpert DH. Stacked generalization. *Neural Networks*. 1992;5(2):241-259. doi:10.1016/S0893-6080(05)80023-1
 
 24. Salvatier J, Wiecki TV, Fonnesbeck C. Probabilistic programming in Python using PyMC3. *PeerJ Computer Science*. 2016;2:e55. doi:10.7717/peerj-cs.55
-
-25. Lundberg SM, Lee SI. A unified approach to interpreting model predictions. In: *Advances in Neural Information Processing Systems* (NeurIPS). 2017;30:4765-4774.
