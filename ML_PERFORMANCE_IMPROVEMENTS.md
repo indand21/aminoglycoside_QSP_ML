@@ -418,6 +418,70 @@ With enhanced performance:
 
 ---
 
+## Neural Network Experimental Results
+
+**Date:** 2025-11-16
+**Experiment:** Comparison of deep neural networks vs tree-based ensemble methods
+
+### Architecture Tested
+
+**Deep Neural Network:**
+```
+Input Layer → Dense(256, relu) → BatchNorm → Dropout(0.3)
+           → Dense(128, relu) → BatchNorm → Dropout(0.3)
+           → Dense(64, relu)  → BatchNorm → Dropout(0.2)
+           → Dense(32, relu)  → Dropout(0.2)
+           → Dense(1, sigmoid)
+
+Training: Adam optimizer, 100 epochs, early stopping
+Framework: TensorFlow/Keras 2.20.0
+```
+
+### Performance Comparison
+
+| Model | Approach | ROC-AUC (Test) | Performance |
+|-------|----------|----------------|-------------|
+| **Nephrotoxicity** | XGBoost (Optimized) | 0.737 | Excellent |
+| | **Ensemble (Stacking)** | **0.739** | **✅ BEST** |
+| | Deep Neural Network | 0.691 | ❌ 6.5% worse |
+| **Clinical Cure** | XGBoost (Optimized) | 0.727 | Excellent |
+| | **Ensemble (Stacking)** | **0.742** | **✅ BEST** |
+| | Deep Neural Network | N/A | Not trained |
+
+### Key Findings
+
+1. **Tree-based ensemble outperforms neural networks** by 6.5% (0.739 vs 0.691 AUC)
+2. **Dataset characteristics favor gradient boosting:**
+   - Sample size: 1,500 patients (small for deep learning)
+   - Data type: Tabular with mixed features
+   - Feature count: 25-36 (moderate dimensionality)
+
+3. **Literature Support:**
+   - Shwartz-Ziv & Armon (2022): XGBoost outperforms NNs on 11/11 medical tabular datasets
+   - Grinsztajn et al. (2022): Gradient boosting superior on 30/45 tabular datasets
+   - Neural networks typically require >10,000 samples to excel
+
+### Recommendation
+
+**✅ Continue using tree-based ensemble methods (XGBoost + stacking)**
+
+**Rationale:**
+- Superior performance (6.5% better AUC)
+- Better interpretability (feature importance)
+- Faster training with hyperparameter optimization
+- Lower computational requirements for deployment
+- Proven approach for tabular medical data
+
+**When to reconsider neural networks:**
+- Dataset grows to >10,000 patients
+- Multi-modal data becomes available (images, time-series)
+- Transfer learning from pre-trained medical models
+- Longitudinal/temporal dynamics require RNNs/LSTMs
+
+**Detailed Analysis:** See `NEURAL_NETWORK_COMPARISON.md`
+
+---
+
 ## Conclusions
 
 Through comprehensive computational enhancements including:
@@ -447,6 +511,8 @@ The enhanced aminoglycoside QSP-ML framework is now **ready for external validat
 
 ---
 
+**Document Version:** 1.1
+**Last Updated:** 2025-11-16 (added neural network comparison)
 **Document Version:** 1.0
 **Last Updated:** 2025-11-15
 **Author:** Aminoglycoside QSP-ML Project Team
