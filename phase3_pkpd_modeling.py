@@ -632,7 +632,7 @@ class PKPDAnalyzer:
 
         # 2. PTA Heatmap
         print("  Creating PTA heatmap...")
-        fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+        fig, axes = plt.subplots(1, 2, figsize=(18, 6))
 
         # Pivot for heatmap
         pta_pivot_cmax = self.pta_results.pivot(index='MIC', columns='dose',
@@ -641,16 +641,20 @@ class PKPDAnalyzer:
                                                     values='PTA_combined')
 
         sns.heatmap(pta_pivot_cmax, annot=True, fmt='.2f', cmap='RdYlGn',
-                   vmin=0, vmax=1, ax=axes[0], cbar_kws={'label': 'PTA'})
-        axes[0].set_title('PTA: Cmax/MIC ≥8')
-        axes[0].set_xlabel('Dose (mg)')
-        axes[0].set_ylabel('MIC (mg/L)')
+                   vmin=0, vmax=1, ax=axes[0], cbar_kws={'label': 'PTA'},
+                   annot_kws={'fontsize': 6})
+        axes[0].set_title('PTA: Cmax/MIC ≥8', fontsize=12, fontweight='bold')
+        axes[0].set_xlabel('Dose (mg)', fontsize=10)
+        axes[0].set_ylabel('MIC (mg/L)', fontsize=10)
+        axes[0].tick_params(axis='both', labelsize=8)
 
         sns.heatmap(pta_pivot_combined, annot=True, fmt='.2f', cmap='RdYlGn',
-                   vmin=0, vmax=1, ax=axes[1], cbar_kws={'label': 'PTA'})
-        axes[1].set_title('PTA: All Targets (Efficacy + Safety)')
-        axes[1].set_xlabel('Dose (mg)')
-        axes[1].set_ylabel('MIC (mg/L)')
+                   vmin=0, vmax=1, ax=axes[1], cbar_kws={'label': 'PTA'},
+                   annot_kws={'fontsize': 6})
+        axes[1].set_title('PTA: All Targets (Efficacy + Safety)', fontsize=12, fontweight='bold')
+        axes[1].set_xlabel('Dose (mg)', fontsize=10)
+        axes[1].set_ylabel('MIC (mg/L)', fontsize=10)
+        axes[1].tick_params(axis='both', labelsize=8)
 
         plt.tight_layout()
         plt.savefig(self.results_dir / 'pta_heatmap.png', dpi=300, bbox_inches='tight')
