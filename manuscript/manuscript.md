@@ -1,17 +1,8 @@
 # Integration of Quantitative Systems Pharmacology and Machine Learning for Personalized Aminoglycoside Dosing in Critically Ill Patients: A Complete Framework for Indian Intensive Care Units
 
-## Authors
-[Author names and affiliations to be added]
-
-## Corresponding Author
-[Contact information to be added]
 
 ## Running Title
 QSP-ML Framework for Aminoglycoside Dosing
-
-## Word Count
-Abstract: 250 words
-Main text: 4,500 words
 
 ## Keywords
 Aminoglycosides, pharmacokinetics, pharmacodynamics, machine learning, dose optimization, precision medicine, critical care, therapeutic drug monitoring
@@ -231,37 +222,3 @@ Future research should focus on several priorities. External validation using re
 In conclusion, this study demonstrates the feasibility and potential value of integrating quantitative systems pharmacology and machine learning approaches for personalized aminoglycoside dosing. The framework achieved clinically useful performance for key outcomes and identified substantial opportunities for improvement over current dosing practices. External validation with real patient data is needed before clinical deployment, but the comprehensive methodology and open-source implementation provide a strong foundation for translation to practice. If validated and implemented, this approach has the potential to improve antimicrobial efficacy while reducing nephrotoxicity in vulnerable critically ill populations.
 
 ---
-
-## ACKNOWLEDGMENTS
-
-[To be completed]
-
----
-
-## FUNDING
-
-[To be completed]
-
----
-
-## CONFLICTS OF INTEREST
-
-The authors declare no conflicts of interest.
-
----
-
-## DATA AVAILABILITY
-
-All synthetic data, Python code, trained models, and documentation are available in the project repository at [URL to be added]. The complete framework is released under an open-source license to facilitate validation and adoption by the research community.
-
----
-
-## AUTHOR CONTRIBUTIONS
-
-[To be completed based on actual contributors]
-
----
-
-## ETHICS STATEMENT
-
-This study used synthetic data generated to represent realistic clinical scenarios and did not involve human subjects. No ethics approval was required.
