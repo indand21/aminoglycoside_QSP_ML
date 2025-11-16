@@ -513,4 +513,6 @@ The enhanced aminoglycoside QSP-ML framework is now **ready for external validat
 
 **Document Version:** 1.1
 **Last Updated:** 2025-11-16 (added neural network comparison)
+**Document Version:** 1.0
+**Last Updated:** 2025-11-15
 **Author:** Aminoglycoside QSP-ML Project Team
