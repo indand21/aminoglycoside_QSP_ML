@@ -1,0 +1,9 @@
+{
+  "n_patients": 1500,
+  "study_duration_days": 7,
+  "generation_date": "2026-03-27T06:26:28.130966",
+  "seed": 12345,
+  "population": "Indian ICU",
+  "drugs": "gentamicin + amikacin",
+  "description": "Synthetic aminoglycoside data for Indian ICU setting. Dual-drug (gentamicin + amikacin), correlated covariates, bimodal MIC (ICMR resistance rates), literature-calibrated outcome models."
+}

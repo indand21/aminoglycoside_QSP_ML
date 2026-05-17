@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: "Aminoglycoside QSP-ML: Bayesian PopPK + Interpretable Machine Learning for Precision Dosing"
+message: "If you reuse this software or its included synthetic data, please cite the accompanying manuscript."
+type: software
+authors:
+  - given-names: Anand
+    family-names: Srinivasan
+    email: anandsrinivasan@aiimsbhubaneswar.edu.in
+    affiliation: "Department of Pharmacology, All India Institute of Medical Sciences (AIIMS) Bhubaneswar, India"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - given-names: Ashutosh
+    family-names: Biswas
+    affiliation: "Office of the Executive Director, All India Institute of Medical Sciences (AIIMS) Bhubaneswar, India"
+  - given-names: Archana
+    family-names: Mishra
+    affiliation: "Department of Pharmacology, All India Institute of Medical Sciences (AIIMS) Bhubaneswar, India"
+  - given-names: Abhishek
+    family-names: Anil
+    affiliation: "Department of Pharmacology, All India Institute of Medical Sciences (AIIMS) Bhubaneswar, India"
+repository-code: "https://github.com/indand21/aminoglycoside_QSP_ML"
+license: MIT
+keywords:
+  - pharmacokinetics
+  - aminoglycoside
+  - machine-learning
+  - Bayesian
+  - precision-dosing
+  - quantitative-systems-pharmacology
+  - intensive-care
+preferred-citation:
+  type: article
+  authors:
+    - given-names: Anand
+      family-names: Srinivasan
+    - given-names: Ashutosh
+      family-names: Biswas
+    - given-names: Archana
+      family-names: Mishra
+    - given-names: Abhishek
+      family-names: Anil
+  title: "A Simulation-Based Quantitative Systems Pharmacology-Machine Learning Framework for Aminoglycoside Precision Dosing in Critical Illness: Development and In-Silico Qualification"
+  journal: "Pharmacological Research"
+  year: 2026
+  notes: "Manuscript under review"

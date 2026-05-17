@@ -1,0 +1,44 @@
+# --- Large posterior traces (> GitHub 100 MB limit) ---
+models/phase2_popk_trace.nc
+models/phase2_popk_trace_likelihood.nc
+models/phase2_popk_trace_smoke.nc
+*.nc
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.python-version
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- Build / output ---
+build/
+dist/
+*.egg
+.coverage
+htmlcov/
+
+# --- Optuna SQLite caches ---
+*.sqlite
+*.db
+
+# --- Large intermediate model checkpoints ---
+*.pkl
+*.joblib

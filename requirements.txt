@@ -1,0 +1,31 @@
+# Aminoglycoside QSP-ML — pinned dependency manifest
+# Python 3.12 required.
+# Versions match those reported in the manuscript Methods §2.7.
+
+# Bayesian / probabilistic modeling
+pymc==5.16.2
+pytensor==2.25.5
+arviz==0.22.0
+
+# Machine learning
+xgboost==3.1.2
+lightgbm==4.6.0
+catboost==1.2.8
+scikit-learn==1.7.2
+imbalanced-learn==0.14.0
+
+# Hyperparameter optimization and Bayesian dose optimization
+optuna==4.6.0
+bayesian-optimization==2.0.0
+
+# Interpretability
+shap==0.48.0
+
+# Numerical and data handling
+numpy==1.26.4
+pandas==2.1
+scipy>=1.11
+
+# Visualization
+matplotlib==3.8
+seaborn==0.13
