@@ -17,8 +17,8 @@
     "test_auroc": 0.857
   },
   "ml_gradient_boosted_full": {
-    "n_features": 68,
-    "test_auroc": 0.908
+    "n_features": 67,
+    "test_auroc": 0.91
   },
-  "delta_ml_minus_bayesian": 0.054
+  "delta_ml_minus_bayesian": 0.057
 }

@@ -50,8 +50,12 @@ def main():
             "ototoxicity", "neurotoxicity", "icu_mortality", "day_28_mortality",
             "icu_los", "hospital_los", "microbiological_eradication",
             "time_to_clinical_improvement", "day_28_mortality_pk"}
+    # The ml/pk merge uses suffixes=("", "_pk"), so any column present in both
+    # frames appears twice: once under its own name and once with a _pk suffix.
+    # Drop the suffixed copy - it carries no information the base column lacks.
     num = df.select_dtypes(include=[np.number]).columns
-    ml_feats = [c for c in num if c not in leak
+    merge_dupes = {c for c in num if c.endswith("_pk") and c[:-3] in df.columns}
+    ml_feats = [c for c in num if c not in leak and c not in merge_dupes
                 and not any(k in c.lower() for k in ["mortality", "_los", "aki_",
                     "peak_scr", "nephrotox", "cure", "ototox", "neurotox"])]
 
