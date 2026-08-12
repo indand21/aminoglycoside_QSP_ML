@@ -1,0 +1,24 @@
+{
+  "n_patients": 50,
+  "n_bootstrap": 10000,
+  "dose_change_pct": {
+    "point": -36.7,
+    "ci_low": -54.873,
+    "ci_high": -13.199
+  },
+  "cure_improvement_pct": {
+    "point": 1.71,
+    "ci_low": -4.655,
+    "ci_high": 8.557
+  },
+  "aki_reduction_pct": {
+    "point": 20.995,
+    "ci_low": 14.068,
+    "ci_high": 28.074
+  },
+  "composite_improved_pct": {
+    "point": 100.0,
+    "ci_low": 100.0,
+    "ci_high": 100.0
+  }
+}

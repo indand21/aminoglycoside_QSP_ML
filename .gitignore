@@ -42,3 +42,22 @@ htmlcov/
 # --- Large intermediate model checkpoints ---
 *.pkl
 *.joblib
+
+# --- Manuscript drafts, submissions, peer-review correspondence ---
+# Deliberately excluded: the Data Availability Statement commits to sharing
+# source code, synthetic data generation, and analysis pipelines -- not
+# manuscript drafts, reviewer comments, or response letters.
+manuscript/
+Manuscript_*/
+
+# --- Nested repository ---
+# github_release/ has its own .git directory and a separate copy of data/,
+# models/, results/ and utils/. Ignored so `git add -A` cannot commit it as a
+# broken gitlink entry.
+github_release/
+
+# --- Local AI coding-assistant state (machine-specific, not project content) ---
+.claude/
+.grok/
+.crush/
+.antigravitycli/

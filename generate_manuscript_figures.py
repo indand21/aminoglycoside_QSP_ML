@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate Manuscript Figures for Aminoglycoside QSP-ML Project
+Generate Manuscript Figures for Aminoglycoside PM-ML Project
 Based on specifications in Manuscript_v3/figures/
 
 Generates:
@@ -50,7 +50,7 @@ plt.rcParams['savefig.bbox'] = 'tight'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 RESULTS_DIR = os.path.join(BASE_DIR, 'results')
-OUTPUT_DIR = os.path.join(BASE_DIR, 'Manuscript_Pharmacological_Research', 'figures')
+OUTPUT_DIR = os.environ.get('FIG_OUT_DIR', os.path.join(BASE_DIR, 'Manuscript_Pharmacological_Research', 'figures'))
 
 # Ensure output directory exists
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -178,7 +178,7 @@ def generate_figure1_framework(output_path):
                 ha='center', va='top', fontsize=8, color=COLORS['gray'])
 
     # Title
-    ax.text(5, 5.8, 'Integrated QSP-ML Framework for Personalized Aminoglycoside Dosing',
+    ax.text(5, 5.8, 'Integrated PM-ML Framework for Personalized Aminoglycoside Dosing',
             ha='center', va='center', fontsize=14, fontweight='bold')
 
     # Feedback loop arrow
@@ -391,7 +391,7 @@ def generate_figure3_target_attainment(data, output_path):
     ax1 = fig.add_subplot(2, 2, 1)
     # Use manuscript values
     categories = ['Efficacy\n(Cmax/MIC≥8)', 'Safety\n(trough)', 'Combined']
-    values = [49.9, 58.9, 28.7]
+    values = [49.9, 62.4, 30.5]
     colors_bar = [COLORS['blue'], COLORS['green'], COLORS['purple']]
     bars = ax1.bar(categories, values, color=colors_bar, edgecolor='black', alpha=0.8)
     ax1.set_ylabel('Patients (%)')
@@ -403,10 +403,9 @@ def generate_figure3_target_attainment(data, output_path):
 
     # ── Panel B: Target Attainment by Renal Function ──
     ax2 = fig.add_subplot(2, 2, 2)
-    # Manuscript values: Augmented efficacy=38.2%, Impaired safety=52.1%
-    # Normal: estimated from population average
-    efficacy_by_rf = [38.2, 52.0, 35.0]  # Augmented, Normal, Impaired
-    safety_by_rf = [95.0, 60.0, 52.1]
+    # Table 3B combined-cohort values (efficacy = Cmax/MIC≥8; safety = drug-specific trough)
+    efficacy_by_rf = [49.5, 50.5, 47.6]  # Augmented, Normal, Impaired
+    safety_by_rf = [83.1, 57.3, 39.2]
     x = np.arange(3)
     width = 0.35
     ax2.bar(x - width / 2, efficacy_by_rf, width, label='Efficacy', color=COLORS['blue'], alpha=0.8)
@@ -418,8 +417,8 @@ def generate_figure3_target_attainment(data, output_path):
     ax2.legend(fontsize=7)
     ax2.set_ylim(0, 100)
     # Annotate key values
-    ax2.annotate('38.2%', xy=(0, efficacy_by_rf[0] + 2), ha='center', fontsize=7, color=COLORS['blue'])
-    ax2.annotate('52.1%', xy=(2, safety_by_rf[2] + 2), ha='center', fontsize=7, color=COLORS['green'])
+    ax2.annotate('49.5%', xy=(0, efficacy_by_rf[0] + 2), ha='center', fontsize=7, color=COLORS['blue'])
+    ax2.annotate('39.2%', xy=(2, safety_by_rf[2] + 2), ha='center', fontsize=7, color=COLORS['green'])
 
     # ── Panel C: Exposure Distributions ──
     ax3 = fig.add_subplot(2, 2, 3)
@@ -590,9 +589,9 @@ def generate_figure4_ml_performance(data, output_path):
     # ── Panel C: Framework Comparison (was Panel D in 8-panel version) ──
     ax4 = fig.add_subplot(2, 2, 3)
     frameworks = ['XGBoost', 'LightGBM', 'CatBoost', 'Stacking']
-    # Manuscript Table 4 values (nephrotoxicity)
-    roc_auc_vals = [0.915, 0.911, 0.908, 0.913]
-    brier_vals = [0.138, 0.142, 0.145, 0.140]
+    # Table 4A values (post-dose nephrotoxicity, algorithm_comparison.json)
+    roc_auc_vals = [0.916, 0.909, 0.918, 0.911]
+    brier_vals = [0.111, 0.119, 0.114, 0.109]
     x = np.arange(len(frameworks))
     width = 0.35
     # Show ROC-AUC and 1-Brier (inverted)
@@ -605,8 +604,8 @@ def generate_figure4_ml_performance(data, output_path):
     ax4.set_title('C. Framework Comparison', fontweight='bold')
     ax4.legend(fontsize=7)
     ax4.set_ylim(0.80, 0.95)
-    # Annotate best values
-    ax4.annotate('★ Best', xy=(0, roc_auc_vals[0] + 0.005), ha='center', fontsize=7, color='darkred')
+    # XGBoost retained for interpretability/calibration (all within a 0.01 AUROC band)
+    ax4.annotate('(selected)', xy=(0, roc_auc_vals[0] + 0.006), ha='center', fontsize=7, color='darkred')
 
     # ── Panel D: Clinical Cure Calibration Curve ──
     # Shows the clinical cure model (ECE=0.068); nephrotoxicity calibration is
@@ -626,7 +625,7 @@ def generate_figure4_ml_performance(data, output_path):
     ax5.legend(fontsize=7, loc='upper left')
     ax5.set_xlim(0, 1)
     ax5.set_ylim(0, 1)
-    ax5.text(0.05, 0.90, f'ECE = 0.068', fontsize=8, transform=ax5.transAxes)
+    ax5.text(0.55, 0.10, f'ECE = 0.062\nBrier = 0.072', fontsize=8, transform=ax5.transAxes)
 
     fig.subplots_adjust(left=0.08, right=0.97, top=0.94, bottom=0.08, wspace=0.30, hspace=0.35)
     plt.savefig(output_path, dpi=300, bbox_inches='tight', facecolor='white')
@@ -737,31 +736,34 @@ def generate_figure5_shap_analysis(data, output_path):
     #   Row 1: D[0:5]        E[5:10]    — two equal panels filling full width
     gs = gridspec.GridSpec(2, 10, figure=fig)
 
-    # Panel A: Global Feature Importance (Bar plot)
+    # Panel A: Global Feature Importance (real TreeSHAP; shap_importance.json)
     ax1 = fig.add_subplot(gs[0, 0:3])
-    if fi is not None and len(fi) > 0:
+    _shap_path = os.path.join(BASE_DIR, 'results', 'phase4_ml_enhanced', 'shap_importance.json')
+    if os.path.exists(_shap_path):
+        with open(_shap_path) as _f:
+            _sh = json.load(_f)['nephrotoxicity_postdose'][:15]
+        features = np.array([r['feature'] for r in _sh])
+        importance = np.array([r['pct'] for r in _sh])
+    elif fi is not None and len(fi) > 0:
         top_features = fi.head(15)
         features = top_features['feature'].values
         importance = top_features['importance'].values
     else:
-        features = ['Cmin', 'AUC24', 'baseline_scr', 'CL_bayes', 'age',
-                   'diabetes', 'apache_ii', 'Cmax', 'fluctuation_index', 'weight',
-                   'pk_composite', 'sofa_score', 'time_to_peak', 't_half_beta', 'Vc_bayes']
-        importance = [0.092, 0.087, 0.079, 0.068, 0.055, 0.045, 0.042, 0.038, 0.035, 0.032,
-                     0.030, 0.028, 0.025, 0.023, 0.021]
+        features = np.array(['Cmin', 'age', 'k10_bayes', 'CL_bayes', 'fluctuation_index'])
+        importance = np.array([26.1, 9.5, 8.7, 4.7, 4.5])
 
     y_pos = np.arange(len(features))
     ax1.barh(y_pos, importance[::-1], color=COLORS['blue'], alpha=0.8, edgecolor='black')
     ax1.set_yticks(y_pos)
     ax1.set_yticklabels(features[::-1], fontsize=8)
-    ax1.set_xlabel('Mean |SHAP|')
+    ax1.set_xlabel('Mean |SHAP| (% of total)')
     ax1.set_title('A. Feature Importance', fontweight='bold')
 
     # Panel B: SHAP Beeswarm Plot (simulated)
     ax2 = fig.add_subplot(gs[0, 3:7])
     np.random.seed(42)
     n_points = 200
-    features_bees = ['Cmin', 'AUC24', 'baseline_scr', 'CL_bayes', 'age']
+    features_bees = ['Cmin', 'age', 'k10_bayes', 'CL_bayes', 'fluctuation_index']
     for i, feat in enumerate(features_bees):
         shap_vals = np.random.normal(0, 0.1 * (5 - i), n_points)
         feat_vals = np.random.uniform(0, 1, n_points)
@@ -1125,7 +1127,7 @@ def generate_figure7_dose_optimization(data, output_path):
     # Values from manuscript Table 3: efficacy 49.9%, safety 58.9%, combined 28.7%
     # Optimized values are illustrative (consistent with 14% mean dose reduction narrative)
     categories = ['Efficacy\n(Cmax/MIC≥8)', 'Safety\n(trough)', 'Combined']
-    baseline = [49.9, 58.9, 28.7]
+    baseline = [49.9, 62.4, 30.5]
     optimized = [54.2, 76.5, 44.8]
 
     x = np.arange(len(categories))
@@ -1683,7 +1685,7 @@ def generate_figure_s2_additional_shap(data, output_path):
 def main():
     """Main function to generate all manuscript figures."""
     print("=" * 60)
-    print("Generating Manuscript Figures for Aminoglycoside QSP-ML")
+    print("Generating Manuscript Figures for Aminoglycoside PM-ML")
     print("=" * 60)
 
     # Load data
@@ -1731,7 +1733,7 @@ def main():
     generate_figure7_dose_optimization(data, os.path.join(OUTPUT_DIR, 'Figure7_Dose_Optimization.png'))
 
     # Supplementary Figures
-    SUPP_DIR = os.path.join(BASE_DIR, 'Manuscript_Pharmacological_Research', 'supplementary')
+    SUPP_DIR = os.environ.get('FIG_SUPP_DIR', os.path.join(BASE_DIR, 'Manuscript_Pharmacological_Research', 'supplementary'))
     os.makedirs(SUPP_DIR, exist_ok=True)
 
     print("\n[8/14] Figure S1: Phase Comparison")

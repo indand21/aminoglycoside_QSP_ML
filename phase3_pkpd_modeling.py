@@ -309,6 +309,10 @@ class PKPDAnalyzer:
             drug = row.get('drug', 'gentamicin')
             mic = row['mic_amikacin'] if drug == 'amikacin' else row['mic_gentamicin']
 
+            # Drug-specific safety trough threshold, matching the data-generating
+            # model (gentamicin 2.0 mg/L, amikacin 2.5 mg/L).
+            trough_threshold = 2.5 if drug == 'amikacin' else 2.0
+
             # Calculate PK/PD indices
             results.append({
                 'patient_id': patient_id,
@@ -320,7 +324,7 @@ class PKPDAnalyzer:
                 'MIC': mic,
                 'Cmax_MIC': Cmax / mic if mic > 0 else np.nan,
                 'AUC_MIC': AUC24 / mic if mic > 0 else np.nan,
-                'trough_target': 1 if Cmin < 2 else 0,  # Target: trough <2 mg/L
+                'trough_target': 1 if Cmin < trough_threshold else 0,  # trough below drug-specific safety threshold
                 'cmax_target': 1 if (Cmax / mic) >= 8 else 0,  # Target: Cmax/MIC ≥8
                 'auc_target': 1 if (AUC24 / mic) >= 80 else 0,  # Target: AUC/MIC ≥80
                 'clinical_cure': row['clinical_cure'],
@@ -341,7 +345,7 @@ class PKPDAnalyzer:
         print(f"\nTarget attainment:")
         print(f"  Cmax/MIC >=8:  {self.pkpd_indices['cmax_target'].mean()*100:.1f}%")
         print(f"  AUC/MIC >=80:  {self.pkpd_indices['auc_target'].mean()*100:.1f}%")
-        print(f"  Trough <2:    {self.pkpd_indices['trough_target'].mean()*100:.1f}%")
+        print(f"  Trough below safety threshold: {self.pkpd_indices['trough_target'].mean()*100:.1f}%")
         print()
 
         # Save results (will be updated with time-based features later)
@@ -513,15 +517,18 @@ class PKPDAnalyzer:
                 cmax_mic = dose_subset['Cmax'] / mic
                 auc_mic = dose_subset['AUC24'] / mic
 
-                # PTA = proportion achieving target
+                # PTA = proportion achieving target. Trough safety uses the
+                # drug-specific threshold already encoded in 'trough_target'
+                # (gentamicin 2.0 mg/L, amikacin 2.5 mg/L).
+                trough_safe = dose_subset['trough_target'] == 1
                 pta_cmax = (cmax_mic >= 8).mean()
                 pta_auc = (auc_mic >= 80).mean()
-                pta_trough = (dose_subset['Cmin'] < 2).mean()
+                pta_trough = trough_safe.mean()
 
                 # Combined PTA (all targets)
                 pta_combined = ((cmax_mic >= 8) &
                               (auc_mic >= 80) &
-                              (dose_subset['Cmin'] < 2)).mean()
+                              trough_safe).mean()
 
                 pta_results.append({
                     'dose': dose,
@@ -899,7 +906,7 @@ class PKPDAnalyzer:
                      f"({self.pkpd_indices['cmax_target'].sum()}/{len(self.pkpd_indices)} patients)")
         report.append(f"AUC/MIC >=80:   {self.pkpd_indices['auc_target'].mean()*100:.1f}% "
                      f"({self.pkpd_indices['auc_target'].sum()}/{len(self.pkpd_indices)} patients)")
-        report.append(f"Trough <2:     {self.pkpd_indices['trough_target'].mean()*100:.1f}% "
+        report.append(f"Trough below safety threshold (gent 2.0/ami 2.5 mg/L): {self.pkpd_indices['trough_target'].mean()*100:.1f}% "
                      f"({self.pkpd_indices['trough_target'].sum()}/{len(self.pkpd_indices)} patients)")
         report.append("")
 
@@ -946,7 +953,7 @@ class PKPDAnalyzer:
 
         report.append(f"Recommended Starting Dose: {best_dose:.0f} mg")
         report.append(f"  - Achieves Cmax/MIC >=8: {dose_performance.loc[best_dose, 'cmax_target']*100:.1f}%")
-        report.append(f"  - Safe trough <2: {dose_performance.loc[best_dose, 'trough_target']*100:.1f}%")
+        report.append(f"  - Safe trough (below drug-specific threshold): {dose_performance.loc[best_dose, 'trough_target']*100:.1f}%")
         report.append(f"  - Clinical cure rate: {dose_performance.loc[best_dose, 'clinical_cure']*100:.1f}%")
         report.append(f"  - Nephrotoxicity rate: {dose_performance.loc[best_dose, 'nephrotoxicity']*100:.1f}%")
         report.append("")

@@ -1,0 +1,64 @@
+{
+  "seeds": [
+    12345,
+    111,
+    222,
+    333,
+    444
+  ],
+  "per_seed": [
+    {
+      "seed": 12345,
+      "predose_auroc": 0.776,
+      "combined_attainment_pct": 30.5,
+      "nephrotox_prev_pct": 32.9,
+      "amikacin_pct": 62.6
+    },
+    {
+      "seed": 111,
+      "predose_auroc": 0.807,
+      "combined_attainment_pct": 30.5,
+      "nephrotox_prev_pct": 35.1,
+      "amikacin_pct": 65.9
+    },
+    {
+      "seed": 222,
+      "predose_auroc": 0.811,
+      "combined_attainment_pct": 32.6,
+      "nephrotox_prev_pct": 33.1,
+      "amikacin_pct": 61.6
+    },
+    {
+      "seed": 333,
+      "predose_auroc": 0.802,
+      "combined_attainment_pct": 31.0,
+      "nephrotox_prev_pct": 35.1,
+      "amikacin_pct": 65.5
+    },
+    {
+      "seed": 444,
+      "predose_auroc": 0.804,
+      "combined_attainment_pct": 28.4,
+      "nephrotox_prev_pct": 37.1,
+      "amikacin_pct": 65.7
+    }
+  ],
+  "predose_auroc": {
+    "mean": 0.8,
+    "sd": 0.014,
+    "min": 0.776,
+    "max": 0.811
+  },
+  "combined_attainment_pct": {
+    "mean": 30.6,
+    "sd": 1.502,
+    "min": 28.4,
+    "max": 32.6
+  },
+  "nephrotox_prev_pct": {
+    "mean": 34.66,
+    "sd": 1.723,
+    "min": 32.9,
+    "max": 37.1
+  }
+}

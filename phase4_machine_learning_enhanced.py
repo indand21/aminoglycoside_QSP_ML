@@ -35,7 +35,7 @@ from sklearn.preprocessing import StandardScaler, PolynomialFeatures
 from sklearn.metrics import (
     roc_auc_score, roc_curve, precision_recall_curve, average_precision_score,
     confusion_matrix, classification_report, mean_squared_error, r2_score,
-    mean_absolute_error, f1_score
+    mean_absolute_error, f1_score, brier_score_loss
 )
 from sklearn.calibration import calibration_curve, CalibratedClassifierCV
 
@@ -100,6 +100,32 @@ except ImportError:
 # Set plotting style
 plt.style.use('seaborn-v0_8-darkgrid')
 sns.set_palette("husl")
+
+
+def expected_calibration_error(y_true, y_prob, n_bins=10):
+    """Expected Calibration Error (ECE) using equal-width probability bins.
+
+    ECE = sum_b (n_b / N) * |acc_b - conf_b|, where acc_b is the observed
+    event rate and conf_b the mean predicted probability within bin b.
+    """
+    y_true = np.asarray(y_true, dtype=float)
+    y_prob = np.asarray(y_prob, dtype=float)
+    n = len(y_true)
+    if n == 0:
+        return float('nan')
+    bins = np.linspace(0.0, 1.0, n_bins + 1)
+    ece = 0.0
+    for i in range(n_bins):
+        lo, hi = bins[i], bins[i + 1]
+        # include the right edge in the final bin
+        mask = (y_prob >= lo) & (y_prob <= hi) if i == n_bins - 1 else (y_prob >= lo) & (y_prob < hi)
+        n_b = int(mask.sum())
+        if n_b == 0:
+            continue
+        conf_b = y_prob[mask].mean()
+        acc_b = y_true[mask].mean()
+        ece += (n_b / n) * abs(acc_b - conf_b)
+    return float(ece)
 
 
 class EnhancedMLPipeline:
@@ -642,7 +668,11 @@ class EnhancedMLPipeline:
             'X_test': X_test_scaled,
             'y_test': y_test,
             'y_pred_proba': y_pred_proba,
-            'y_pred': y_pred
+            'y_pred': y_pred,
+            # Retained (not serialized) so the algorithm comparison can reuse the
+            # exact processed training split for this model.
+            '_X_train': X_train_final,
+            '_y_train': y_train_final,
         }
 
         # Feature importance
@@ -968,7 +998,11 @@ class EnhancedMLPipeline:
             'X_test': X_test_scaled,
             'y_test': y_test,
             'y_pred_proba': y_pred_proba,
-            'y_pred': y_pred
+            'y_pred': y_pred,
+            # Retained (not serialized) so the algorithm comparison can reuse the
+            # exact processed training split for this model.
+            '_X_train': X_train_final,
+            '_y_train': y_train_final,
         }
 
         # Feature importance
@@ -1421,12 +1455,36 @@ class EnhancedMLPipeline:
             # Convert numpy arrays to lists for JSON
             perf_serializable = {}
             for key, val in self.performance.items():
-                perf_serializable[key] = {
+                entry = {
                     k: v.tolist() if isinstance(v, np.ndarray) else v
                     for k, v in val.items()
-                    if k not in ['X_test', 'y_test', 'y_pred_proba', 'y_pred']
+                    if k not in ['X_test', 'y_test', 'y_pred_proba', 'y_pred',
+                                 '_X_train', '_y_train']
                 }
+                # Calibration metrics for classification models (Brier + ECE),
+                # computed from the held-out test predictions retained in memory.
+                if 'y_test' in val and 'y_pred_proba' in val:
+                    try:
+                        y_t = np.asarray(val['y_test'], dtype=float)
+                        y_p = np.asarray(val['y_pred_proba'], dtype=float)
+                        entry['brier_score'] = float(brier_score_loss(y_t, y_p))
+                        entry['ece'] = expected_calibration_error(y_t, y_p, n_bins=10)
+                    except Exception as e:
+                        print(f"  [WARN] calibration metrics failed for {key}: {e}")
+                perf_serializable[key] = entry
             json.dump(perf_serializable, f, indent=2)
+
+        # Persist held-out predictions for classification models so AUROC/CI,
+        # operating points, and calibration can be recomputed reproducibly.
+        preds = {}
+        for key, val in self.performance.items():
+            if 'y_test' in val and 'y_pred_proba' in val:
+                preds[key] = {
+                    'y_test': np.asarray(val['y_test']).astype(int).tolist(),
+                    'y_pred_proba': np.asarray(val['y_pred_proba']).astype(float).tolist(),
+                }
+        with open(self.results_dir / 'test_predictions.json', 'w') as f:
+            json.dump(preds, f)
 
         # Save feature importance
         for model_name, fi_df in self.feature_importance.items():
@@ -1633,7 +1691,12 @@ class EnhancedMLPipeline:
         print(f"   [OK] XGBoost Test AUC: {xgb_auc:.4f}")
 
         models['xgboost'] = xgb_model
-        results['xgboost'] = {'test_auc': xgb_auc, 'model': xgb_model}
+        results['xgboost'] = {
+            'test_auc': float(xgb_auc),
+            'brier_score': float(brier_score_loss(y_test, y_pred_xgb)),
+            'ece': expected_calibration_error(y_test, y_pred_xgb, n_bins=10),
+            'model': xgb_model,
+        }
 
         # 2. LightGBM
         if LGBM_AVAILABLE:
@@ -1656,7 +1719,12 @@ class EnhancedMLPipeline:
             print(f"   [OK] LightGBM Test AUC: {lgb_auc:.4f}")
 
             models['lightgbm'] = lgb_model
-            results['lightgbm'] = {'test_auc': lgb_auc, 'model': lgb_model}
+            results['lightgbm'] = {
+                'test_auc': float(lgb_auc),
+                'brier_score': float(brier_score_loss(y_test, y_pred_lgb)),
+                'ece': expected_calibration_error(y_test, y_pred_lgb, n_bins=10),
+                'model': lgb_model,
+            }
         else:
             print("\n2. LightGBM - SKIPPED (not available)")
 
@@ -1681,9 +1749,34 @@ class EnhancedMLPipeline:
             print(f"   [OK] CatBoost Test AUC: {cb_auc:.4f}")
 
             models['catboost'] = cb_model
-            results['catboost'] = {'test_auc': cb_auc, 'model': cb_model}
+            results['catboost'] = {
+                'test_auc': float(cb_auc),
+                'brier_score': float(brier_score_loss(y_test, y_pred_cb)),
+                'ece': expected_calibration_error(y_test, y_pred_cb, n_bins=10),
+                'model': cb_model,
+            }
         else:
             print("\n3. CatBoost - SKIPPED (not available)")
+
+        # 4. Stacking ensemble (same base learners used elsewhere in the pipeline)
+        print("\n4. Stacking ensemble")
+        try:
+            stack_model = self.build_ensemble_classifier(X_train, y_train, X_test, y_test)
+            if stack_model is not None:
+                y_pred_stack = stack_model.predict_proba(X_test)[:, 1]
+                stack_auc = roc_auc_score(y_test, y_pred_stack)
+                print(f"   [OK] Stacking Test AUC: {stack_auc:.4f}")
+                models['stacking'] = stack_model
+                results['stacking'] = {
+                    'test_auc': float(stack_auc),
+                    'brier_score': float(brier_score_loss(y_test, y_pred_stack)),
+                    'ece': expected_calibration_error(y_test, y_pred_stack, n_bins=10),
+                    'model': stack_model,
+                }
+            else:
+                print("   [WARN] Stacking ensemble unavailable")
+        except Exception as e:
+            print(f"   [WARN] Stacking ensemble failed: {e}")
 
         # Summary
         print("\n" + "="*80)
@@ -1691,13 +1784,57 @@ class EnhancedMLPipeline:
         print("="*80)
 
         for name, res in results.items():
-            print(f"  {name:15s}: AUC = {res['test_auc']:.4f}")
+            print(f"  {name:15s}: AUC = {res['test_auc']:.4f} | "
+                  f"Brier = {res.get('brier_score', float('nan')):.4f} | "
+                  f"ECE = {res.get('ece', float('nan')):.4f}")
 
         # Find best
         best_framework = max(results.items(), key=lambda x: x[1]['test_auc'])
         print(f"\n  [OK] Best framework: {best_framework[0].upper()} (AUC = {best_framework[1]['test_auc']:.4f})")
 
         return results, models
+
+    def run_algorithm_comparison(self, model_name='nephrotoxicity_postdose',
+                                 use_optuna=False, n_trials=30):
+        """Run a reproducible head-to-head comparison (XGBoost / LightGBM /
+        CatBoost / stacking) on the processed split of ``model_name`` and write
+        results/phase4_ml_enhanced/algorithm_comparison.json.
+
+        Uses matched (untuned by default) hyperparameters so Table 4 reflects a
+        genuine, code-derived comparison rather than hard-coded literals.
+        """
+        perf = self.performance.get(model_name)
+        if not perf or '_X_train' not in perf:
+            print(f"  [WARN] No retained split for '{model_name}'; skipping algorithm comparison.")
+            return None
+
+        print("\n" + "=" * 80)
+        print(f"ALGORITHM COMPARISON on split: {model_name}")
+        print("=" * 80)
+
+        results, _ = self.compare_gradient_boosting_frameworks(
+            perf['_X_train'], perf['_y_train'], perf['X_test'], perf['y_test'],
+            scale_pos_weight=perf.get('scale_pos_weight', 1.0),
+            use_optuna=use_optuna, n_trials=n_trials,
+        )
+
+        # Serialize (drop model objects)
+        serializable = {
+            'source_model': model_name,
+            'feature_set': perf.get('feature_set'),
+            'n_features': perf.get('n_features'),
+            'use_optuna': bool(use_optuna),
+            'n_trials': int(n_trials) if use_optuna else None,
+            'frameworks': {
+                name: {k: v for k, v in res.items() if k != 'model'}
+                for name, res in results.items()
+            },
+        }
+        out_path = self.results_dir / 'algorithm_comparison.json'
+        with open(out_path, 'w') as f:
+            json.dump(serializable, f, indent=2)
+        print(f"  [OK] Saved algorithm comparison: {out_path}")
+        return serializable
 
     # ========================================================================
     # PHASE 2: ADVANCED FEATURE ENGINEERING
@@ -2009,6 +2146,11 @@ class EnhancedMLPipeline:
 
         # 4. PK surrogate models
         self.build_pk_surrogate_models_enhanced()
+
+        # 5. Reproducible algorithm comparison (XGBoost/LightGBM/CatBoost/stacking)
+        #    with Brier + ECE on the post-dose nephrotoxicity split -> Table 4.
+        self.run_algorithm_comparison(model_name='nephrotoxicity_postdose',
+                                      use_optuna=use_optuna)
 
         # Visualizations
         self.plot_enhanced_results()

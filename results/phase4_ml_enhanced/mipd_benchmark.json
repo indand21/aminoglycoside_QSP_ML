@@ -1,0 +1,24 @@
+{
+  "n_train": 1050,
+  "n_test": 450,
+  "map_bayesian_tdm_exposure_response": {
+    "features": [
+      "Cmin",
+      "AUC24"
+    ],
+    "test_auroc": 0.854
+  },
+  "map_bayesian_tdm_plus_scr": {
+    "features": [
+      "Cmin",
+      "AUC24",
+      "baseline_scr"
+    ],
+    "test_auroc": 0.857
+  },
+  "ml_gradient_boosted_full": {
+    "n_features": 68,
+    "test_auroc": 0.908
+  },
+  "delta_ml_minus_bayesian": 0.054
+}

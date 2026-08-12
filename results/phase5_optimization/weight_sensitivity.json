@@ -1,0 +1,62 @@
+{
+  "Safety-weighted": {
+    "weights": {
+      "cure": 0.25,
+      "safety": 0.45,
+      "cmax_target": 0.15,
+      "trough_safety": 0.15
+    },
+    "mean_dose_change_pct": -52.4,
+    "mean_optimal_dose_mg": 636.0,
+    "mean_aki_reduction_pct": 27.0,
+    "mean_cure_improvement_pct": -3.75
+  },
+  "Efficacy-weighted": {
+    "weights": {
+      "cure": 0.55,
+      "safety": 0.2,
+      "cmax_target": 0.2,
+      "trough_safety": 0.05
+    },
+    "mean_dose_change_pct": -16.3,
+    "mean_optimal_dose_mg": 1118.0,
+    "mean_aki_reduction_pct": 12.1,
+    "mean_cure_improvement_pct": 7.03
+  },
+  "Equal weights": {
+    "weights": {
+      "cure": 0.25,
+      "safety": 0.25,
+      "cmax_target": 0.25,
+      "trough_safety": 0.25
+    },
+    "mean_dose_change_pct": -50.5,
+    "mean_optimal_dose_mg": 661.0,
+    "mean_aki_reduction_pct": 24.8,
+    "mean_cure_improvement_pct": -2.2
+  },
+  "Cmax-weighted": {
+    "weights": {
+      "cure": 0.3,
+      "safety": 0.25,
+      "cmax_target": 0.35,
+      "trough_safety": 0.1
+    },
+    "mean_dose_change_pct": -33.0,
+    "mean_optimal_dose_mg": 895.0,
+    "mean_aki_reduction_pct": 18.5,
+    "mean_cure_improvement_pct": 1.98
+  },
+  "Baseline (0.40/0.30/0.20/0.10)": {
+    "weights": {
+      "cure": 0.4,
+      "safety": 0.3,
+      "cmax_target": 0.2,
+      "trough_safety": 0.1
+    },
+    "mean_dose_change_pct": -36.7,
+    "mean_optimal_dose_mg": 845.0,
+    "mean_aki_reduction_pct": 21.0,
+    "mean_cure_improvement_pct": 1.71
+  }
+}

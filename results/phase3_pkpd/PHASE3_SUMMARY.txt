@@ -25,9 +25,9 @@ max     225.850000   112.590000  2951.880000   497.640000  5992.980000
 
 Cmax/MIC >=8:   49.9% (749/1500 patients)
 AUC/MIC >=80:   46.7% (700/1500 patients)
-Trough <2:     58.9% (883/1500 patients)
+Trough below safety threshold (gent 2.0/ami 2.5 mg/L): 62.4% (936/1500 patients)
 
-Combined (Efficacy + Safety): 28.7%
+Combined (Efficacy + Safety): 30.5%
 
 ================================================================================
 3. OUTCOME MODELS
@@ -47,7 +47,7 @@ Nephrotoxicity Model: P(AKI) = 1/(1 + exp(-(beta0 + beta1*Trough)))
 
 Recommended Starting Dose: 2850 mg
   - Achieves Cmax/MIC >=8: 100.0%
-  - Safe trough <2: 100.0%
+  - Safe trough (below drug-specific threshold): 100.0%
   - Clinical cure rate: 100.0%
   - Nephrotoxicity rate: 0.0%
 

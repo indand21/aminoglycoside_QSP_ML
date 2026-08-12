@@ -9,7 +9,7 @@ outcome prediction.
 Key fixes from original version:
 1. Correct model paths (models/enhanced/)
 2. Mechanistic PK model using individual Bayesian parameters
-3. Feature vectors matching Phase 4 training exactly (54 post-dose, 25 pre-dose)
+3. Feature vectors matching Phase 4 training exactly (55 post-dose, 26 pre-dose)
 4. StandardScaler reconstruction from training data
 5. Proper prediction chain: dose -> PK model -> PK/PD indices -> ML outcomes
 

@@ -1,0 +1,29 @@
+{
+  "source_model": "nephrotoxicity_postdose",
+  "feature_set": "pkpd",
+  "n_features": 55,
+  "use_optuna": true,
+  "n_trials": 30,
+  "frameworks": {
+    "xgboost": {
+      "test_auc": 0.9163777074224835,
+      "brier_score": 0.11070801060407778,
+      "ece": 0.07577574259135872
+    },
+    "lightgbm": {
+      "test_auc": 0.9089904015277149,
+      "brier_score": 0.11939844530464062,
+      "ece": 0.08421651895123711
+    },
+    "catboost": {
+      "test_auc": 0.9177848133072013,
+      "brier_score": 0.11405400524699288,
+      "ece": 0.07929141762971881
+    },
+    "stacking": {
+      "test_auc": 0.9106990301020153,
+      "brier_score": 0.10871481512524189,
+      "ece": 0.0564721385474017
+    }
+  }
+}

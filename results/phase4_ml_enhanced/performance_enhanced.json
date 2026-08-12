@@ -44,7 +44,9 @@
     "cv_std": 0.01983586062100138,
     "imbalance_strategy": "class_weight",
     "scale_pos_weight": 2.0425963488843815,
-    "optimize_hyperparams": true
+    "optimize_hyperparams": true,
+    "brier_score": 0.17518282333373164,
+    "ece": 0.08827598812679449
   },
   "nephrotoxicity_postdose": {
     "model_type": "POST-DOSE",
@@ -120,7 +122,9 @@
     "cv_std": 0.012287134639285914,
     "imbalance_strategy": "class_weight",
     "scale_pos_weight": 2.0425963488843815,
-    "optimize_hyperparams": true
+    "optimize_hyperparams": true,
+    "brier_score": 0.11115026308479145,
+    "ece": 0.07266761403996497
   },
   "clinical_cure": {
     "feature_set": "pkpd",
@@ -194,7 +198,9 @@
     "cv_mean": 0.9606072473045687,
     "cv_std": 0.004278031494039055,
     "imbalance_strategy": "class_weight",
-    "scale_pos_weight": 0.5544041450777202
+    "scale_pos_weight": 0.5544041450777202,
+    "brier_score": 0.07247961068459423,
+    "ece": 0.06230861153453591
   },
   "Cmax_surrogate": {
     "r2": 0.710715421539794,
