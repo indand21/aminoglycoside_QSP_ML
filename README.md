@@ -197,7 +197,7 @@ python phase1_preprocessing.py
 | Post-dose nephrotoxicity AUROC | 0.915 (55 features) — positive-control |
 | Clinical-cure AUROC | 0.964 |
 | Algorithm comparison | ROC-AUC 0.909–0.918 across XGBoost/LightGBM/CatBoost/stacking |
-| MAP-Bayesian TDM benchmark | 0.854 vs 0.908 for gradient-boosted ML (Δ +0.054) |
+| MAP-Bayesian TDM benchmark | 0.854 vs 0.908 for gradient-boosted ML (Δ +0.054), on its own 70/30 split; the ML arm here uses the full 68-predictor numeric pool with untuned hyperparameters, not the curated 55-feature set |
 | Dose-optimization deltas | −36.7% dose (95% CI 13.2–54.9), −21.0% simulated nephrotoxicity (14.1–28.1), +1.7% simulated cure (−4.7 to +8.6; crosses zero); mean 1,335 → 845 mg, n = 50 subsample |
 
 Detailed parameter table: `results/phase2_diagnostics/parameter_summary_likelihood.csv`.
