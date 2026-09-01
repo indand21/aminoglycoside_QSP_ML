@@ -8,9 +8,11 @@ trace to any released artefact. Each panel below is now computed from the files 
   S4(A)  precision-recall curves and average precision, from test_predictions.json
   S4(B)  per-framework held-out ROC-AUC, from algorithm_comparison.json
   S6(A)  subgroup forest plot, from the Table 7C subgroup sizes and event rates
-  S7(B)  composite objective across the 50-point dose grid, via optimize_dose_grid
+  S6(C)  predicted AKI risk and cure probability across the dose grid, via the
+         released optimizer's surrogate models
+  S7(B)  composite objective across the same 50-point grid, via optimize_dose_grid
 
-The remaining panels (S4 C-D, S6 B-C, S7 A/C/D) are reproduced unchanged and remain
+The remaining panels (S4 C-D, S6 B, S7 A/C/D) are reproduced unchanged and remain
 illustrative; they are labelled as such in the figure captions.
 
 Usage:  python regenerate_supplementary_figures.py
@@ -65,6 +67,47 @@ def rr_with_ci(n_total, high_pct, low_pct, z=1.96):
     rr = p1 / p0
     se = np.sqrt((1 - p1) / (n_grp * p1) + (1 - p0) / (n_grp * p0))
     return rr, rr * np.exp(-z * se), rr * np.exp(z * se)
+
+
+_DOSE_RESPONSE = None
+
+
+def dose_response():
+    """Run the released optimizer over its 50-point dose grid for a representative patient.
+
+    The representative patient is the sampled patient whose selected dose sits closest to
+    the cohort mean, so the panels illustrate a typical rather than an extreme case.
+    Cached: the optimizer is expensive to construct.
+    """
+    global _DOSE_RESPONSE
+    if _DOSE_RESPONSE is not None:
+        return _DOSE_RESPONSE
+    cwd = os.getcwd()
+    os.chdir(ROOT)
+    sys.path.insert(0, ROOT)
+    buf = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(buf):
+            from phase5_dose_optimization import DoseOptimizer
+            opt = DoseOptimizer()
+        recs = pd.read_csv(os.path.join(ROOT, "results", "phase5_optimization",
+                                        "dose_recommendations.csv"))
+        mean_opt = recs["optimal_dose"].mean()
+        pid = recs.iloc[(recs["optimal_dose"] - mean_opt).abs().argmin()]["patient_id"]
+        patient = opt.data[opt.data["patient_id"] == pid].iloc[0]
+        doses = np.linspace(opt.dose_range[0], opt.dose_range[1], 50)
+        with contextlib.redirect_stdout(buf):
+            outcomes = [opt.predict_outcomes(patient, d) for d in doses]
+            scores = np.array([opt.objective_function(patient, d) for d in doses])
+    finally:
+        os.chdir(cwd)
+    _DOSE_RESPONSE = dict(
+        pid=pid, weight=float(patient["weight"]), mean_opt=mean_opt, doses=doses,
+        scores=scores,
+        aki=np.array([o["p_nephrotoxicity"] for o in outcomes]) * 100,
+        cure=np.array([o["p_cure"] for o in outcomes]) * 100,
+    )
+    return _DOSE_RESPONSE
 
 
 def figure_s4(path):
@@ -191,15 +234,19 @@ def figure_s6(path):
              f"PPV={tp/(tp+fp):.2f}, NPV={tn/(tn+fn):.2f}",
              transform=ax2.transAxes, ha="center", fontsize=8)
 
-    # (C) risk-benefit trajectory - illustrative
+    # (C) risk-benefit trajectory - computed across the optimizer's dose grid
+    dr = dose_response()
+    mgkg = dr["doses"] / dr["weight"]
     ax3 = fig.add_subplot(1, 3, 3)
-    doses = np.array([3, 4, 5, 6, 7])
     tw = ax3.twinx()
-    l1 = ax3.plot(doses, np.array([15, 28, 45, 62, 78]), "o-", color=COLORS["red"],
-                  lw=2, label="AKI Risk")
-    l2 = tw.plot(doses, np.array([55, 68, 78, 85, 89]), "s-", color=COLORS["green"],
-                 lw=2, label="Efficacy")
-    ax3.axvline(5, color="gray", linestyle="--", lw=1.5)
+    l1 = ax3.plot(mgkg, dr["aki"], "-", color=COLORS["red"], lw=2, label="AKI Risk")
+    l2 = tw.plot(mgkg, dr["cure"], "-", color=COLORS["green"], lw=2, label="Efficacy")
+    sel = int(np.argmax(dr["scores"]))
+    ax3.axvline(mgkg[sel], color="gray", linestyle="--", lw=1.5)
+    ax3.annotate(f"selected\n{dr['doses'][sel]:.0f} mg", xy=(mgkg[sel], dr["aki"].max()),
+                 fontsize=6, ha="center", va="top", color=COLORS["gray"])
+    print(f"    P(AKI) {dr['aki'].min():.1f}-{dr['aki'].max():.1f}%   "
+          f"P(cure) {dr['cure'].min():.1f}-{dr['cure'].max():.1f}%")
     ax3.set_xlabel("Dose (mg/kg)")
     ax3.set_ylabel("AKI Risk (%)", color=COLORS["red"])
     tw.set_ylabel("Efficacy (%)", color=COLORS["green"])
@@ -215,29 +262,11 @@ def figure_s6(path):
 
 def figure_s7(path):
     """Components of the multi-objective dose optimizer."""
-    # Panel B runs the released optimizer, which resolves its inputs relative to the
-    # project root.
-    cwd = os.getcwd()
-    os.chdir(ROOT)
-    sys.path.insert(0, ROOT)
-    buf = io.StringIO()
-    try:
-        with contextlib.redirect_stdout(buf):
-            from phase5_dose_optimization import DoseOptimizer
-            opt = DoseOptimizer()
-        recs = pd.read_csv(os.path.join(ROOT, "results", "phase5_optimization",
-                                        "dose_recommendations.csv"))
-        mean_opt = recs["optimal_dose"].mean()
-        pid = recs.iloc[(recs["optimal_dose"] - mean_opt).abs().argmin()]["patient_id"]
-        patient = opt.data[opt.data["patient_id"] == pid].iloc[0]
-        doses = np.linspace(opt.dose_range[0], opt.dose_range[1], 50)
-        with contextlib.redirect_stdout(buf):
-            scores = np.array([opt.objective_function(patient, d) for d in doses])
-    finally:
-        os.chdir(cwd)
+    dr = dose_response()
+    doses, scores = dr["doses"], dr["scores"]
     best = int(np.argmax(scores))
-    print(f"    representative patient {pid}: optimum {doses[best]:.0f} mg "
-          f"(cohort mean {mean_opt:.0f} mg)")
+    print(f"    representative patient {dr['pid']}: optimum {doses[best]:.0f} mg "
+          f"(cohort mean {dr['mean_opt']:.0f} mg)")
 
     fig = plt.figure(figsize=(13, 7))
 
