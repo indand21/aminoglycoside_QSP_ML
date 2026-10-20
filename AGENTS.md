@@ -117,7 +117,7 @@ python r2_run_all.py --pymc ... --skip-ablation   # skip the feature-engineering
 | `r2_figures_main.py` | Figures 1 and 3–7 and the Graphical Abstract; cross-checks plotted values against the result files | `figure_values.json` | ~35 s |
 | `r2_figures_supp.py` | Supplementary Figures S2–S7 (asserts its values against the result files) | `supp_figure_values.json` | ~25 s |
 
-Times are from a 12-core Windows workstation. The `*.log` files in `results/revision2/` are console output saved from the reported runs; the scripts print to stdout and do not write them, so `r2_run_all.py` does not refresh them. Redirect the output yourself if you need a new log. The figure scripts write images to `Manuscript_AAPS_Journal/Revision2_Submission/` (created if missing; git-ignored, so figures are never committed). `r2_run_all.py` also runs the private manuscript build (`make_tables.py`, `build_r2.py`, `make_tracked.py`) only when that folder exists.
+Times are from a 12-core Windows workstation. The scripts print to the console; `r2_run_all.py` also writes the console output (stdout and stderr) of the PopPK refits, `r2_ml_analyses.py`, both sensitivity scripts and the two figure scripts to their `*.log` files in `results/revision2/`, replacing a log only when its step succeeds (a failed step leaves `<name>.log.partial`). Running a script directly does not update its log. The figure scripts write images to `Manuscript_AAPS_Journal/Revision2_Submission/` (created if missing; git-ignored, so figures are never committed). `r2_run_all.py` also runs the private manuscript build (`make_tables.py`, `build_r2.py`, `make_tracked.py`) only when that folder exists.
 
 ### Conventions
 
