@@ -100,7 +100,7 @@ python r2_run_all.py --pymc ... --skip-ablation   # skip the feature-engineering
 
 | Script | Purpose | Main outputs (`results/revision2/`) | Time |
 |---|---|---|---|
-| `r2_simulator_truth.py` | Re-runs the simulator (seed 12345) in memory, checks it reproduces `data/` exactly, and recovers each patient's true PK parameters; `load_truth()` and the outcome functions are imported by other scripts | `true_individual_pk.csv` | seconds |
+| `r2_simulator_truth.py` | Re-runs the simulator (seed 12345) in memory, checks the result against key columns of `data/` (baseline CrCL, drug, doses, concentrations, both outcomes; `time_varying.csv` is not checked), and recovers each patient's true PK parameters; `load_truth()` and the outcome functions are imported by other scripts | `true_individual_pk.csv` | seconds |
 | `refit_popk.py` | R1 production PopPK fit (*PyMC*); run automatically only if its trace is missing | `models/phase2_popk_trace_likelihood.nc` | slow |
 | `r2_popk_parameterization_check.py` | Puts the R1 PopPK estimates (z-standardized covariates) on the simulator's reference scale (*PyMC*) | `popk_r1_reference_comparison.csv`, `popk_individual_recovery.csv` | ~20 s |
 | `r2_refit_popk_power.py` | Correctly specified power-model refit (*PyMC*; `--seed`, default 2026; `--smoke` for a quick test) | `popk_power_summary.csv`, `popk_power_chains.json`, `models/r2_popk_power_trace.nc` | ~70 min |
@@ -111,13 +111,13 @@ python r2_run_all.py --pymc ... --skip-ablation   # skip the feature-engineering
 | `r2_shap.py` | Exact TreeSHAP and gain importance, each model with its own scaler | `shap_importance.json`, `shap_values_*.csv` | ~15 s |
 | `r2_dose_optimization.py` | Vectorized full-cohort grid-search dose optimization with a ground-truth (simulator) check and a gentamicin trough-threshold scenario | `dose_optimization_*.json/.csv` | ~45 s |
 | `r2_table8.py` | Table 8 (baseline and optimized doses by drug) | `table8_values.json` | seconds |
-| `r2_sensitivity_cohorts.py` | Source-aligned cohorts: published values replace author-chosen ones, 5 paired seeds (Table S2) | `sensitivity_cohorts.json/.log` | ~2 min |
-| `r2_sensitivity_sweep.py` | One-at-a-time sweep of assumptions without a published source, plus three published values (Table S4); 130 cohorts | `sensitivity_sweep.json/.log` | ~26 min |
+| `r2_sensitivity_cohorts.py` | Source-aligned cohorts: published values replace author-chosen ones, 5 paired seeds (Table S2) | `sensitivity_cohorts.json` | ~2 min |
+| `r2_sensitivity_sweep.py` | One-at-a-time sweep of assumptions without a published source, plus three published values (Table S4); 130 cohorts | `sensitivity_sweep.json` | ~26 min |
 | `r2_figure2_popk.py` | Figure 2 and Supplementary Figure S1 from the posterior traces (*PyMC*) | `figure2_values.json` | ~20 s |
-| `r2_figures_main.py` | Figures 1 and 3–7 and the Graphical Abstract; cross-checks plotted values against the result files | `figure_values.json`, `figures_main.log` | ~35 s |
-| `r2_figures_supp.py` | Supplementary Figures S2–S7 (asserts its values against the result files) | `supp_figure_values.json`, `figures_supp.log` | ~25 s |
+| `r2_figures_main.py` | Figures 1 and 3–7 and the Graphical Abstract; cross-checks plotted values against the result files | `figure_values.json` | ~35 s |
+| `r2_figures_supp.py` | Supplementary Figures S2–S7 (asserts its values against the result files) | `supp_figure_values.json` | ~25 s |
 
-Times are from a 12-core Windows workstation. The figure scripts write images to `Manuscript_AAPS_Journal/Revision2_Submission/` (created if missing; git-ignored, so figures are never committed). `r2_run_all.py` also runs the private manuscript build (`make_tables.py`, `build_r2.py`, `make_tracked.py`) only when that folder exists.
+Times are from a 12-core Windows workstation. The `*.log` files in `results/revision2/` are console output saved from the reported runs; the scripts print to stdout and do not write them, so `r2_run_all.py` does not refresh them. Redirect the output yourself if you need a new log. The figure scripts write images to `Manuscript_AAPS_Journal/Revision2_Submission/` (created if missing; git-ignored, so figures are never committed). `r2_run_all.py` also runs the private manuscript build (`make_tables.py`, `build_r2.py`, `make_tracked.py`) only when that folder exists.
 
 ### Conventions
 
