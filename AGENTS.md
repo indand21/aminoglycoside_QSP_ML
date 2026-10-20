@@ -78,6 +78,54 @@ python test_phase4_enhancements.py
 - `check_feature_importance.py` – Checks feature importance of trained models.
 - `fill_poster.py` – Fills poster templates with results.
 
+## Revision 2 Scripts (`r2_*.py`)
+
+The `r2_*.py` scripts produce every number, table and figure of the second revision of the AAPS Journal manuscript (AAPSJ-D-26-00274). They read the Phase 1–5 outputs and write to `results/revision2/`; they do not modify `data/` or the Phase 4 production models.
+
+### Running them
+
+```bash
+# Everything, in dependency order (two environments; see below)
+python r2_run_all.py --pymc <path to the PyMC environment's python.exe>
+python r2_run_all.py --pymc ... --skip-refit      # reuse existing R2 PopPK traces
+python r2_run_all.py --pymc ... --skip-ablation   # skip the feature-engineering ablation
+```
+
+`r2_run_all.py` uses two Python environments:
+
+- **Main environment** (NumPy 2.x, XGBoost 3.1.2, scikit-learn, Optuna) for the ML, dose-optimization, table and figure scripts.
+- **Pinned PyMC environment** (NumPy 1.26.4, PyMC 5.16.2, PyTensor 2.25.5, nutpie 0.13.2, numba 0.60.0, ArviZ, Matplotlib), passed with `--pymc`, for the scripts that read or fit posterior traces (marked *PyMC* below).
+
+### Scripts, in run order
+
+| Script | Purpose | Main outputs (`results/revision2/`) | Time |
+|---|---|---|---|
+| `r2_simulator_truth.py` | Re-runs the simulator (seed 12345) in memory, checks it reproduces `data/` exactly, and recovers each patient's true PK parameters; `load_truth()` and the outcome functions are imported by other scripts | `true_individual_pk.csv` | seconds |
+| `refit_popk.py` | R1 production PopPK fit (*PyMC*); run automatically only if its trace is missing | `models/phase2_popk_trace_likelihood.nc` | slow |
+| `r2_popk_parameterization_check.py` | Puts the R1 PopPK estimates (z-standardized covariates) on the simulator's reference scale (*PyMC*) | `popk_r1_reference_comparison.csv`, `popk_individual_recovery.csv` | ~20 s |
+| `r2_refit_popk_power.py` | Correctly specified power-model refit (*PyMC*; `--seed`, default 2026; `--smoke` for a quick test) | `popk_power_summary.csv`, `popk_power_chains.json`, `models/r2_popk_power_trace.nc` | ~70 min |
+| `r2_popk_dense_check.py` | Dense-sampling simulation-estimation check of identifiability (*PyMC*) | `popk_dense_summary.csv`, `models/r2_popk_dense_trace.nc` | ~20 min |
+| `r2_tables.py` | Tables 2 and 4 from `data/` and Phase 3 PK/PD indices (CLSI M100 2023 breakpoints) | `table2_values.json`, `table4_values.json` | seconds |
+| `r2_ml_common.py` | Shared helpers that reproduce the Phase 4 production setup; run directly to verify the held-out predictions match `results/phase4_ml_enhanced/test_predictions.json` | – | ~20 s |
+| `r2_ml_analyses.py` | Nested out-of-fold predictions, risk stratification (Table 7), feature-engineering ablation, logistic-regression comparisons, imputed-PK sensitivity | `oof_predictions.csv`, `risk_stratification.json`, `feature_ablation.json`, `lr_comparisons.json` | ~11 min without ablation; longer with it |
+| `r2_shap.py` | Exact TreeSHAP and gain importance, each model with its own scaler | `shap_importance.json`, `shap_values_*.csv` | ~15 s |
+| `r2_dose_optimization.py` | Vectorized full-cohort grid-search dose optimization with a ground-truth (simulator) check and a gentamicin trough-threshold scenario | `dose_optimization_*.json/.csv` | ~45 s |
+| `r2_table8.py` | Table 8 (baseline and optimized doses by drug) | `table8_values.json` | seconds |
+| `r2_sensitivity_cohorts.py` | Source-aligned cohorts: published values replace author-chosen ones, 5 paired seeds (Table S2) | `sensitivity_cohorts.json/.log` | ~2 min |
+| `r2_sensitivity_sweep.py` | One-at-a-time sweep of assumptions without a published source, plus three published values (Table S4); 130 cohorts | `sensitivity_sweep.json/.log` | ~26 min |
+| `r2_figure2_popk.py` | Figure 2 and Supplementary Figure S1 from the posterior traces (*PyMC*) | `figure2_values.json` | ~20 s |
+| `r2_figures_main.py` | Figures 1 and 3–7 and the Graphical Abstract; cross-checks plotted values against the result files | `figure_values.json`, `figures_main.log` | ~35 s |
+| `r2_figures_supp.py` | Supplementary Figures S2–S7 (asserts its values against the result files) | `supp_figure_values.json`, `figures_supp.log` | ~25 s |
+
+Times are from a 12-core Windows workstation. The figure scripts write images to `Manuscript_AAPS_Journal/Revision2_Submission/` (created if missing; git-ignored, so figures are never committed). `r2_run_all.py` also runs the private manuscript build (`make_tables.py`, `build_r2.py`, `make_tracked.py`) only when that folder exists.
+
+### Conventions
+
+- **No hand-typed results.** Every number is computed by a script and stored in `results/revision2/`; tables and the manuscript text are filled from those files. Change the script and re-run it rather than editing a result file.
+- **Fixed seeds.** Simulator 12345; PopPK refit 2026 (2027 for the repeat); sensitivity cohorts `[12345, 111, 222, 333, 444]`; Optuna TPE seed 42 (Phase 4's own tuning code). Re-running a script reproduces its outputs value for value, apart from recorded run times.
+- **Production models are reused, not retrained.** `r2_ml_common.py` rebuilds the Phase 4 features, split and scaler exactly. The saved XGBoost JSON models do not store the tuned hyperparameters, so any refit (nested CV, ablation, sensitivity cohorts) re-tunes with Optuna (100 trials).
+- **Parallelism.** The sensitivity scripts use `ProcessPoolExecutor(max_tasks_per_child=1)` (Python ≥ 3.11) so that each cohort runs in a fresh process; `--workers` sets the pool size. CPU processes are used rather than the GPU, which was slower for these small XGBoost fits.
+
 ## Code Organization
 
 ```
@@ -93,13 +141,15 @@ aminoglycoside_QSP_ML/
 │   ├── phase2_diagnostics/
 │   ├── phase3_pkpd/
 │   ├── phase4_ml_enhanced/
-│   └── phase5_optimization/
+│   ├── phase5_optimization/
+│   └── revision2/          # Revision 2 results (r2_*.py); _optuna_scratch/ is git-ignored
 ├── utils/                  # Utility modules
 │   ├── __init__.py
 │   └── extract_individual_pk.py  # Extract individual PK parameters from Bayesian trace
 ├── *.py                    # Main phase scripts (phase1_preprocessing.py, …)
 ├── test_*.py               # Test scripts
 ├── run_*.py                # Pipeline scripts
+├── r2_*.py                 # Revision 2 analysis scripts (see above); refit_popk.py = R1 production PopPK fit
 └── *.md                    # Extensive documentation (README, guides, summaries)
 ```
 
@@ -150,7 +200,7 @@ import pymc as pm
 
 - The `EnhancedMLPipeline` class orchestrates data loading, feature engineering, model training, evaluation, and saving.
 - Imbalance handling via `class_weight` (default) or SMOTE (optional).
-- Hyperparameter optimization uses `RandomizedSearchCV`; Optuna is installed but not yet integrated (see `DEPENDENCY_INSTALLATION_AND_RESULTS.md`).
+- Hyperparameter optimization uses Optuna (TPE sampler, seed 42, 100 trials in the production models); `RandomizedSearchCV` is used only as a fallback when Optuna is unavailable or fails.
 - Performance metrics (ROC‑AUC, R², etc.) are stored in JSON files under `results/phase4_ml_enhanced/`.
 
 ## Testing Approach
@@ -178,6 +228,10 @@ Many downstream steps (individual PK extraction, some tests) require `models/pha
 - Run `python phase2_population_pk.py` (takes 30‑90 minutes).
 - If you cannot run Phase 2, those steps will skip or fall back to using only population PK parameters.
 
+### Which PopPK Trace Is the Posterior
+
+`phase2_population_pk.py` defines priors but no observation likelihood, so `models/phase2_popk_trace.nc` is a prior sample. `refit_popk.py` adds the likelihood and writes `models/phase2_popk_trace_likelihood.nc`, which is the R1 production fit used by `phase3_pkpd_modeling.py` and the Revision 2 scripts. That fit uses z-standardized log-linear covariates, so its coefficients are log-changes per SD, not allometric exponents; `r2_popk_parameterization_check.py` converts them. All `*.nc` traces (0.2–0.7 GB) are git-ignored and must be regenerated on a clean checkout.
+
 ### Outdated R Documentation
 
 The main `README.md` references R scripts and directory structures that do not exist. **Ignore those sections**. The actual implementation is entirely Python.
@@ -186,7 +240,7 @@ The main `README.md` references R scripts and directory structures that do not e
 
 - NumPy 2.x is incompatible; stick to NumPy 1.26.4.
 - PyMC 5.16.2 with PyTensor 2.25.5 is required; newer versions may cause issues.
-- Optuna is installed but not yet integrated into the ML build methods (see `DEPENDENCY_INSTALLATION_AND_RESULTS.md` for remaining work).
+- Phase 4 depends on Optuna for tuning; without it, results fall back to `RandomizedSearchCV` and will not match the production models.
 
 ### Data Paths
 
@@ -217,6 +271,7 @@ All scripts assume the working directory is the project root. Relative paths lik
 4. **Run tests** to verify improvements.
 5. **Consult existing documentation** for gotchas (Windows, dependency versions).
 6. **Ignore R‑related instructions**; focus on Python scripts.
+7. **For Revision 2 work**, change the relevant `r2_*.py` script and re-run it (or `r2_run_all.py`); never edit files in `results/revision2/` by hand.
 
 ---
 
