@@ -1,0 +1,401 @@
+{
+ "N": 1500,
+ "age": [
+  57.7,
+  14.5
+ ],
+ "age_range": [
+  18.0,
+  90.0
+ ],
+ "male": [
+  974,
+  64.9
+ ],
+ "weight": [
+  62.0,
+  11.5
+ ],
+ "height": [
+  162.2,
+  9.8
+ ],
+ "bmi": [
+  23.4,
+  2.9
+ ],
+ "amikacin": [
+  939,
+  62.6
+ ],
+ "gentamicin": [
+  561,
+  37.4
+ ],
+ "apache": [
+  22.0,
+  7.9
+ ],
+ "apache_range": [
+  5,
+  45
+ ],
+ "sofa": [
+  9.1,
+  3.9
+ ],
+ "sofa_range": [
+  2,
+  20
+ ],
+ "sepsis_type": {
+  "sepsis": [
+   378,
+   25.2
+  ],
+  "severe sepsis": [
+   523,
+   34.9
+  ],
+  "septic shock": [
+   599,
+   39.9
+  ]
+ },
+ "mech_vent": [
+  964,
+  64.3
+ ],
+ "vasopressor": [
+  745,
+  49.7
+ ],
+ "infection_site": {
+  "pneumonia": [
+   498,
+   33.2
+  ],
+  "bloodstream": [
+   480,
+   32.0
+  ],
+  "uti": [
+   212,
+   14.1
+  ],
+  "iai": [
+   190,
+   12.7
+  ],
+  "other": [
+   120,
+   8.0
+  ]
+ },
+ "pathogen": {
+  "klebsiella": [
+   544,
+   36.3
+  ],
+  "pseudomonas": [
+   371,
+   24.7
+  ],
+  "e_coli": [
+   278,
+   18.5
+  ],
+  "acinetobacter": [
+   222,
+   14.8
+  ],
+  "other": [
+   85,
+   5.7
+  ]
+ },
+ "mic": {
+  "gentamicin": {
+   "n": 561,
+   "distribution": {
+    "0.25": 97,
+    "0.5": 90,
+    "1": 50,
+    "2": 22,
+    "4": 7,
+    "8": 17,
+    "16": 71,
+    "32": 131,
+    "64": 66,
+    "128": 10
+   },
+   "geometric_mean": 4.45,
+   "MIC50": 8.0,
+   "MIC90": 64.0,
+   "clsi_m100_ed33": {
+    "Susceptible": [
+     188,
+     33.5
+    ],
+    "Intermediate": [
+     7,
+     1.2
+    ],
+    "Resistant": [
+     241,
+     43.0
+    ],
+    "No CLSI breakpoint": [
+     125,
+     22.3
+    ]
+   },
+   "clsi_by_organism": {
+    "Enterobacterales": {
+     "n": 344,
+     "Susceptible": 156,
+     "Intermediate": 5,
+     "Resistant": 183,
+     "No CLSI breakpoint": 0
+    },
+    "Pseudomonas": {
+     "n": 125,
+     "Susceptible": 0,
+     "Intermediate": 0,
+     "Resistant": 0,
+     "No CLSI breakpoint": 125
+    },
+    "Acinetobacter": {
+     "n": 92,
+     "Susceptible": 32,
+     "Intermediate": 2,
+     "Resistant": 58,
+     "No CLSI breakpoint": 0
+    }
+   },
+   "r1_categories": {
+    "S": [
+     259,
+     46.2
+    ],
+    "I": [
+     24,
+     4.3
+    ],
+    "R": [
+     278,
+     49.6
+    ]
+   }
+  },
+  "amikacin": {
+   "n": 939,
+   "distribution": {
+    "0.25": 9,
+    "0.5": 56,
+    "1": 120,
+    "2": 171,
+    "4": 112,
+    "8": 31,
+    "16": 28,
+    "32": 120,
+    "64": 183,
+    "128": 109
+   },
+   "geometric_mean": 9.07,
+   "MIC50": 8.0,
+   "MIC90": 128.0,
+   "clsi_m100_ed33": {
+    "Susceptible": [
+     361,
+     38.4
+    ],
+    "Intermediate": [
+     52,
+     5.5
+    ],
+    "Resistant": [
+     307,
+     32.7
+    ],
+    "No CLSI breakpoint": [
+     219,
+     23.3
+    ]
+   },
+   "clsi_by_organism": {
+    "Enterobacterales": {
+     "n": 563,
+     "Susceptible": 314,
+     "Intermediate": 17,
+     "Resistant": 232,
+     "No CLSI breakpoint": 0
+    },
+    "Pseudomonas": {
+     "n": 246,
+     "Susceptible": 9,
+     "Intermediate": 7,
+     "Resistant": 11,
+     "No CLSI breakpoint": 219
+    },
+    "Acinetobacter": {
+     "n": 130,
+     "Susceptible": 38,
+     "Intermediate": 28,
+     "Resistant": 64,
+     "No CLSI breakpoint": 0
+    }
+   },
+   "r1_categories": {
+    "S": [
+     468,
+     49.8
+    ],
+    "I": [
+     31,
+     3.3
+    ],
+    "R": [
+     440,
+     46.9
+    ]
+   }
+  }
+ },
+ "scr": [
+  0.8,
+  0.54
+ ],
+ "crcl": [
+  104.7,
+  46.4
+ ],
+ "renal": {
+  "Augmented (>130)": [
+   396,
+   26.4
+  ],
+  "Normal (50-130)": [
+   961,
+   64.1
+  ],
+  "Impaired (<50)": [
+   143,
+   9.5
+  ]
+ },
+ "egfr": [
+  103.0,
+  42.8
+ ],
+ "albumin": [
+  2.8,
+  0.6
+ ],
+ "diabetes": [
+  535,
+  35.7
+ ],
+ "ckd_stage": {
+  "0": [
+   882,
+   58.8
+  ],
+  "1": [
+   381,
+   25.4
+  ],
+  "2": [
+   124,
+   8.3
+  ],
+  "3a": [
+   59,
+   3.9
+  ],
+  "3b": [
+   36,
+   2.4
+  ],
+  "4": [
+   18,
+   1.2
+  ]
+ },
+ "ckd_stages_1_4": [
+  618,
+  41.2
+ ],
+ "dose": {
+  "amikacin": {
+   "dose_mg": [
+    1695.0,
+    326.0
+   ],
+   "dose_mgkg": [
+    27.5,
+    1.5
+   ]
+  },
+  "gentamicin": {
+   "dose_mg": [
+    375.0,
+    80.0
+   ],
+   "dose_mgkg": [
+    6.0,
+    0.6
+   ]
+  }
+ },
+ "interval": {
+  "q24h": [
+   1262,
+   84.1
+  ],
+  "q36h": [
+   149,
+   9.9
+  ],
+  "q48h": [
+   89,
+   5.9
+  ]
+ },
+ "interval_by_drug": {
+  "amikacin": {
+   "q24h": 785,
+   "q36h": 91,
+   "q48h": 63
+  },
+  "gentamicin": {
+   "q24h": 477,
+   "q36h": 58,
+   "q48h": 26
+  }
+ },
+ "n_doses": [
+  4.7,
+  1.5
+ ],
+ "treatment_days": [
+  5.0,
+  1.4
+ ],
+ "nephrotoxicity": [
+  493,
+  32.9
+ ],
+ "cure": [
+  965,
+  64.3
+ ],
+ "icu_mortality": [
+  488,
+  32.5
+ ],
+ "day28_mortality": [
+  555,
+  37.0
+ ]
+}

@@ -1,0 +1,113 @@
+{
+  "nephrotoxicity_predose": {
+    "with_engineered": 0.7913,
+    "without_engineered": 0.7911,
+    "with_engineered_ci": [
+      0.738,
+      0.841
+    ],
+    "without_engineered_ci": [
+      0.737,
+      0.842
+    ],
+    "difference": 0.0003,
+    "difference_95ci": [
+      -0.0222,
+      0.0223
+    ],
+    "delong_p": 0.9819,
+    "n_test": 300,
+    "n_events": 99,
+    "n_features_with": 26,
+    "n_features_without": 19,
+    "engineered_removed": [
+      "age_x_baseline_scr",
+      "diabetes_x_baseline_crcl",
+      "severity_composite",
+      "renal_score",
+      "elderly",
+      "impaired_renal",
+      "obese"
+    ],
+    "inner_val_auc_with": 0.8523468826165579,
+    "inner_val_auc_without": 0.8435411588961397
+  },
+  "nephrotoxicity_postdose": {
+    "with_engineered": 0.9111,
+    "without_engineered": 0.9182,
+    "with_engineered_ci": [
+      0.878,
+      0.943
+    ],
+    "without_engineered_ci": [
+      0.886,
+      0.948
+    ],
+    "difference": -0.0071,
+    "difference_95ci": [
+      -0.0183,
+      0.0032
+    ],
+    "delong_p": 0.1846,
+    "n_test": 300,
+    "n_events": 99,
+    "n_features_with": 55,
+    "n_features_without": 42,
+    "engineered_removed": [
+      "pk_composite",
+      "pk_ratio",
+      "target_score",
+      "Cmax_x_weight",
+      "AUC_MIC_x_apache_ii",
+      "Cmax_MIC_x_baseline_crcl",
+      "age_x_baseline_scr",
+      "diabetes_x_baseline_crcl",
+      "severity_composite",
+      "renal_score",
+      "elderly",
+      "impaired_renal",
+      "obese"
+    ],
+    "inner_val_auc_with": 0.9280603821055114,
+    "inner_val_auc_without": 0.9279817595722935
+  },
+  "clinical_cure": {
+    "with_engineered": 0.9617,
+    "without_engineered": 0.9596,
+    "with_engineered_ci": [
+      0.94,
+      0.979
+    ],
+    "without_engineered_ci": [
+      0.937,
+      0.977
+    ],
+    "difference": 0.0021,
+    "difference_95ci": [
+      -0.0012,
+      0.0057
+    ],
+    "delong_p": 0.1997,
+    "n_test": 300,
+    "n_events": 193,
+    "n_features_with": 55,
+    "n_features_without": 42,
+    "engineered_removed": [
+      "pk_composite",
+      "pk_ratio",
+      "target_score",
+      "Cmax_x_weight",
+      "AUC_MIC_x_apache_ii",
+      "Cmax_MIC_x_baseline_crcl",
+      "age_x_baseline_scr",
+      "diabetes_x_baseline_crcl",
+      "severity_composite",
+      "renal_score",
+      "elderly",
+      "impaired_renal",
+      "obese"
+    ],
+    "inner_val_auc_with": 0.9646632437330112,
+    "inner_val_auc_without": 0.9645877378435518
+  }
+}

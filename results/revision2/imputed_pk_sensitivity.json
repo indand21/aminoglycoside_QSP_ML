@@ -1,0 +1,16 @@
+{
+  "nephrotoxicity_postdose": {
+    "n_imputed_total": 50,
+    "n_imputed_in_test": 14,
+    "n_imputed_in_train": 36,
+    "auroc_all_test": 0.9149203477561686,
+    "auroc_test_excluding_imputed": 0.9141156462585034
+  },
+  "clinical_cure": {
+    "n_imputed_total": 50,
+    "n_imputed_in_test": 9,
+    "n_imputed_in_train": 41,
+    "auroc_all_test": 0.964408503220183,
+    "auroc_test_excluding_imputed": 0.9657095641396407
+  }
+}

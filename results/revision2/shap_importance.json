@@ -1,0 +1,1232 @@
+{
+ "nephrotoxicity_postdose": [
+  {
+   "feature": "Cmin",
+   "shap_pct": 26.0847110748291,
+   "mean_abs_shap": 1.2053922414779663,
+   "gain_pct": 13.31169605255127,
+   "shap_value_corr": 0.9289356966508383,
+   "shap_rank": 1,
+   "gain_rank": 1
+  },
+  {
+   "feature": "age",
+   "shap_pct": 9.545201301574707,
+   "mean_abs_shap": 0.44109025597572327,
+   "gain_pct": 2.248518228530884,
+   "shap_value_corr": 0.9635494741983791,
+   "shap_rank": 2,
+   "gain_rank": 7
+  },
+  {
+   "feature": "k10_bayes",
+   "shap_pct": 8.71383285522461,
+   "mean_abs_shap": 0.4026721715927124,
+   "gain_pct": 4.860109806060791,
+   "shap_value_corr": -0.9461575635488136,
+   "shap_rank": 3,
+   "gain_rank": 2
+  },
+  {
+   "feature": "CL_bayes",
+   "shap_pct": 4.684557914733887,
+   "mean_abs_shap": 0.21647661924362183,
+   "gain_pct": 1.9765870571136475,
+   "shap_value_corr": -0.9606767845489792,
+   "shap_rank": 4,
+   "gain_rank": 10
+  },
+  {
+   "feature": "fluctuation_index",
+   "shap_pct": 4.508487224578857,
+   "mean_abs_shap": 0.20834027230739594,
+   "gain_pct": 2.806079149246216,
+   "shap_value_corr": -0.8242146630223407,
+   "shap_rank": 5,
+   "gain_rank": 4
+  },
+  {
+   "feature": "mechanical_ventilation",
+   "shap_pct": 4.15310001373291,
+   "mean_abs_shap": 0.1919175684452057,
+   "gain_pct": 1.7841877937316895,
+   "shap_value_corr": 0.8300234772955314,
+   "shap_rank": 6,
+   "gain_rank": 14
+  },
+  {
+   "feature": "CL_cv",
+   "shap_pct": 2.8873636722564697,
+   "mean_abs_shap": 0.13342703878879547,
+   "gain_pct": 1.5073710680007935,
+   "shap_value_corr": -0.9010887163471659,
+   "shap_rank": 7,
+   "gain_rank": 26
+  },
+  {
+   "feature": "age_x_baseline_scr",
+   "shap_pct": 2.682922840118408,
+   "mean_abs_shap": 0.12397969514131546,
+   "gain_pct": 2.489142417907715,
+   "shap_value_corr": 0.859276355036861,
+   "shap_rank": 8,
+   "gain_rank": 6
+  },
+  {
+   "feature": "t_half_beta",
+   "shap_pct": 2.2751097679138184,
+   "mean_abs_shap": 0.10513436794281006,
+   "gain_pct": 2.0832815170288086,
+   "shap_value_corr": 0.8171566773543574,
+   "shap_rank": 9,
+   "gain_rank": 9
+  },
+  {
+   "feature": "t_half_alpha",
+   "shap_pct": 2.229611396789551,
+   "mean_abs_shap": 0.10303185880184174,
+   "gain_pct": 2.1439692974090576,
+   "shap_value_corr": 0.7152247167155058,
+   "shap_rank": 10,
+   "gain_rank": 8
+  },
+  {
+   "feature": "Vp_bayes",
+   "shap_pct": 2.1931803226470947,
+   "mean_abs_shap": 0.10134835541248322,
+   "gain_pct": 1.694473385810852,
+   "shap_value_corr": 0.3535841392031108,
+   "shap_rank": 11,
+   "gain_rank": 17
+  },
+  {
+   "feature": "diabetes_x_baseline_crcl",
+   "shap_pct": 2.19315767288208,
+   "mean_abs_shap": 0.10134731233119965,
+   "gain_pct": 1.6157971620559692,
+   "shap_value_corr": 0.8019591158369133,
+   "shap_rank": 12,
+   "gain_rank": 21
+  },
+  {
+   "feature": "baseline_albumin",
+   "shap_pct": 1.6563174724578857,
+   "mean_abs_shap": 0.0765395537018776,
+   "gain_pct": 1.6059958934783936,
+   "shap_value_corr": -0.046813237089546614,
+   "shap_rank": 13,
+   "gain_rank": 22
+  },
+  {
+   "feature": "Vc_cv",
+   "shap_pct": 1.5931669473648071,
+   "mean_abs_shap": 0.07362133264541626,
+   "gain_pct": 1.3493998050689697,
+   "shap_value_corr": -0.7281457740879848,
+   "shap_rank": 14,
+   "gain_rank": 41
+  },
+  {
+   "feature": "k21_bayes",
+   "shap_pct": 1.5765665769577026,
+   "mean_abs_shap": 0.07285421341657639,
+   "gain_pct": 1.908053994178772,
+   "shap_value_corr": -0.0853280867892425,
+   "shap_rank": 15,
+   "gain_rank": 12
+  },
+  {
+   "feature": "baseline_bilirubin",
+   "shap_pct": 1.4665148258209229,
+   "mean_abs_shap": 0.0677686482667923,
+   "gain_pct": 1.2922965288162231,
+   "shap_value_corr": 0.4110281090371446,
+   "shap_rank": 16,
+   "gain_rank": 47
+  },
+  {
+   "feature": "vasopressor_use",
+   "shap_pct": 1.2916865348815918,
+   "mean_abs_shap": 0.059689711779356,
+   "gain_pct": 1.5332884788513184,
+   "shap_value_corr": 0.8658462327871668,
+   "shap_rank": 17,
+   "gain_rank": 24
+  },
+  {
+   "feature": "Cmax_MIC_x_baseline_crcl",
+   "shap_pct": 1.154116153717041,
+   "mean_abs_shap": 0.05333249270915985,
+   "gain_pct": 1.2682431936264038,
+   "shap_value_corr": 0.0713252477001101,
+   "shap_rank": 18,
+   "gain_rank": 49
+  },
+  {
+   "feature": "Cmax",
+   "shap_pct": 1.079496145248413,
+   "mean_abs_shap": 0.04988425225019455,
+   "gain_pct": 1.8272697925567627,
+   "shap_value_corr": 0.8125715085958602,
+   "shap_rank": 19,
+   "gain_rank": 13
+  },
+  {
+   "feature": "peak_trough_ratio",
+   "shap_pct": 1.0536640882492065,
+   "mean_abs_shap": 0.04869053140282631,
+   "gain_pct": 3.6079626083374023,
+   "shap_value_corr": -0.8546719439172843,
+   "shap_rank": 20,
+   "gain_rank": 3
+  },
+  {
+   "feature": "bmi",
+   "shap_pct": 0.9951953887939453,
+   "mean_abs_shap": 0.04598865285515785,
+   "gain_pct": 1.3539105653762817,
+   "shap_value_corr": 0.7891138090546529,
+   "shap_rank": 21,
+   "gain_rank": 40
+  },
+  {
+   "feature": "Vss_bayes",
+   "shap_pct": 0.9898543953895569,
+   "mean_abs_shap": 0.04574184492230415,
+   "gain_pct": 1.505789041519165,
+   "shap_value_corr": 0.6110575990409611,
+   "shap_rank": 22,
+   "gain_rank": 27
+  },
+  {
+   "feature": "AUC24",
+   "shap_pct": 0.9651485681533813,
+   "mean_abs_shap": 0.044600170105695724,
+   "gain_pct": 1.4285857677459717,
+   "shap_value_corr": 0.08246210534305859,
+   "shap_rank": 23,
+   "gain_rank": 34
+  },
+  {
+   "feature": "sofa_score",
+   "shap_pct": 0.9164929986000061,
+   "mean_abs_shap": 0.04235176369547844,
+   "gain_pct": 1.4897446632385254,
+   "shap_value_corr": 0.9436934594905056,
+   "shap_rank": 24,
+   "gain_rank": 28
+  },
+  {
+   "feature": "Cmax_x_weight",
+   "shap_pct": 0.9042631983757019,
+   "mean_abs_shap": 0.041786618530750275,
+   "gain_pct": 1.7762336730957031,
+   "shap_value_corr": 0.8235898491250615,
+   "shap_rank": 25,
+   "gain_rank": 15
+  },
+  {
+   "feature": "pk_ratio",
+   "shap_pct": 0.8202864527702332,
+   "mean_abs_shap": 0.037905994802713394,
+   "gain_pct": 1.5092711448669434,
+   "shap_value_corr": 0.2908944475086434,
+   "shap_rank": 26,
+   "gain_rank": 25
+  },
+  {
+   "feature": "height",
+   "shap_pct": 0.814152181148529,
+   "mean_abs_shap": 0.03762252628803253,
+   "gain_pct": 1.430954933166504,
+   "shap_value_corr": -0.10147948642475459,
+   "shap_rank": 27,
+   "gain_rank": 33
+  },
+  {
+   "feature": "baseline_crcl",
+   "shap_pct": 0.7854278683662415,
+   "mean_abs_shap": 0.03629515692591667,
+   "gain_pct": 1.3994466066360474,
+   "shap_value_corr": -0.7929117893772425,
+   "shap_rank": 28,
+   "gain_rank": 37
+  },
+  {
+   "feature": "Q_bayes",
+   "shap_pct": 0.7208983302116394,
+   "mean_abs_shap": 0.03331320360302925,
+   "gain_pct": 1.4777131080627441,
+   "shap_value_corr": 0.2150134748478179,
+   "shap_rank": 29,
+   "gain_rank": 30
+  },
+  {
+   "feature": "severity_composite",
+   "shap_pct": 0.7008098363876343,
+   "mean_abs_shap": 0.03238489851355553,
+   "gain_pct": 1.3355191946029663,
+   "shap_value_corr": 0.6910939280855292,
+   "shap_rank": 30,
+   "gain_rank": 44
+  },
+  {
+   "feature": "Cmax_MIC",
+   "shap_pct": 0.6954105496406555,
+   "mean_abs_shap": 0.03213539347052574,
+   "gain_pct": 1.677376389503479,
+   "shap_value_corr": 0.36109211870700075,
+   "shap_rank": 31,
+   "gain_rank": 19
+  },
+  {
+   "feature": "baseline_scr",
+   "shap_pct": 0.6861443519592285,
+   "mean_abs_shap": 0.031707197427749634,
+   "gain_pct": 1.2715791463851929,
+   "shap_value_corr": -0.7235867656120698,
+   "shap_rank": 32,
+   "gain_rank": 48
+  },
+  {
+   "feature": "apache_ii",
+   "shap_pct": 0.6617955565452576,
+   "mean_abs_shap": 0.030582023784518242,
+   "gain_pct": 1.294605016708374,
+   "shap_value_corr": 0.48995405323021723,
+   "shap_rank": 33,
+   "gain_rank": 46
+  },
+  {
+   "feature": "AUC_MIC",
+   "shap_pct": 0.5759364366531372,
+   "mean_abs_shap": 0.026614412665367126,
+   "gain_pct": 1.6442543268203735,
+   "shap_value_corr": 0.2593092364418698,
+   "shap_rank": 34,
+   "gain_rank": 20
+  },
+  {
+   "feature": "time_to_peak",
+   "shap_pct": 0.5540544390678406,
+   "mean_abs_shap": 0.02560323290526867,
+   "gain_pct": 1.9225202798843384,
+   "shap_value_corr": -0.7838343851807642,
+   "shap_rank": 35,
+   "gain_rank": 11
+  },
+  {
+   "feature": "elderly",
+   "shap_pct": 0.5399792790412903,
+   "mean_abs_shap": 0.024952810257673264,
+   "gain_pct": 2.618605375289917,
+   "shap_value_corr": 0.7957224405161516,
+   "shap_rank": 36,
+   "gain_rank": 5
+  },
+  {
+   "feature": "Vc_bayes",
+   "shap_pct": 0.5018069744110107,
+   "mean_abs_shap": 0.023188840597867966,
+   "gain_pct": 1.356152057647705,
+   "shap_value_corr": -0.3888996676783635,
+   "shap_rank": 37,
+   "gain_rank": 39
+  },
+  {
+   "feature": "weight",
+   "shap_pct": 0.47865456342697144,
+   "mean_abs_shap": 0.022118952125310898,
+   "gain_pct": 1.3358067274093628,
+   "shap_value_corr": -0.18369918879406794,
+   "shap_rank": 38,
+   "gain_rank": 43
+  },
+  {
+   "feature": "AUC_MIC_x_apache_ii",
+   "shap_pct": 0.45947909355163574,
+   "mean_abs_shap": 0.021232841536402702,
+   "gain_pct": 1.4626786708831787,
+   "shap_value_corr": -0.15832053546628652,
+   "shap_rank": 39,
+   "gain_rank": 32
+  },
+  {
+   "feature": "renal_score",
+   "shap_pct": 0.44230565428733826,
+   "mean_abs_shap": 0.02043924666941166,
+   "gain_pct": 1.4102081060409546,
+   "shap_value_corr": -0.4050850032844906,
+   "shap_rank": 40,
+   "gain_rank": 36
+  },
+  {
+   "feature": "baseline_egfr",
+   "shap_pct": 0.4276195466518402,
+   "mean_abs_shap": 0.01976059004664421,
+   "gain_pct": 1.3244831562042236,
+   "shap_value_corr": 0.20757967328817875,
+   "shap_rank": 41,
+   "gain_rank": 45
+  },
+  {
+   "feature": "k12_bayes",
+   "shap_pct": 0.41695958375930786,
+   "mean_abs_shap": 0.019267985597252846,
+   "gain_pct": 1.4805891513824463,
+   "shap_value_corr": 0.038940499957873055,
+   "shap_rank": 42,
+   "gain_rank": 29
+  },
+  {
+   "feature": "infection_site",
+   "shap_pct": 0.36896756291389465,
+   "mean_abs_shap": 0.0170502420514822,
+   "gain_pct": 1.4655084609985352,
+   "shap_value_corr": -0.015922493225453065,
+   "shap_rank": 43,
+   "gain_rank": 31
+  },
+  {
+   "feature": "pk_composite",
+   "shap_pct": 0.28118062019348145,
+   "mean_abs_shap": 0.012993548065423965,
+   "gain_pct": 1.4235397577285767,
+   "shap_value_corr": 0.4732136101955456,
+   "shap_rank": 44,
+   "gain_rank": 35
+  },
+  {
+   "feature": "diabetes",
+   "shap_pct": 0.23784279823303223,
+   "mean_abs_shap": 0.010990876704454422,
+   "gain_pct": 1.3813116550445557,
+   "shap_value_corr": 0.8052936126809602,
+   "shap_rank": 45,
+   "gain_rank": 38
+  },
+  {
+   "feature": "AUC_above_MIC",
+   "shap_pct": 0.21771495044231415,
+   "mean_abs_shap": 0.010060756467282772,
+   "gain_pct": 1.761394739151001,
+   "shap_value_corr": -0.25866051368562964,
+   "shap_rank": 46,
+   "gain_rank": 16
+  },
+  {
+   "feature": "time_above_MIC_percent",
+   "shap_pct": 0.20579580962657928,
+   "mean_abs_shap": 0.009509963914752007,
+   "gain_pct": 1.0377529859542847,
+   "shap_value_corr": 0.7908063219810963,
+   "shap_rank": 47,
+   "gain_rank": 51
+  },
+  {
+   "feature": "time_above_MIC",
+   "shap_pct": 0.20416684448719025,
+   "mean_abs_shap": 0.009434688836336136,
+   "gain_pct": 1.3393800258636475,
+   "shap_value_corr": -0.2860162782666871,
+   "shap_rank": 48,
+   "gain_rank": 42
+  },
+  {
+   "feature": "sex",
+   "shap_pct": 0.13830500841140747,
+   "mean_abs_shap": 0.0063911681063473225,
+   "gain_pct": 1.6886714696884155,
+   "shap_value_corr": 0.8271284106077647,
+   "shap_rank": 49,
+   "gain_rank": 18
+  },
+  {
+   "feature": "sepsis_type",
+   "shap_pct": 0.13091425597667694,
+   "mean_abs_shap": 0.006049636751413345,
+   "gain_pct": 0.6639052033424377,
+   "shap_value_corr": -0.4768414258803613,
+   "shap_rank": 50,
+   "gain_rank": 52
+  },
+  {
+   "feature": "target_score",
+   "shap_pct": 0.12016461044549942,
+   "mean_abs_shap": 0.005552888382226229,
+   "gain_pct": 1.5855239629745483,
+   "shap_value_corr": -0.4714501152378958,
+   "shap_rank": 51,
+   "gain_rank": 23
+  },
+  {
+   "feature": "obese",
+   "shap_pct": 0.019517527893185616,
+   "mean_abs_shap": 0.0009019182762131095,
+   "gain_pct": 1.233257532119751,
+   "shap_value_corr": 0.22087636372801198,
+   "shap_rank": 52,
+   "gain_rank": 50
+  },
+  {
+   "feature": "ckd_stage",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 53,
+   "gain_rank": 53
+  },
+  {
+   "feature": "drug",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 54,
+   "gain_rank": 54
+  },
+  {
+   "feature": "impaired_renal",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 55,
+   "gain_rank": 55
+  }
+ ],
+ "clinical_cure": [
+  {
+   "feature": "Cmax_MIC",
+   "shap_pct": 51.82050323486328,
+   "mean_abs_shap": 1.5968867540359497,
+   "gain_pct": 12.219441413879395,
+   "shap_value_corr": 0.945262792636084,
+   "shap_rank": 1,
+   "gain_rank": 3
+  },
+  {
+   "feature": "Cmax_MIC_x_baseline_crcl",
+   "shap_pct": 14.376287460327148,
+   "mean_abs_shap": 0.44301581382751465,
+   "gain_pct": 17.05095863342285,
+   "shap_value_corr": 0.9192969063541807,
+   "shap_rank": 2,
+   "gain_rank": 1
+  },
+  {
+   "feature": "severity_composite",
+   "shap_pct": 7.688449859619141,
+   "mean_abs_shap": 0.23692521452903748,
+   "gain_pct": 1.766294002532959,
+   "shap_value_corr": -0.9506383690197836,
+   "shap_rank": 3,
+   "gain_rank": 8
+  },
+  {
+   "feature": "apache_ii",
+   "shap_pct": 5.814975261688232,
+   "mean_abs_shap": 0.17919272184371948,
+   "gain_pct": 2.1756060123443604,
+   "shap_value_corr": -0.9505001511982627,
+   "shap_rank": 4,
+   "gain_rank": 6
+  },
+  {
+   "feature": "pk_composite",
+   "shap_pct": 4.413010120391846,
+   "mean_abs_shap": 0.13599014282226562,
+   "gain_pct": 6.274503231048584,
+   "shap_value_corr": 0.9472726950054076,
+   "shap_rank": 5,
+   "gain_rank": 4
+  },
+  {
+   "feature": "target_score",
+   "shap_pct": 3.0104150772094727,
+   "mean_abs_shap": 0.09276814013719559,
+   "gain_pct": 13.913463592529297,
+   "shap_value_corr": 0.7802424331629814,
+   "shap_rank": 6,
+   "gain_rank": 2
+  },
+  {
+   "feature": "baseline_albumin",
+   "shap_pct": 1.5442824363708496,
+   "mean_abs_shap": 0.04758819565176964,
+   "gain_pct": 0.9900349974632263,
+   "shap_value_corr": 0.9431683770494399,
+   "shap_rank": 7,
+   "gain_rank": 28
+  },
+  {
+   "feature": "AUC_MIC",
+   "shap_pct": 1.3099783658981323,
+   "mean_abs_shap": 0.04036794230341911,
+   "gain_pct": 3.6109259128570557,
+   "shap_value_corr": 0.9187479850409767,
+   "shap_rank": 8,
+   "gain_rank": 5
+  },
+  {
+   "feature": "sofa_score",
+   "shap_pct": 1.2330524921417236,
+   "mean_abs_shap": 0.03799741715192795,
+   "gain_pct": 0.9215410351753235,
+   "shap_value_corr": -0.7558966887193269,
+   "shap_rank": 9,
+   "gain_rank": 30
+  },
+  {
+   "feature": "t_half_beta",
+   "shap_pct": 0.8675340414047241,
+   "mean_abs_shap": 0.026733696460723877,
+   "gain_pct": 1.4591795206069946,
+   "shap_value_corr": 0.7132271882606802,
+   "shap_rank": 10,
+   "gain_rank": 15
+  },
+  {
+   "feature": "pk_ratio",
+   "shap_pct": 0.8432921767234802,
+   "mean_abs_shap": 0.02598666585981846,
+   "gain_pct": 1.5619560480117798,
+   "shap_value_corr": 0.8320803045662242,
+   "shap_rank": 11,
+   "gain_rank": 13
+  },
+  {
+   "feature": "age_x_baseline_scr",
+   "shap_pct": 0.7715441584587097,
+   "mean_abs_shap": 0.023775698617100716,
+   "gain_pct": 1.357567548751831,
+   "shap_value_corr": 0.8714099887822863,
+   "shap_rank": 12,
+   "gain_rank": 17
+  },
+  {
+   "feature": "renal_score",
+   "shap_pct": 0.6421790719032288,
+   "mean_abs_shap": 0.01978921890258789,
+   "gain_pct": 1.5500982999801636,
+   "shap_value_corr": -0.8848861975398855,
+   "shap_rank": 13,
+   "gain_rank": 14
+  },
+  {
+   "feature": "baseline_crcl",
+   "shap_pct": 0.4459400773048401,
+   "mean_abs_shap": 0.01374197006225586,
+   "gain_pct": 1.1926449537277222,
+   "shap_value_corr": -0.9389385780442719,
+   "shap_rank": 14,
+   "gain_rank": 24
+  },
+  {
+   "feature": "AUC_above_MIC",
+   "shap_pct": 0.4280446767807007,
+   "mean_abs_shap": 0.01319051068276167,
+   "gain_pct": 1.659423828125,
+   "shap_value_corr": 0.892767231810528,
+   "shap_rank": 15,
+   "gain_rank": 10
+  },
+  {
+   "feature": "baseline_egfr",
+   "shap_pct": 0.3885839581489563,
+   "mean_abs_shap": 0.011974498629570007,
+   "gain_pct": 2.0997776985168457,
+   "shap_value_corr": -0.8882118493126148,
+   "shap_rank": 16,
+   "gain_rank": 7
+  },
+  {
+   "feature": "fluctuation_index",
+   "shap_pct": 0.3160047233104706,
+   "mean_abs_shap": 0.009737917222082615,
+   "gain_pct": 0.8326979875564575,
+   "shap_value_corr": 0.1372940993177517,
+   "shap_rank": 17,
+   "gain_rank": 32
+  },
+  {
+   "feature": "baseline_scr",
+   "shap_pct": 0.2828507423400879,
+   "mean_abs_shap": 0.008716252632439137,
+   "gain_pct": 1.400595784187317,
+   "shap_value_corr": 0.9115527428844141,
+   "shap_rank": 18,
+   "gain_rank": 16
+  },
+  {
+   "feature": "Cmax",
+   "shap_pct": 0.2535906732082367,
+   "mean_abs_shap": 0.00781458243727684,
+   "gain_pct": 0.7401420474052429,
+   "shap_value_corr": 0.26855160835534747,
+   "shap_rank": 19,
+   "gain_rank": 35
+  },
+  {
+   "feature": "Vc_cv",
+   "shap_pct": 0.2528834640979767,
+   "mean_abs_shap": 0.007792789023369551,
+   "gain_pct": 0.9023791551589966,
+   "shap_value_corr": 0.008472279510436621,
+   "shap_rank": 20,
+   "gain_rank": 31
+  },
+  {
+   "feature": "baseline_bilirubin",
+   "shap_pct": 0.24223735928535461,
+   "mean_abs_shap": 0.0074647217988967896,
+   "gain_pct": 0.6987820267677307,
+   "shap_value_corr": 0.8739303786394849,
+   "shap_rank": 21,
+   "gain_rank": 38
+  },
+  {
+   "feature": "k21_bayes",
+   "shap_pct": 0.21740993857383728,
+   "mean_abs_shap": 0.006699646823108196,
+   "gain_pct": 0.757045567035675,
+   "shap_value_corr": 0.6419400137128667,
+   "shap_rank": 22,
+   "gain_rank": 34
+  },
+  {
+   "feature": "AUC_MIC_x_apache_ii",
+   "shap_pct": 0.20951034128665924,
+   "mean_abs_shap": 0.006456214934587479,
+   "gain_pct": 1.3306738138198853,
+   "shap_value_corr": 0.2776545744222925,
+   "shap_rank": 23,
+   "gain_rank": 18
+  },
+  {
+   "feature": "Vp_bayes",
+   "shap_pct": 0.207511305809021,
+   "mean_abs_shap": 0.006394612602889538,
+   "gain_pct": 0.49610060453414917,
+   "shap_value_corr": -0.16365041950899345,
+   "shap_rank": 24,
+   "gain_rank": 45
+  },
+  {
+   "feature": "height",
+   "shap_pct": 0.18427447974681854,
+   "mean_abs_shap": 0.005678553134202957,
+   "gain_pct": 0.3746410310268402,
+   "shap_value_corr": 0.22132959948303774,
+   "shap_rank": 25,
+   "gain_rank": 49
+  },
+  {
+   "feature": "AUC24",
+   "shap_pct": 0.17928919196128845,
+   "mean_abs_shap": 0.005524928215891123,
+   "gain_pct": 1.1202986240386963,
+   "shap_value_corr": 0.07084837193851604,
+   "shap_rank": 26,
+   "gain_rank": 25
+  },
+  {
+   "feature": "Vss_bayes",
+   "shap_pct": 0.17810995876789093,
+   "mean_abs_shap": 0.0054885889403522015,
+   "gain_pct": 1.214064121246338,
+   "shap_value_corr": -0.10642245669337085,
+   "shap_rank": 27,
+   "gain_rank": 23
+  },
+  {
+   "feature": "weight",
+   "shap_pct": 0.1744467169046402,
+   "mean_abs_shap": 0.005375703331083059,
+   "gain_pct": 0.7186556458473206,
+   "shap_value_corr": 0.3657183340956045,
+   "shap_rank": 28,
+   "gain_rank": 37
+  },
+  {
+   "feature": "Cmax_x_weight",
+   "shap_pct": 0.16545535624027252,
+   "mean_abs_shap": 0.005098627880215645,
+   "gain_pct": 1.3115103244781494,
+   "shap_value_corr": 0.3720973729666309,
+   "shap_rank": 29,
+   "gain_rank": 20
+  },
+  {
+   "feature": "Q_bayes",
+   "shap_pct": 0.14880837500095367,
+   "mean_abs_shap": 0.0045856391079723835,
+   "gain_pct": 0.9331539869308472,
+   "shap_value_corr": -0.5829009353146507,
+   "shap_rank": 30,
+   "gain_rank": 29
+  },
+  {
+   "feature": "infection_site",
+   "shap_pct": 0.1318078190088272,
+   "mean_abs_shap": 0.004061754327267408,
+   "gain_pct": 1.269440770149231,
+   "shap_value_corr": -0.5171555683928075,
+   "shap_rank": 31,
+   "gain_rank": 21
+  },
+  {
+   "feature": "diabetes_x_baseline_crcl",
+   "shap_pct": 0.11806122213602066,
+   "mean_abs_shap": 0.003638142952695489,
+   "gain_pct": 1.566954255104065,
+   "shap_value_corr": 0.5483688485938645,
+   "shap_rank": 32,
+   "gain_rank": 12
+  },
+  {
+   "feature": "time_above_MIC_percent",
+   "shap_pct": 0.10441399365663528,
+   "mean_abs_shap": 0.003217593766748905,
+   "gain_pct": 1.6892738342285156,
+   "shap_value_corr": 0.8598729427187102,
+   "shap_rank": 33,
+   "gain_rank": 9
+  },
+  {
+   "feature": "Cmin",
+   "shap_pct": 0.0988454669713974,
+   "mean_abs_shap": 0.0030459954869002104,
+   "gain_pct": 1.0443525314331055,
+   "shap_value_corr": -0.06707947309641296,
+   "shap_rank": 34,
+   "gain_rank": 26
+  },
+  {
+   "feature": "age",
+   "shap_pct": 0.09673147648572922,
+   "mean_abs_shap": 0.0029808511026203632,
+   "gain_pct": 0.6593344807624817,
+   "shap_value_corr": 0.7912488020653045,
+   "shap_rank": 35,
+   "gain_rank": 40
+  },
+  {
+   "feature": "bmi",
+   "shap_pct": 0.09370853006839752,
+   "mean_abs_shap": 0.002887696959078312,
+   "gain_pct": 0.6579442024230957,
+   "shap_value_corr": 0.8685417755924884,
+   "shap_rank": 36,
+   "gain_rank": 42
+  },
+  {
+   "feature": "time_above_MIC",
+   "shap_pct": 0.0890280082821846,
+   "mean_abs_shap": 0.0027434632647782564,
+   "gain_pct": 0.5900413990020752,
+   "shap_value_corr": -0.328076117008298,
+   "shap_rank": 37,
+   "gain_rank": 44
+  },
+  {
+   "feature": "k10_bayes",
+   "shap_pct": 0.0863548293709755,
+   "mean_abs_shap": 0.0026610870845615864,
+   "gain_pct": 1.3212387561798096,
+   "shap_value_corr": -0.545852820737457,
+   "shap_rank": 38,
+   "gain_rank": 19
+  },
+  {
+   "feature": "CL_cv",
+   "shap_pct": 0.08379063755273819,
+   "mean_abs_shap": 0.0025820699520409107,
+   "gain_pct": 0.3930470645427704,
+   "shap_value_corr": -0.685085998112675,
+   "shap_rank": 39,
+   "gain_rank": 47
+  },
+  {
+   "feature": "peak_trough_ratio",
+   "shap_pct": 0.08299095928668976,
+   "mean_abs_shap": 0.002557427156716585,
+   "gain_pct": 0.8296173810958862,
+   "shap_value_corr": -0.31542358213657834,
+   "shap_rank": 40,
+   "gain_rank": 33
+  },
+  {
+   "feature": "k12_bayes",
+   "shap_pct": 0.07181748747825623,
+   "mean_abs_shap": 0.0022131085861474276,
+   "gain_pct": 1.6274604797363281,
+   "shap_value_corr": -0.5292693620711445,
+   "shap_rank": 41,
+   "gain_rank": 11
+  },
+  {
+   "feature": "CL_bayes",
+   "shap_pct": 0.06548909097909927,
+   "mean_abs_shap": 0.0020180942956358194,
+   "gain_pct": 0.6240714192390442,
+   "shap_value_corr": 0.42452083398801904,
+   "shap_rank": 42,
+   "gain_rank": 43
+  },
+  {
+   "feature": "Vc_bayes",
+   "shap_pct": 0.0636579617857933,
+   "mean_abs_shap": 0.001961666624993086,
+   "gain_pct": 0.6583046317100525,
+   "shap_value_corr": 0.6334078465033071,
+   "shap_rank": 43,
+   "gain_rank": 41
+  },
+  {
+   "feature": "diabetes",
+   "shap_pct": 0.05419563502073288,
+   "mean_abs_shap": 0.0016700782580301166,
+   "gain_pct": 1.0172374248504639,
+   "shap_value_corr": 0.8344874785908519,
+   "shap_rank": 44,
+   "gain_rank": 27
+  },
+  {
+   "feature": "t_half_alpha",
+   "shap_pct": 0.04667951166629791,
+   "mean_abs_shap": 0.0014384633395820856,
+   "gain_pct": 0.7207797765731812,
+   "shap_value_corr": 0.44474877203855023,
+   "shap_rank": 45,
+   "gain_rank": 36
+  },
+  {
+   "feature": "sepsis_type",
+   "shap_pct": 0.03110351786017418,
+   "mean_abs_shap": 0.0009584776707924902,
+   "gain_pct": 0.6624916195869446,
+   "shap_value_corr": 0.7393755928007992,
+   "shap_rank": 46,
+   "gain_rank": 39
+  },
+  {
+   "feature": "sex",
+   "shap_pct": 0.02846207655966282,
+   "mean_abs_shap": 0.0008770797285251319,
+   "gain_pct": 1.2217079401016235,
+   "shap_value_corr": -0.9267464802638931,
+   "shap_rank": 47,
+   "gain_rank": 22
+  },
+  {
+   "feature": "mechanical_ventilation",
+   "shap_pct": 0.02695704996585846,
+   "mean_abs_shap": 0.0008307012030854821,
+   "gain_pct": 0.4275229573249817,
+   "shap_value_corr": -0.858124517937262,
+   "shap_rank": 48,
+   "gain_rank": 46
+  },
+  {
+   "feature": "elderly",
+   "shap_pct": 0.015452281571924686,
+   "mean_abs_shap": 0.0004761733871418983,
+   "gain_pct": 0.38502538204193115,
+   "shap_value_corr": 0.814469293731082,
+   "shap_rank": 49,
+   "gain_rank": 48
+  },
+  {
+   "feature": "ckd_stage",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 50,
+   "gain_rank": 50
+  },
+  {
+   "feature": "drug",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 51,
+   "gain_rank": 51
+  },
+  {
+   "feature": "vasopressor_use",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 52,
+   "gain_rank": 52
+  },
+  {
+   "feature": "time_to_peak",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 53,
+   "gain_rank": 53
+  },
+  {
+   "feature": "impaired_renal",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 54,
+   "gain_rank": 54
+  },
+  {
+   "feature": "obese",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 55,
+   "gain_rank": 55
+  }
+ ],
+ "nephrotoxicity_predose": [
+  {
+   "feature": "drug",
+   "shap_pct": 33.32620620727539,
+   "mean_abs_shap": 0.7260555624961853,
+   "gain_pct": 42.200523376464844,
+   "shap_value_corr": -0.8380765550744586,
+   "shap_rank": 1,
+   "gain_rank": 1
+  },
+  {
+   "feature": "baseline_crcl",
+   "shap_pct": 10.683518409729004,
+   "mean_abs_shap": 0.23275461792945862,
+   "gain_pct": 4.568151473999023,
+   "shap_value_corr": -0.9289182897720355,
+   "shap_rank": 2,
+   "gain_rank": 3
+  },
+  {
+   "feature": "age",
+   "shap_pct": 10.490923881530762,
+   "mean_abs_shap": 0.22855867445468903,
+   "gain_pct": 2.7876617908477783,
+   "shap_value_corr": 0.9002824320815749,
+   "shap_rank": 3,
+   "gain_rank": 7
+  },
+  {
+   "feature": "age_x_baseline_scr",
+   "shap_pct": 7.208383083343506,
+   "mean_abs_shap": 0.1570441722869873,
+   "gain_pct": 3.356818914413452,
+   "shap_value_corr": 0.9083823568379108,
+   "shap_rank": 4,
+   "gain_rank": 6
+  },
+  {
+   "feature": "baseline_egfr",
+   "shap_pct": 5.09894323348999,
+   "mean_abs_shap": 0.11108723282814026,
+   "gain_pct": 4.543911457061768,
+   "shap_value_corr": -0.9261043590074878,
+   "shap_rank": 5,
+   "gain_rank": 4
+  },
+  {
+   "feature": "height",
+   "shap_pct": 3.606959104537964,
+   "mean_abs_shap": 0.07858238369226456,
+   "gain_pct": 1.994784951210022,
+   "shap_value_corr": -0.7583041969962468,
+   "shap_rank": 6,
+   "gain_rank": 13
+  },
+  {
+   "feature": "mechanical_ventilation",
+   "shap_pct": 3.0682168006896973,
+   "mean_abs_shap": 0.06684517115354538,
+   "gain_pct": 2.2386512756347656,
+   "shap_value_corr": 0.8300234772955314,
+   "shap_rank": 7,
+   "gain_rank": 10
+  },
+  {
+   "feature": "weight",
+   "shap_pct": 2.841893434524536,
+   "mean_abs_shap": 0.061914414167404175,
+   "gain_pct": 1.8962947130203247,
+   "shap_value_corr": -0.564808860926612,
+   "shap_rank": 8,
+   "gain_rank": 14
+  },
+  {
+   "feature": "renal_score",
+   "shap_pct": 2.8255867958068848,
+   "mean_abs_shap": 0.061559151858091354,
+   "gain_pct": 2.337966203689575,
+   "shap_value_corr": -0.7556192495311852,
+   "shap_rank": 9,
+   "gain_rank": 9
+  },
+  {
+   "feature": "baseline_albumin",
+   "shap_pct": 2.7626090049743652,
+   "mean_abs_shap": 0.060187097638845444,
+   "gain_pct": 2.3439173698425293,
+   "shap_value_corr": -0.34957451134104955,
+   "shap_rank": 10,
+   "gain_rank": 8
+  },
+  {
+   "feature": "baseline_bilirubin",
+   "shap_pct": 2.3764240741729736,
+   "mean_abs_shap": 0.0517735481262207,
+   "gain_pct": 1.7593939304351807,
+   "shap_value_corr": 0.19422241671451126,
+   "shap_rank": 11,
+   "gain_rank": 19
+  },
+  {
+   "feature": "baseline_scr",
+   "shap_pct": 2.035959005355835,
+   "mean_abs_shap": 0.04435606300830841,
+   "gain_pct": 1.7714903354644775,
+   "shap_value_corr": 0.4261305894817276,
+   "shap_rank": 12,
+   "gain_rank": 17
+  },
+  {
+   "feature": "severity_composite",
+   "shap_pct": 1.9690767526626587,
+   "mean_abs_shap": 0.04289894551038742,
+   "gain_pct": 1.740206241607666,
+   "shap_value_corr": 0.6305208991052264,
+   "shap_rank": 13,
+   "gain_rank": 20
+  },
+  {
+   "feature": "diabetes_x_baseline_crcl",
+   "shap_pct": 1.7126275300979614,
+   "mean_abs_shap": 0.0373118594288826,
+   "gain_pct": 2.0306200981140137,
+   "shap_value_corr": 0.5593064879471152,
+   "shap_rank": 14,
+   "gain_rank": 12
+  },
+  {
+   "feature": "vasopressor_use",
+   "shap_pct": 1.6207317113876343,
+   "mean_abs_shap": 0.03530978783965111,
+   "gain_pct": 1.882543921470642,
+   "shap_value_corr": 0.8585514370085208,
+   "shap_rank": 15,
+   "gain_rank": 15
+  },
+  {
+   "feature": "apache_ii",
+   "shap_pct": 1.5394279956817627,
+   "mean_abs_shap": 0.03353847935795784,
+   "gain_pct": 1.6172922849655151,
+   "shap_value_corr": 0.4025182407669582,
+   "shap_rank": 16,
+   "gain_rank": 23
+  },
+  {
+   "feature": "bmi",
+   "shap_pct": 1.4796550273895264,
+   "mean_abs_shap": 0.0322362445294857,
+   "gain_pct": 1.7071564197540283,
+   "shap_value_corr": 0.37947225039138216,
+   "shap_rank": 17,
+   "gain_rank": 21
+  },
+  {
+   "feature": "sofa_score",
+   "shap_pct": 1.2344530820846558,
+   "mean_abs_shap": 0.02689419500529766,
+   "gain_pct": 1.7691750526428223,
+   "shap_value_corr": 0.6127390651288643,
+   "shap_rank": 18,
+   "gain_rank": 18
+  },
+  {
+   "feature": "sepsis_type",
+   "shap_pct": 0.9246842265129089,
+   "mean_abs_shap": 0.020145470276474953,
+   "gain_pct": 1.3910733461380005,
+   "shap_value_corr": -0.7119916800320674,
+   "shap_rank": 19,
+   "gain_rank": 25
+  },
+  {
+   "feature": "elderly",
+   "shap_pct": 0.9209861159324646,
+   "mean_abs_shap": 0.020064901560544968,
+   "gain_pct": 4.2274322509765625,
+   "shap_value_corr": 0.7954104058653563,
+   "shap_rank": 20,
+   "gain_rank": 5
+  },
+  {
+   "feature": "infection_site",
+   "shap_pct": 0.8843918442726135,
+   "mean_abs_shap": 0.019267648458480835,
+   "gain_pct": 1.7812954187393188,
+   "shap_value_corr": -0.0029840609914317754,
+   "shap_rank": 21,
+   "gain_rank": 16
+  },
+  {
+   "feature": "diabetes",
+   "shap_pct": 0.7551112771034241,
+   "mean_abs_shap": 0.016451099887490273,
+   "gain_pct": 1.504691481590271,
+   "shap_value_corr": 0.8296788370252333,
+   "shap_rank": 22,
+   "gain_rank": 24
+  },
+  {
+   "feature": "sex",
+   "shap_pct": 0.3677467703819275,
+   "mean_abs_shap": 0.008011850528419018,
+   "gain_pct": 1.700179100036621,
+   "shap_value_corr": -0.7144202620526118,
+   "shap_rank": 23,
+   "gain_rank": 22
+  },
+  {
+   "feature": "ckd_stage",
+   "shap_pct": 0.1658828854560852,
+   "mean_abs_shap": 0.0036139783915132284,
+   "gain_pct": 2.2134692668914795,
+   "shap_value_corr": 0.8091821797227652,
+   "shap_rank": 24,
+   "gain_rank": 11
+  },
+  {
+   "feature": "impaired_renal",
+   "shap_pct": 0.09959409385919571,
+   "mean_abs_shap": 0.002169789280742407,
+   "gain_pct": 4.6353044509887695,
+   "shap_value_corr": 0.5086622986580482,
+   "shap_rank": 25,
+   "gain_rank": 2
+  },
+  {
+   "feature": "obese",
+   "shap_pct": 0.0,
+   "mean_abs_shap": 0.0,
+   "gain_pct": 0.0,
+   "shap_value_corr": NaN,
+   "shap_rank": 26,
+   "gain_rank": 26
+  }
+ ]
+}

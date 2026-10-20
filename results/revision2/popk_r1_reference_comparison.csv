@@ -1,0 +1,13 @@
+quantity,estimate_mean,hdi_3,hdi_97,truth_same_scale,truth_in_hdi,note
+"theta_CL (R1 scale, cohort-mean covariates)",4.362411558019845,4.276039494240636,4.463618601978807,4.508617258303834,False,projection
+beta_CL_CRCL per SD (R1 scale),0.32228036236698837,0.29753343711915253,0.3474589554395596,0.33328100542398087,True,projection
+beta_CL_WT per SD (R1 scale),0.1476156317834092,0.12333572812045558,0.17005907672972517,0.14320696637352126,True,projection
+beta_CL_AGE per SD (R1 scale),-0.01957841208597153,-0.042003858253925344,0.004680603641191258,-0.0310537465892336,True,projection
+"theta_Vc (R1 scale, cohort-mean weight)",15.579387694757445,15.35784162813471,15.856038209652167,14.546208797719208,False,projection
+beta_Vc_WT per SD (R1 scale),0.13408101384023335,0.12064803523777626,0.14663422857612252,0.13072787135945416,True,projection
+CrCL->CL exponent (implied at cohort mean),0.7494591166523428,0.6919104388493035,0.808011632803575,0.75,True,generating exponent
+WT->CL exponent (implied at cohort mean),0.7913090678222597,0.6611540991226275,0.9116195070665782,0.75,True,generating exponent
+"WT->Vc exponent (implied, drug-pooled)",0.71875532958633,0.6467464396905556,0.7860481530550809,0.6910344827586207,True,"generating exponents 1.0 (GEN) / 0.5 (AMK), weighted by drug mix"
+"Typical GEN CL at CrCL 100, 70 kg, 55 y (L/h)",4.644506600503843,4.500163250835924,4.770018573355357,5.181312678812907,False,5.5 L/h x exp(-0.15 x 0.398 septic-shock fraction); R1 model has no shock term
+"Typical GEN CL at CrCL 100, 70 kg, 55 y (L/h), vs projection",4.644506600503843,4.500163250835924,4.770018573355357,4.7870744618856715,False,best value attainable by the R1 (log-linear) model at the same reference
+Typical GEN Vc at 70 kg (L),17.110430382154963,16.76564830687097,17.401493780679107,16.0,False,generating value

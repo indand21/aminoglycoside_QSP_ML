@@ -61,3 +61,8 @@ github_release/
 .grok/
 .crush/
 .antigravitycli/
+
+# --- Revision 2 scratch output (Optuna plots from re-tuning runs) ---
+results/revision2/_optuna_scratch/
+# Literature-verification working notes (manuscript/peer-review material)
+results/revision2/literature_verification.md

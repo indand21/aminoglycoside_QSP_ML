@@ -1,0 +1,82 @@
+{
+ "n_obs": 10258,
+ "n_patients": 1499,
+ "r2_log_obs_vs_ipred": 0.9597206071306201,
+ "iwres_mean": -0.022221986935335353,
+ "iwres_sd": 0.8616560208275418,
+ "pct_abs_iwres_lt2": 97.56287775394814,
+ "forest": [
+  {
+   "parameter": "b_CL_CRCL",
+   "mean": 0.721,
+   "hdi_3%": 0.678,
+   "hdi_97%": 0.761,
+   "true": 0.75
+  },
+  {
+   "parameter": "b_CL_WT",
+   "mean": 0.757,
+   "hdi_3%": 0.646,
+   "hdi_97%": 0.866,
+   "true": 0.75
+  },
+  {
+   "parameter": "b_CL_AGE",
+   "mean": 0.027,
+   "hdi_3%": -0.053,
+   "hdi_97%": 0.11,
+   "true": 0.0
+  },
+  {
+   "parameter": "b_CL_SHOCK",
+   "mean": -0.107,
+   "hdi_3%": -0.147,
+   "hdi_97%": -0.063,
+   "true": -0.15
+  },
+  {
+   "parameter": "b_Vc_WT_GEN",
+   "mean": 0.755,
+   "hdi_3%": 0.642,
+   "hdi_97%": 0.875,
+   "true": 1.0
+  },
+  {
+   "parameter": "b_Vc_WT_AMK",
+   "mean": 0.589,
+   "hdi_3%": 0.51,
+   "hdi_97%": 0.675,
+   "true": 0.5
+  },
+  {
+   "parameter": "d_CL_AMK",
+   "mean": -0.198,
+   "hdi_3%": -0.252,
+   "hdi_97%": -0.152,
+   "true": -0.2696635669491026
+  },
+  {
+   "parameter": "d_Vc_AMK",
+   "mean": 0.258,
+   "hdi_3%": 0.208,
+   "hdi_97%": 0.305,
+   "true": 0.4054651081081644
+  },
+  {
+   "parameter": "d_Q_AMK",
+   "mean": -0.83,
+   "hdi_3%": -1.289,
+   "hdi_97%": -0.32,
+   "true": -2.389596469983676
+  },
+  {
+   "parameter": "d_Vp_AMK",
+   "mean": 0.21,
+   "hdi_3%": 0.033,
+   "hdi_97%": 0.385,
+   "true": 0.1570037488096647
+  }
+ ],
+ "s1_r_log_CL_bayes": 0.9464802415357793,
+ "s1_r_log_Vc_bayes": 0.9162428794089821
+}

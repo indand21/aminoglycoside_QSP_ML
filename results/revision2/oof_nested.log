@@ -1,0 +1,26 @@
+Out-of-fold predictions ...
+    nephrotoxicity_predose: fold 1/5 done
+    nephrotoxicity_predose: fold 2/5 done
+    nephrotoxicity_predose: fold 3/5 done
+    nephrotoxicity_predose: fold 4/5 done
+    nephrotoxicity_predose: fold 5/5 done
+  OOF nephrotoxicity_predose     AUROC 0.806
+    nephrotoxicity_postdose: fold 1/5 done
+    nephrotoxicity_postdose: fold 2/5 done
+    nephrotoxicity_postdose: fold 3/5 done
+    nephrotoxicity_postdose: fold 4/5 done
+    nephrotoxicity_postdose: fold 5/5 done
+  OOF nephrotoxicity_postdose    AUROC 0.908
+    clinical_cure: fold 1/5 done
+    clinical_cure: fold 2/5 done
+    clinical_cure: fold 3/5 done
+    clinical_cure: fold 4/5 done
+    clinical_cure: fold 5/5 done
+  OOF clinical_cure              AUROC 0.956
+Imputed-PK sensitivity ...
+  imputed-PK sensitivity nephrotoxicity_postdose: {'n_imputed_total': 50, 'n_imputed_in_test': 14, 'n_imputed_in_train': 36, 'auroc_all_test': 0.9149203477561686, 'auroc_test_excluding_imputed': 0.9141156462585034}
+  imputed-PK sensitivity clinical_cure: {'n_imputed_total': 50, 'n_imputed_in_test': 9, 'n_imputed_in_train': 41, 'auroc_all_test': 0.964408503220183, 'auroc_test_excluding_imputed': 0.9657095641396407}
+Logistic-regression comparisons ...
+  LR comparison two_exposure_predictors    {'xgboost': np.float64(0.8608), 'logistic': np.float64(0.84), 'xgboost_ci': [0.815, 0.9], 'logistic_ci': [0.79, 0.883], 'difference': np.float64(0.0209), 'difference_95ci': [-0.0129, 0.056], 'delong_p': 0.2499, 'n_test': 300, 'n_events': 99, 'predictors': ['Cmin', 'AUC24']}
+  LR comparison postdose_55_features       {'xgboost_production': np.float64(0.9149), 'logistic_l2': np.float64(0.9085), 'xgboost_production_ci': [0.883, 0.945], 'logistic_l2_ci': [0.874, 0.94], 'difference': np.float64(0.0064), 'difference_95ci': [-0.0101, 0.0239], 'delong_p': 0.4613, 'n_test': 300, 'n_events': 99}
+  LR comparison predose_26_features        {'xgboost_production': np.float64(0.7991), 'logistic_l2': np.float64(0.8063), 'xgboost_production_ci': [0.748, 0.848], 'logistic_l2_ci': [0.755, 0.853], 'difference': np.float64(-0.0072), 'difference_95ci': [-0.0337, 0.0186], 'delong_p': 0.5925, 'n_test': 300, 'n_events': 99}

@@ -1,0 +1,67 @@
+{
+  "two_exposure_predictors": {
+    "xgboost": 0.8608472787577265,
+    "logistic": 0.8399919593949444,
+    "xgboost_ci": [
+      0.815,
+      0.9
+    ],
+    "logistic_ci": [
+      0.79,
+      0.883
+    ],
+    "difference": 0.020855319362782065,
+    "difference_95ci": [
+      -0.012936070614419478,
+      0.05595189982444885
+    ],
+    "delong_p": 0.2498651305357925,
+    "n_test": 300,
+    "n_events": 99,
+    "predictors": [
+      "Cmin",
+      "AUC24"
+    ]
+  },
+  "postdose_55_features": {
+    "xgboost_production": 0.9149203477561687,
+    "logistic_l2": 0.9085381174933413,
+    "xgboost_production_ci": [
+      0.883,
+      0.945
+    ],
+    "logistic_l2_ci": [
+      0.874,
+      0.94
+    ],
+    "difference": 0.00638223026282736,
+    "difference_95ci": [
+      -0.010050599596183676,
+      0.023864675289307684
+    ],
+    "delong_p": 0.4613435271743914,
+    "n_test": 300,
+    "n_events": 99
+  },
+  "predose_26_features": {
+    "xgboost_production": 0.7991356349565305,
+    "logistic_l2": 0.8063219257249108,
+    "xgboost_production_ci": [
+      0.748,
+      0.848
+    ],
+    "logistic_l2_ci": [
+      0.755,
+      0.853
+    ],
+    "difference": -0.007186290768380288,
+    "difference_95ci": [
+      -0.03365635303470642,
+      0.018587892115413087
+    ],
+    "delong_p": 0.5925268907440455,
+    "n_test": 300,
+    "n_events": 99
+  },
+  "note": "All comparisons use the primary 80/20 split (N = 300 held-out, 99 events) and give both arms identical predictors. Logistic regression: standardised predictors, L2 penalty C = 1. Two-predictor XGBoost arm: fixed configuration of the R1 benchmark. DeLong test for paired AUCs; 95% CI of the difference by paired bootstrap (2000 resamples)."
+}
