@@ -1,0 +1,3824 @@
+{
+ "seeds": [
+  12345,
+  111,
+  222,
+  333,
+  444
+ ],
+ "primary": {
+  "nephrotoxicity_pct": {
+   "mean": 34.29333333333334,
+   "sd": 2.0442874335844023
+  },
+  "cure_pct": {
+   "mean": 63.85333333333333,
+   "sd": 0.5444671197092095
+  },
+  "combined_attainment_pct": {
+   "mean": 30.6,
+   "sd": 1.501850710142509
+  },
+  "predose_auroc_xgb": {
+   "mean": 0.8241951390636284,
+   "sd": 0.02100778185125119
+  },
+  "predose_auroc_lr": {
+   "mean": 0.8361119197469234,
+   "sd": 0.025015357868217285
+  }
+ },
+ "variants": [
+  {
+   "assumption": "Weight (mean)",
+   "unit": "kg",
+   "primary_value": 62,
+   "level": "low",
+   "value": 52,
+   "nephrotoxicity_pct": {
+    "mean": 36.18666666666666,
+    "diff_mean": 1.893333333333335,
+    "diff_min": 0.8000000000000043,
+    "diff_max": 2.93333333333333
+   },
+   "cure_pct": {
+    "mean": 63.46666666666666,
+    "diff_mean": -0.3866666666666688,
+    "diff_min": -1.06666666666667,
+    "diff_max": 0.4000000000000057
+   },
+   "combined_attainment_pct": {
+    "mean": 29.853333333333335,
+    "diff_mean": -0.7466666666666661,
+    "diff_min": -0.9999999999999964,
+    "diff_max": -0.5333333333333314
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8353202754526672,
+    "diff_mean": 0.011125136389038804,
+    "diff_min": -0.021169042728885867,
+    "diff_max": 0.035478174255926365
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8368819704779524,
+    "diff_mean": 0.0007700507310287819,
+    "diff_min": -0.03598674422551007,
+    "diff_max": 0.03344822290243199
+   }
+  },
+  {
+   "assumption": "Weight (mean)",
+   "unit": "kg",
+   "primary_value": 62,
+   "level": "high",
+   "value": 72,
+   "nephrotoxicity_pct": {
+    "mean": 34.026666666666664,
+    "diff_mean": -0.2666666666666657,
+    "diff_min": -0.7333333333333272,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 64.73333333333332,
+    "diff_mean": 0.8800000000000026,
+    "diff_min": 0.3999999999999986,
+    "diff_max": 1.3333333333333286
+   },
+   "combined_attainment_pct": {
+    "mean": 31.240000000000002,
+    "diff_mean": 0.6399999999999999,
+    "diff_min": 0.46666666666666856,
+    "diff_max": 0.8666666666666671
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.821628015209026,
+    "diff_mean": -0.002567123854602471,
+    "diff_min": -0.026168313069908744,
+    "diff_max": 0.02924469266908425
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8305869719261392,
+    "diff_mean": -0.005524947820784454,
+    "diff_min": -0.025425671852899567,
+    "diff_max": 0.017435864185523897
+   }
+  },
+  {
+   "assumption": "Mechanical ventilation",
+   "unit": "probability",
+   "primary_value": 0.65,
+   "level": "low",
+   "value": 0.45,
+   "nephrotoxicity_pct": {
+    "mean": 33.28,
+    "diff_mean": -1.0133333333333305,
+    "diff_min": -1.5999999999999943,
+    "diff_max": 0.20000000000000284
+   },
+   "cure_pct": {
+    "mean": 63.85333333333333,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "combined_attainment_pct": {
+    "mean": 30.6,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.829541740695699,
+    "diff_mean": 0.005346601632070525,
+    "diff_min": -0.00945160462130934,
+    "diff_max": 0.02991083155090246
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8480939284288563,
+    "diff_mean": 0.011982008681932887,
+    "diff_min": -0.029534210526315885,
+    "diff_max": 0.035055194746030804
+   }
+  },
+  {
+   "assumption": "Mechanical ventilation",
+   "unit": "probability",
+   "primary_value": 0.65,
+   "level": "high",
+   "value": 0.85,
+   "nephrotoxicity_pct": {
+    "mean": 35.86666666666666,
+    "diff_mean": 1.5733333333333335,
+    "diff_min": 1.13333333333334,
+    "diff_max": 1.93333333333333
+   },
+   "cure_pct": {
+    "mean": 63.85333333333333,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "combined_attainment_pct": {
+    "mean": 30.6,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8181269515917439,
+    "diff_mean": -0.0060681874718845116,
+    "diff_min": -0.04653232199201074,
+    "diff_max": 0.025722731279190114
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8255660023117004,
+    "diff_mean": -0.010545917435223017,
+    "diff_min": -0.046627523819885774,
+    "diff_max": 0.015321556208302223
+   }
+  },
+  {
+   "assumption": "Vasopressor use",
+   "unit": "probability",
+   "primary_value": 0.5,
+   "level": "low",
+   "value": 0.3,
+   "nephrotoxicity_pct": {
+    "mean": 33.519999999999996,
+    "diff_mean": -0.773333333333332,
+    "diff_min": -2.5333333333333314,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 64.4,
+    "diff_mean": 0.5466666666666697,
+    "diff_min": -1.2666666666666657,
+    "diff_max": 1.9333333333333371
+   },
+   "combined_attainment_pct": {
+    "mean": 30.6,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8346954684083723,
+    "diff_mean": 0.010500329344743963,
+    "diff_min": -0.01176738735098004,
+    "diff_max": 0.024853505758739125
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8475038917788126,
+    "diff_mean": 0.011391972031889065,
+    "diff_min": -0.0236071226510407,
+    "diff_max": 0.030964144053160503
+   }
+  },
+  {
+   "assumption": "Vasopressor use",
+   "unit": "probability",
+   "primary_value": 0.5,
+   "level": "high",
+   "value": 0.7,
+   "nephrotoxicity_pct": {
+    "mean": 35.373333333333335,
+    "diff_mean": 1.0800000000000012,
+    "diff_min": -0.06666666666666288,
+    "diff_max": 1.6666666666666643
+   },
+   "cure_pct": {
+    "mean": 64.14666666666668,
+    "diff_mean": 0.2933333333333351,
+    "diff_min": -0.5999999999999943,
+    "diff_max": 2.1333333333333258
+   },
+   "combined_attainment_pct": {
+    "mean": 30.6,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.821058914592226,
+    "diff_mean": -0.0031362244714024934,
+    "diff_min": -0.028498768244171302,
+    "diff_max": 0.043329220234870625
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8372813332039785,
+    "diff_mean": 0.0011694134570549685,
+    "diff_min": -0.033752518357892725,
+    "diff_max": 0.04434526422799345
+   }
+  },
+  {
+   "assumption": "Diabetes",
+   "unit": "probability",
+   "primary_value": 0.35,
+   "level": "low",
+   "value": 0.2,
+   "nephrotoxicity_pct": {
+    "mean": 32.92,
+    "diff_mean": -1.3733333333333313,
+    "diff_min": -1.79999999999999,
+    "diff_max": -0.46666666666666146
+   },
+   "cure_pct": {
+    "mean": 63.85333333333333,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "combined_attainment_pct": {
+    "mean": 30.6,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8249872723528842,
+    "diff_mean": 0.0007921332892558252,
+    "diff_min": -0.04343864155624988,
+    "diff_max": 0.030187358887023175
+   },
+   "predose_auroc_lr": {
+    "mean": 0.83172005273774,
+    "diff_mean": -0.0043918670091835695,
+    "diff_min": -0.04347030009071007,
+    "diff_max": 0.021089766074304128
+   }
+  },
+  {
+   "assumption": "Diabetes",
+   "unit": "probability",
+   "primary_value": 0.35,
+   "level": "high",
+   "value": 0.5,
+   "nephrotoxicity_pct": {
+    "mean": 36.16,
+    "diff_mean": 1.8666666666666685,
+    "diff_min": 1.6000000000000014,
+    "diff_max": 2.2666666666666657
+   },
+   "cure_pct": {
+    "mean": 63.85333333333333,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "combined_attainment_pct": {
+    "mean": 30.6,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8019683902016862,
+    "diff_mean": -0.02222674886194238,
+    "diff_min": -0.05438092657965343,
+    "diff_max": 0.020262361360072645
+   },
+   "predose_auroc_lr": {
+    "mean": 0.813665979475114,
+    "diff_mean": -0.022445940271809663,
+    "diff_min": -0.059471863450690554,
+    "diff_max": 0.016308797255720986
+   }
+  },
+  {
+   "assumption": "Augmented renal clearance (prevalence)",
+   "unit": "probability",
+   "primary_value": 0.25,
+   "level": "low",
+   "value": 0.15,
+   "nephrotoxicity_pct": {
+    "mean": 36.97333333333333,
+    "diff_mean": 2.6799999999999997,
+    "diff_min": 0.6000000000000014,
+    "diff_max": 3.93333333333333
+   },
+   "cure_pct": {
+    "mean": 64.47999999999999,
+    "diff_mean": 0.6266666666666623,
+    "diff_min": -0.13333333333333997,
+    "diff_max": 1.7999999999999972
+   },
+   "combined_attainment_pct": {
+    "mean": 29.453333333333337,
+    "diff_mean": -1.146666666666667,
+    "diff_min": -1.6000000000000014,
+    "diff_max": -0.7333333333333307
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.824400488711644,
+    "diff_mean": 0.00020534964801539602,
+    "diff_min": -0.01575796259695228,
+    "diff_max": 0.03876106997462425
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8340554924040473,
+    "diff_mean": -0.002056427342876166,
+    "diff_min": -0.02436581037237917,
+    "diff_max": 0.024539318294227952
+   }
+  },
+  {
+   "assumption": "Augmented renal clearance (prevalence)",
+   "unit": "probability",
+   "primary_value": 0.25,
+   "level": "high",
+   "value": 0.4,
+   "nephrotoxicity_pct": {
+    "mean": 31.426666666666666,
+    "diff_mean": -2.8666666666666645,
+    "diff_min": -3.1999999999999993,
+    "diff_max": -2.3333333333333286
+   },
+   "cure_pct": {
+    "mean": 63.35999999999999,
+    "diff_mean": -0.4933333333333351,
+    "diff_min": -2.3999999999999986,
+    "diff_max": 0.5999999999999943
+   },
+   "combined_attainment_pct": {
+    "mean": 32.24453635757172,
+    "diff_mean": 1.6445363575717153,
+    "diff_min": 1.0666666666666629,
+    "diff_max": 2.1333333333333364
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8338029001270091,
+    "diff_mean": 0.009607761063380594,
+    "diff_min": -0.04498511705685626,
+    "diff_max": 0.06714238658781357
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8500412278956719,
+    "diff_mean": 0.013929308148748442,
+    "diff_min": -0.049240468227424894,
+    "diff_max": 0.06821878464305342
+   }
+  },
+  {
+   "assumption": "Augmented renal clearance (mean CrCL)",
+   "unit": "mL/min",
+   "primary_value": 160,
+   "level": "low",
+   "value": 140,
+   "nephrotoxicity_pct": {
+    "mean": 35.559999999999995,
+    "diff_mean": 1.266666666666667,
+    "diff_min": 0.0,
+    "diff_max": 3.1999999999999957
+   },
+   "cure_pct": {
+    "mean": 63.85333333333333,
+    "diff_mean": 2.842170943040401e-15,
+    "diff_min": -0.2666666666666657,
+    "diff_max": 0.5999999999999943
+   },
+   "combined_attainment_pct": {
+    "mean": 29.973333333333336,
+    "diff_mean": -0.6266666666666673,
+    "diff_min": -0.93333333333333,
+    "diff_max": -0.40000000000000213
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8281682806996999,
+    "diff_mean": 0.003973141636071498,
+    "diff_min": -0.007693446467919918,
+    "diff_max": 0.034951288393554214
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8355162327458571,
+    "diff_mean": -0.0005956870010664916,
+    "diff_min": -0.0186858408808952,
+    "diff_max": 0.04666708418095877
+   }
+  },
+  {
+   "assumption": "Augmented renal clearance (mean CrCL)",
+   "unit": "mL/min",
+   "primary_value": 160,
+   "level": "high",
+   "value": 180,
+   "nephrotoxicity_pct": {
+    "mean": 33.666666666666664,
+    "diff_mean": -0.6266666666666652,
+    "diff_min": -0.86666666666666,
+    "diff_max": -0.3333333333333357
+   },
+   "cure_pct": {
+    "mean": 63.8,
+    "diff_mean": -0.05333333333333314,
+    "diff_min": -0.13333333333333997,
+    "diff_max": 0.0
+   },
+   "combined_attainment_pct": {
+    "mean": 31.093333333333334,
+    "diff_mean": 0.4933333333333344,
+    "diff_min": 0.0,
+    "diff_max": 0.8000000000000007
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8204427304224206,
+    "diff_mean": -0.0037524086412078494,
+    "diff_min": -0.011014946699437256,
+    "diff_max": 0.00525350189754803
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8363735062291028,
+    "diff_mean": 0.0002615864821793101,
+    "diff_min": -0.023023835762531086,
+    "diff_max": 0.017506219112832344
+   }
+  },
+  {
+   "assumption": "Pneumonia share of infection sites",
+   "unit": "probability",
+   "primary_value": 0.35,
+   "level": "low",
+   "value": 0.2,
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 63.85333333333333,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "combined_attainment_pct": {
+    "mean": 30.6,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8220312192343728,
+    "diff_mean": -0.0021639198292556783,
+    "diff_min": -0.01540000000000008,
+    "diff_max": 0.005152556071933767
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8355850074860747,
+    "diff_mean": -0.0005269122608487109,
+    "diff_min": -0.0020896656534955538,
+    "diff_max": 0.001212366134572762
+   }
+  },
+  {
+   "assumption": "Pneumonia share of infection sites",
+   "unit": "probability",
+   "primary_value": 0.35,
+   "level": "high",
+   "value": 0.5,
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 63.85333333333333,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "combined_attainment_pct": {
+    "mean": 30.6,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8203209698112545,
+    "diff_mean": -0.00387416925237396,
+    "diff_min": -0.010750000000000037,
+    "diff_max": 0.0003799392097263432
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8360274482438879,
+    "diff_mean": -8.447150303567686e-05,
+    "diff_min": -0.0014071058847178186,
+    "diff_max": 0.0015999999999999348
+   }
+  },
+  {
+   "assumption": "Acinetobacter share of pathogens",
+   "unit": "probability",
+   "primary_value": 0.15,
+   "level": "low",
+   "value": 0.05,
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 67.56,
+    "diff_mean": 3.706666666666669,
+    "diff_min": 2.26666666666668,
+    "diff_max": 4.6000000000000085
+   },
+   "combined_attainment_pct": {
+    "mean": 32.56,
+    "diff_mean": 1.9599999999999986,
+    "diff_min": 1.3333333333333321,
+    "diff_max": 2.400000000000002
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8241951390636284,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8361119197469234,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   }
+  },
+  {
+   "assumption": "Acinetobacter share of pathogens",
+   "unit": "probability",
+   "primary_value": 0.15,
+   "level": "high",
+   "value": 0.25,
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 60.06666666666668,
+    "diff_mean": -3.786666666666666,
+    "diff_min": -4.733333333333334,
+    "diff_max": -2.3999999999999986
+   },
+   "combined_attainment_pct": {
+    "mean": 28.54666666666667,
+    "diff_mean": -2.0533333333333323,
+    "diff_min": -2.333333333333332,
+    "diff_max": -1.0666666666666664
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8241951390636284,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8361119197469234,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   }
+  },
+  {
+   "assumption": "Gentamicin resistance (all pathogens, multiplier)",
+   "unit": "x",
+   "primary_value": 1.0,
+   "level": "low",
+   "value": 0.7,
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 69.06666666666668,
+    "diff_mean": 5.213333333333333,
+    "diff_min": 4.266666666666666,
+    "diff_max": 5.86666666666666
+   },
+   "combined_attainment_pct": {
+    "mean": 36.6,
+    "diff_mean": 5.999999999999998,
+    "diff_min": 4.799999999999997,
+    "diff_max": 7.133333333333329
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8241951390636284,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8361119197469234,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   }
+  },
+  {
+   "assumption": "Gentamicin resistance (all pathogens, multiplier)",
+   "unit": "x",
+   "primary_value": 1.0,
+   "level": "high",
+   "value": 1.3,
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 59.36,
+    "diff_mean": -4.493333333333334,
+    "diff_min": -5.266666666666666,
+    "diff_max": -3.6000000000000014
+   },
+   "combined_attainment_pct": {
+    "mean": 24.893333333333338,
+    "diff_mean": -5.706666666666665,
+    "diff_min": -6.866666666666667,
+    "diff_max": -4.599999999999998
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8241951390636284,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8361119197469234,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   }
+  },
+  {
+   "assumption": "Resistant MIC mode (both drugs, multiplier)",
+   "unit": "x",
+   "primary_value": 1.0,
+   "level": "low",
+   "value": 0.5,
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 73.08,
+    "diff_mean": 9.226666666666663,
+    "diff_min": 8.0,
+    "diff_max": 11.0
+   },
+   "combined_attainment_pct": {
+    "mean": 31.133333333333336,
+    "diff_mean": 0.5333333333333321,
+    "diff_min": 0.3999999999999986,
+    "diff_max": 0.6666666666666643
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8241951390636284,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8361119197469234,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   }
+  },
+  {
+   "assumption": "Resistant MIC mode (both drugs, multiplier)",
+   "unit": "x",
+   "primary_value": 1.0,
+   "level": "high",
+   "value": 2.0,
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 57.78666666666667,
+    "diff_mean": -6.06666666666667,
+    "diff_min": -6.733333333333334,
+    "diff_max": -5.400000000000006
+   },
+   "combined_attainment_pct": {
+    "mean": 30.560000000000002,
+    "diff_mean": -0.039999999999999855,
+    "diff_min": -0.13333333333333286,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8241951390636284,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8361119197469234,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   }
+  },
+  {
+   "assumption": "Septic-shock effect on CL (log scale)",
+   "unit": "log units",
+   "primary_value": -0.15,
+   "level": "low",
+   "value": 0.0,
+   "nephrotoxicity_pct": {
+    "mean": 31.853333333333335,
+    "diff_mean": -2.4399999999999955,
+    "diff_min": -3.3333333333333286,
+    "diff_max": -1.7333333333333307
+   },
+   "cure_pct": {
+    "mean": 63.55999999999999,
+    "diff_mean": -0.2933333333333351,
+    "diff_min": -0.46666666666666856,
+    "diff_max": -0.06666666666666998
+   },
+   "combined_attainment_pct": {
+    "mean": 32.22666666666667,
+    "diff_mean": 1.6266666666666674,
+    "diff_min": 1.2666666666666693,
+    "diff_max": 2.0666666666666664
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8211893056996544,
+    "diff_mean": -0.0030058333639739086,
+    "diff_min": -0.025516565261968327,
+    "diff_max": 0.029470591277873437
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8390487195250967,
+    "diff_mean": 0.0029367997781732046,
+    "diff_min": -0.021564285714285703,
+    "diff_max": 0.03513618523803719
+   }
+  },
+  {
+   "assumption": "Septic-shock effect on CL (log scale)",
+   "unit": "log units",
+   "primary_value": -0.15,
+   "level": "high",
+   "value": -0.3,
+   "nephrotoxicity_pct": {
+    "mean": 37.266666666666666,
+    "diff_mean": 2.9733333333333376,
+    "diff_min": 2.4666666666666686,
+    "diff_max": 3.3333333333333286
+   },
+   "cure_pct": {
+    "mean": 64.10666666666667,
+    "diff_mean": 0.25333333333333596,
+    "diff_min": -0.3333333333333357,
+    "diff_max": 0.7333333333333343
+   },
+   "combined_attainment_pct": {
+    "mean": 28.96,
+    "diff_mean": -1.64,
+    "diff_min": -2.1999999999999957,
+    "diff_max": -1.2000000000000028
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8195047682332491,
+    "diff_mean": -0.004690370830379198,
+    "diff_min": -0.026440696539664077,
+    "diff_max": 0.00606256272112593
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8252396529460289,
+    "diff_mean": -0.010872266800894658,
+    "diff_min": -0.022542924732215752,
+    "diff_max": 0.007136869538703183
+   }
+  }
+ ],
+ "published": [
+  {
+   "assumption": "Pathogen mix, ICMR 2024 ICU bloodstream isolates",
+   "value": "Klebsiella 36.0%, Pseudomonas 9.5%, E. coli 8.7%, Acinetobacter 31.3%, other 14.5%",
+   "level": "published",
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 58.25333333333333,
+    "diff_mean": -5.599999999999997,
+    "diff_min": -6.733333333333327,
+    "diff_max": -5.0
+   },
+   "combined_attainment_pct": {
+    "mean": 27.906666666666666,
+    "diff_mean": -2.693333333333334,
+    "diff_min": -2.9333333333333336,
+    "diff_max": -2.2666666666666657
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8241951390636284,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8361119197469234,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   }
+  },
+  {
+   "assumption": "Gentamicin resistance, ICMR 2024 ICU bloodstream isolates",
+   "value": "Klebsiella 0.691, Pseudomonas 0.510, E. coli 0.487, Acinetobacter 0.845",
+   "level": "published",
+   "nephrotoxicity_pct": {
+    "mean": 34.29333333333334,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "cure_pct": {
+    "mean": 60.4,
+    "diff_mean": -3.4533333333333345,
+    "diff_min": -3.86666666666666,
+    "diff_max": -3.0
+   },
+   "combined_attainment_pct": {
+    "mean": 26.4,
+    "diff_mean": -4.200000000000001,
+    "diff_min": -4.866666666666671,
+    "diff_max": -3.600000000000005
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8241951390636284,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8361119197469234,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   }
+  },
+  {
+   "assumption": "Mechanical ventilation, SEPSIS INDIA",
+   "value": "0.48",
+   "level": "published",
+   "nephrotoxicity_pct": {
+    "mean": 33.493333333333325,
+    "diff_mean": -0.7999999999999972,
+    "diff_min": -1.3333333333333286,
+    "diff_max": 0.3999999999999986
+   },
+   "cure_pct": {
+    "mean": 63.85333333333333,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "combined_attainment_pct": {
+    "mean": 30.6,
+    "diff_mean": 0.0,
+    "diff_min": 0.0,
+    "diff_max": 0.0
+   },
+   "predose_auroc_xgb": {
+    "mean": 0.8354345225124271,
+    "diff_mean": 0.011239383448798757,
+    "diff_min": 0.003947227850816026,
+    "diff_max": 0.02913379847642361
+   },
+   "predose_auroc_lr": {
+    "mean": 0.8420971558379133,
+    "diff_mean": 0.005985236090989709,
+    "diff_min": -0.013271206521546786,
+    "diff_max": 0.041461979503847335
+   }
+  }
+ ],
+ "wall_seconds": 1562.9881465435028,
+ "per_replicate": [
+  {
+   "seed": 12345,
+   "parameters": "primary",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 32.53333333333333,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.7954168551183476,
+   "predose_auroc_xgb_ci": [
+    0.743603706195912,
+    0.8446199028990642
+   ],
+   "predose_auroc_lr": 0.8063219257249108,
+   "seconds": 114.43949246406555
+  },
+  {
+   "seed": 111,
+   "parameters": "primary",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.266666666666666,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8214841470531025,
+   "predose_auroc_xgb_ci": [
+    0.7735155311758134,
+    0.8667888282960459
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 91.83036470413208
+  },
+  {
+   "seed": 222,
+   "parameters": "primary",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 32.86666666666667,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.8532000000000001,
+   "predose_auroc_xgb_ci": [
+    0.8075331133240875,
+    0.8945104150009208
+   ],
+   "predose_auroc_lr": 0.87585,
+   "seconds": 96.65474653244019
+  },
+  {
+   "seed": 333,
+   "parameters": "primary",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 63.0,
+   "icu_mortality_pct": 31.6,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.8189028086482117,
+   "predose_auroc_xgb_ci": [
+    0.7708924668352188,
+    0.8643760605352024
+   ],
+   "predose_auroc_lr": 0.834107900585977,
+   "seconds": 87.18354654312134
+  },
+  {
+   "seed": 444,
+   "parameters": "primary",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 31.466666666666665,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.8319718844984803,
+   "predose_auroc_xgb_ci": [
+    0.7887880697349109,
+    0.8750988378316334
+   ],
+   "predose_auroc_lr": 0.8328267477203648,
+   "seconds": 88.23537731170654
+  },
+  {
+   "seed": 12345,
+   "parameters": "Weight (mean) | low | 52",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 64.73333333333333,
+   "icu_mortality_pct": 32.666666666666664,
+   "efficacy_pct": 49.333333333333336,
+   "safety_pct": 61.6,
+   "combined_attainment_pct": 29.733333333333334,
+   "predose_auroc_xgb": 0.788659793814433,
+   "predose_auroc_xgb_ci": [
+    0.7359476664645578,
+    0.8389724967853396
+   ],
+   "predose_auroc_lr": 0.7958568371912079,
+   "seconds": 95.65621066093445
+  },
+  {
+   "seed": 111,
+   "parameters": "Weight (mean) | low | 52",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 36.0,
+   "cure_pct": 62.93333333333333,
+   "icu_mortality_pct": 30.599999999999998,
+   "efficacy_pct": 52.26666666666666,
+   "safety_pct": 58.86666666666667,
+   "combined_attainment_pct": 29.933333333333334,
+   "predose_auroc_xgb": 0.8509355709876544,
+   "predose_auroc_xgb_ci": [
+    0.8047413276065701,
+    0.8939770797125214
+   ],
+   "predose_auroc_lr": 0.8521894290123456,
+   "seconds": 89.33271217346191
+  },
+  {
+   "seed": 222,
+   "parameters": "Weight (mean) | low | 52",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 35.733333333333334,
+   "cure_pct": 62.93333333333333,
+   "icu_mortality_pct": 33.93333333333333,
+   "efficacy_pct": 51.0,
+   "safety_pct": 61.46666666666667,
+   "combined_attainment_pct": 31.733333333333334,
+   "predose_auroc_xgb": 0.8718221877875163,
+   "predose_auroc_xgb_ci": [
+    0.8295035018513484,
+    0.9111253163563588
+   ],
+   "predose_auroc_lr": 0.8719674592029443,
+   "seconds": 91.38536596298218
+  },
+  {
+   "seed": 333,
+   "parameters": "Weight (mean) | low | 52",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 35.53333333333333,
+   "cure_pct": 63.33333333333333,
+   "icu_mortality_pct": 33.06666666666666,
+   "efficacy_pct": 48.86666666666667,
+   "safety_pct": 61.4,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.7977337659193259,
+   "predose_auroc_xgb_ci": [
+    0.7422607356610077,
+    0.8488165449840431
+   ],
+   "predose_auroc_lr": 0.7981211563604669,
+   "seconds": 98.49849605560303
+  },
+  {
+   "seed": 444,
+   "parameters": "Weight (mean) | low | 52",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 38.46666666666667,
+   "cure_pct": 63.4,
+   "icu_mortality_pct": 32.46666666666667,
+   "efficacy_pct": 49.6,
+   "safety_pct": 60.333333333333336,
+   "combined_attainment_pct": 27.400000000000002,
+   "predose_auroc_xgb": 0.8674500587544066,
+   "predose_auroc_xgb_ci": [
+    0.8255572608949082,
+    0.9056648935076893
+   ],
+   "predose_auroc_lr": 0.8662749706227968,
+   "seconds": 83.70364546775818
+  },
+  {
+   "seed": 12345,
+   "parameters": "Weight (mean) | high | 72",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.53333333333333,
+   "cure_pct": 64.93333333333334,
+   "icu_mortality_pct": 32.2,
+   "efficacy_pct": 50.2,
+   "safety_pct": 63.6,
+   "combined_attainment_pct": 31.133333333333336,
+   "predose_auroc_xgb": 0.8246615477874318,
+   "predose_auroc_xgb_ci": [
+    0.774152976435406,
+    0.8721581080348807
+   ],
+   "predose_auroc_lr": 0.8229945443523944,
+   "seconds": 87.61308145523071
+  },
+  {
+   "seed": 111,
+   "parameters": "Weight (mean) | high | 72",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.13333333333333,
+   "cure_pct": 64.93333333333334,
+   "icu_mortality_pct": 30.466666666666665,
+   "efficacy_pct": 52.6,
+   "safety_pct": 60.93333333333333,
+   "combined_attainment_pct": 31.066666666666663,
+   "predose_auroc_xgb": 0.8290598290598291,
+   "predose_auroc_xgb_ci": [
+    0.7778225060323557,
+    0.8754075186480078
+   ],
+   "predose_auroc_lr": 0.8488888888888889,
+   "seconds": 104.8768105506897
+  },
+  {
+   "seed": 222,
+   "parameters": "Weight (mean) | high | 72",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 65.0,
+   "icu_mortality_pct": 32.800000000000004,
+   "efficacy_pct": 51.800000000000004,
+   "safety_pct": 63.66666666666667,
+   "combined_attainment_pct": 33.266666666666666,
+   "predose_auroc_xgb": 0.848757324712063,
+   "predose_auroc_xgb_ci": [
+    0.8041541358255483,
+    0.8911691123180474
+   ],
+   "predose_auroc_lr": 0.8504243281471005,
+   "seconds": 104.46114468574524
+  },
+  {
+   "seed": 333,
+   "parameters": "Weight (mean) | high | 72",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.4,
+   "cure_pct": 63.4,
+   "icu_mortality_pct": 31.2,
+   "efficacy_pct": 49.6,
+   "safety_pct": 63.4,
+   "combined_attainment_pct": 31.866666666666667,
+   "predose_auroc_xgb": 0.7998578030572343,
+   "predose_auroc_xgb_ci": [
+    0.7467476010304452,
+    0.8479535069444444
+   ],
+   "predose_auroc_lr": 0.8179371286374485,
+   "seconds": 109.24294424057007
+  },
+  {
+   "seed": 444,
+   "parameters": "Weight (mean) | high | 72",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 65.4,
+   "icu_mortality_pct": 31.8,
+   "efficacy_pct": 50.33333333333333,
+   "safety_pct": 61.6,
+   "combined_attainment_pct": 28.866666666666667,
+   "predose_auroc_xgb": 0.8058035714285715,
+   "predose_auroc_xgb_ci": [
+    0.7550106143547621,
+    0.8555115643862572
+   ],
+   "predose_auroc_lr": 0.8126899696048631,
+   "seconds": 101.13377380371094
+  },
+  {
+   "seed": 12345,
+   "parameters": "Mechanical ventilation | low | 0.45",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.06666666666666,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 32.666666666666664,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.7969260620915031,
+   "predose_auroc_xgb_ci": [
+    0.7429406796906798,
+    0.8457268483251419
+   ],
+   "predose_auroc_lr": 0.834201388888889,
+   "seconds": 129.0180983543396
+  },
+  {
+   "seed": 111,
+   "parameters": "Mechanical ventilation | low | 0.45",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 33.86666666666667,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.533333333333335,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8264507823331353,
+   "predose_auroc_xgb_ci": [
+    0.776245,
+    0.8718708133971292
+   ],
+   "predose_auroc_lr": 0.8665082194493958,
+   "seconds": 119.22591829299927
+  },
+  {
+   "seed": 222,
+   "parameters": "Mechanical ventilation | low | 0.45",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 31.8,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 33.0,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.8437483953786907,
+   "predose_auroc_xgb_ci": [
+    0.7916702934950112,
+    0.8893176531071268
+   ],
+   "predose_auroc_lr": 0.8463157894736841,
+   "seconds": 114.34309411048889
+  },
+  {
+   "seed": 333,
+   "parameters": "Mechanical ventilation | low | 0.45",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.800000000000004,
+   "cure_pct": 63.0,
+   "icu_mortality_pct": 31.666666666666664,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.8187007476257829,
+   "predose_auroc_xgb_ci": [
+    0.7652628150283517,
+    0.8643491644080803
+   ],
+   "predose_auroc_lr": 0.8311275005051526,
+   "seconds": 118.01392030715942
+  },
+  {
+   "seed": 444,
+   "parameters": "Mechanical ventilation | low | 0.45",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 35.86666666666667,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 31.466666666666665,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.8618827160493827,
+   "predose_auroc_xgb_ci": [
+    0.819870700050162,
+    0.9017325281979731
+   ],
+   "predose_auroc_lr": 0.8623167438271605,
+   "seconds": 116.8389139175415
+  },
+  {
+   "seed": 12345,
+   "parameters": "Mechanical ventilation | high | 0.85",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 34.53333333333333,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 32.666666666666664,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.8113226059654631,
+   "predose_auroc_xgb_ci": [
+    0.7597191177636262,
+    0.8558161368944487
+   ],
+   "predose_auroc_lr": 0.819515306122449,
+   "seconds": 114.6331992149353
+  },
+  {
+   "seed": 111,
+   "parameters": "Mechanical ventilation | high | 0.85",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 36.333333333333336,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.266666666666666,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8472068783322926,
+   "predose_auroc_xgb_ci": [
+    0.8000498670212766,
+    0.8914666055816266
+   ],
+   "predose_auroc_lr": 0.8467745809116672,
+   "seconds": 118.55455112457275
+  },
+  {
+   "seed": 222,
+   "parameters": "Mechanical ventilation | high | 0.85",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 34.599999999999994,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 33.13333333333333,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.8539050235478807,
+   "predose_auroc_xgb_ci": [
+    0.8081516555166544,
+    0.8949732964404712
+   ],
+   "predose_auroc_lr": 0.8544937205651492,
+   "seconds": 127.02831506729126
+  },
+  {
+   "seed": 333,
+   "parameters": "Mechanical ventilation | high | 0.85",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 34.53333333333333,
+   "cure_pct": 63.0,
+   "icu_mortality_pct": 31.933333333333337,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.772370486656201,
+   "predose_auroc_xgb_ci": [
+    0.717011226256018,
+    0.8263843021475034
+   ],
+   "predose_auroc_lr": 0.7874803767660912,
+   "seconds": 172.90632820129395
+  },
+  {
+   "seed": 444,
+   "parameters": "Mechanical ventilation | high | 0.85",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 39.33333333333333,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 31.733333333333334,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.8058297634568822,
+   "predose_auroc_xgb_ci": [
+    0.7513297683188629,
+    0.8532743200631465
+   ],
+   "predose_auroc_lr": 0.8195660271931459,
+   "seconds": 128.91221475601196
+  },
+  {
+   "seed": 12345,
+   "parameters": "Vasopressor use | low | 0.3",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.266666666666666,
+   "cure_pct": 64.73333333333333,
+   "icu_mortality_pct": 30.666666666666664,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.8172261439236199,
+   "predose_auroc_xgb_ci": [
+    0.7674047074498404,
+    0.8636374658296258
+   ],
+   "predose_auroc_lr": 0.8372860697780713,
+   "seconds": 171.84599947929382
+  },
+  {
+   "seed": 111,
+   "parameters": "Vasopressor use | low | 0.3",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.13333333333333,
+   "cure_pct": 65.93333333333334,
+   "icu_mortality_pct": 31.466666666666665,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8434188034188035,
+   "predose_auroc_xgb_ci": [
+    0.7986419920492256,
+    0.8811925938924703
+   ],
+   "predose_auroc_lr": 0.8602197802197802,
+   "seconds": 124.0892698764801
+  },
+  {
+   "seed": 222,
+   "parameters": "Vasopressor use | low | 0.3",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 32.666666666666664,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 32.800000000000004,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.84143261264902,
+   "predose_auroc_xgb_ci": [
+    0.7927515545300643,
+    0.8853282872132802
+   ],
+   "predose_auroc_lr": 0.8522428773489593,
+   "seconds": 147.65301775932312
+  },
+  {
+   "seed": 333,
+   "parameters": "Vasopressor use | low | 0.3",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 64.06666666666668,
+   "icu_mortality_pct": 32.733333333333334,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.8437563144069509,
+   "predose_auroc_xgb_ci": [
+    0.7990645259829843,
+    0.8849322025290742
+   ],
+   "predose_auroc_lr": 0.8469892907658113,
+   "seconds": 118.81561303138733
+  },
+  {
+   "seed": 444,
+   "parameters": "Vasopressor use | low | 0.3",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 34.93333333333333,
+   "cure_pct": 63.0,
+   "icu_mortality_pct": 30.4,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.8276434676434676,
+   "predose_auroc_xgb_ci": [
+    0.776163321274361,
+    0.8705372990593826
+   ],
+   "predose_auroc_lr": 0.8407814407814408,
+   "seconds": 133.81481504440308
+  },
+  {
+   "seed": 12345,
+   "parameters": "Vasopressor use | high | 0.7",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 34.53333333333333,
+   "cure_pct": 64.46666666666667,
+   "icu_mortality_pct": 32.666666666666664,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.8387460753532182,
+   "predose_auroc_xgb_ci": [
+    0.790670881505402,
+    0.8793075123020967
+   ],
+   "predose_auroc_lr": 0.8506671899529042,
+   "seconds": 133.39903903007507
+  },
+  {
+   "seed": 111,
+   "parameters": "Vasopressor use | high | 0.7",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 36.53333333333333,
+   "cure_pct": 66.13333333333333,
+   "icu_mortality_pct": 31.8,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8340191387559809,
+   "predose_auroc_xgb_ci": [
+    0.7841379205053043,
+    0.8774757444781298
+   ],
+   "predose_auroc_lr": 0.8474162679425837,
+   "seconds": 146.05364990234375
+  },
+  {
+   "seed": 222,
+   "parameters": "Vasopressor use | high | 0.7",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 34.46666666666667,
+   "cure_pct": 63.800000000000004,
+   "icu_mortality_pct": 31.4,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.8295303336454586,
+   "predose_auroc_xgb_ci": [
+    0.7781118200818515,
+    0.8749218338322815
+   ],
+   "predose_auroc_lr": 0.8420974816421073,
+   "seconds": 138.7227942943573
+  },
+  {
+   "seed": 333,
+   "parameters": "Vasopressor use | high | 0.7",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 33.93333333333333,
+   "cure_pct": 62.66666666666667,
+   "icu_mortality_pct": 33.800000000000004,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.7904040404040404,
+   "predose_auroc_xgb_ci": [
+    0.7375190841692582,
+    0.839856592429657
+   ],
+   "predose_auroc_lr": 0.8092196474549416,
+   "seconds": 138.82555031776428
+  },
+  {
+   "seed": 444,
+   "parameters": "Vasopressor use | high | 0.7",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.4,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 32.4,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.8125949848024315,
+   "predose_auroc_xgb_ci": [
+    0.7594788416351258,
+    0.8591998921998922
+   ],
+   "predose_auroc_lr": 0.8370060790273556,
+   "seconds": 113.94733905792236
+  },
+  {
+   "seed": 12345,
+   "parameters": "Diabetes | low | 0.2",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 31.466666666666665,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 32.46666666666667,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.8256042140053708,
+   "predose_auroc_xgb_ci": [
+    0.7747715635565886,
+    0.8723943716267729
+   ],
+   "predose_auroc_lr": 0.8274116917992149,
+   "seconds": 127.14049816131592
+  },
+  {
+   "seed": 111,
+   "parameters": "Diabetes | low | 0.2",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 33.53333333333333,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.133333333333333,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8320811980695557,
+   "predose_auroc_xgb_ci": [
+    0.7822508881749778,
+    0.8748707672531175
+   ],
+   "predose_auroc_lr": 0.8399920394049455,
+   "seconds": 121.68583226203918
+  },
+  {
+   "seed": 222,
+   "parameters": "Diabetes | low | 0.2",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 32.800000000000004,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.8580330669882908,
+   "predose_auroc_xgb_ci": [
+    0.8113434138944278,
+    0.8998415392303536
+   ],
+   "predose_auroc_lr": 0.8686366149052717,
+   "seconds": 116.73226356506348
+  },
+  {
+   "seed": 333,
+   "parameters": "Diabetes | low | 0.2",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 31.066666666666663,
+   "cure_pct": 63.0,
+   "icu_mortality_pct": 31.333333333333336,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.8206846397589735,
+   "predose_auroc_xgb_ci": [
+    0.7705854396398868,
+    0.8657407295647046
+   ],
+   "predose_auroc_lr": 0.8332034699496129,
+   "seconds": 127.9612786769867
+  },
+  {
+   "seed": 444,
+   "parameters": "Diabetes | low | 0.2",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 35.66666666666667,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 31.266666666666666,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.7885332429422304,
+   "predose_auroc_xgb_ci": [
+    0.7379153547827215,
+    0.8395706152939449
+   ],
+   "predose_auroc_lr": 0.7893564476296547,
+   "seconds": 117.6864960193634
+  },
+  {
+   "seed": 12345,
+   "parameters": "Diabetes | high | 0.5",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 34.46666666666667,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 32.6,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.8058252427184467,
+   "predose_auroc_xgb_ci": [
+    0.7530802377769289,
+    0.8559062529297368
+   ],
+   "predose_auroc_lr": 0.8226307229806318,
+   "seconds": 129.84505653381348
+  },
+  {
+   "seed": 111,
+   "parameters": "Diabetes | high | 0.5",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 37.13333333333333,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.466666666666665,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8417465084131751,
+   "predose_auroc_xgb_ci": [
+    0.7967717844453376,
+    0.8847468980026413
+   ],
+   "predose_auroc_lr": 0.8429858429858429,
+   "seconds": 124.46230983734131
+  },
+  {
+   "seed": 222,
+   "parameters": "Diabetes | high | 0.5",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 33.0,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.8055339428126824,
+   "predose_auroc_xgb_ci": [
+    0.7543943309558568,
+    0.8536929357423907
+   ],
+   "predose_auroc_lr": 0.8163781365493095,
+   "seconds": 119.09600305557251
+  },
+  {
+   "seed": 333,
+   "parameters": "Diabetes | high | 0.5",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 34.86666666666667,
+   "cure_pct": 63.0,
+   "icu_mortality_pct": 31.866666666666667,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.7791452991452992,
+   "predose_auroc_xgb_ci": [
+    0.7270082136890796,
+    0.8311710439971309
+   ],
+   "predose_auroc_lr": 0.7991697191697192,
+   "seconds": 118.99995136260986
+  },
+  {
+   "seed": 444,
+   "parameters": "Diabetes | high | 0.5",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 39.13333333333333,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 31.866666666666667,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.7775909579188268,
+   "predose_auroc_xgb_ci": [
+    0.7232432544198504,
+    0.8300341887920674
+   ],
+   "predose_auroc_lr": 0.7871654756900659,
+   "seconds": 148.7056119441986
+  },
+  {
+   "seed": 12345,
+   "parameters": "Augmented renal clearance (prevalence) | low | 0.15",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 96.63893333333336,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 36.8,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 31.866666666666667,
+   "efficacy_pct": 50.0,
+   "safety_pct": 60.333333333333336,
+   "combined_attainment_pct": 29.4,
+   "predose_auroc_xgb": 0.8024401913875598,
+   "predose_auroc_xgb_ci": [
+    0.751660465545195,
+    0.8517644440983104
+   ],
+   "predose_auroc_lr": 0.8308612440191387,
+   "seconds": 136.4881420135498
+  },
+  {
+   "seed": 111,
+   "parameters": "Augmented renal clearance (prevalence) | low | 0.15",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 95.98306666666669,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 39.0,
+   "cure_pct": 64.66666666666666,
+   "icu_mortality_pct": 32.93333333333333,
+   "efficacy_pct": 52.33333333333333,
+   "safety_pct": 57.666666666666664,
+   "combined_attainment_pct": 29.733333333333334,
+   "predose_auroc_xgb": 0.8078557750688898,
+   "predose_auroc_xgb_ci": [
+    0.7534243171957185,
+    0.8539793288275253
+   ],
+   "predose_auroc_lr": 0.8149082247442903,
+   "seconds": 123.82704472541809
+  },
+  {
+   "seed": 222,
+   "parameters": "Augmented renal clearance (prevalence) | low | 0.15",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 96.27040000000001,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 35.8,
+   "cure_pct": 64.46666666666667,
+   "icu_mortality_pct": 32.666666666666664,
+   "efficacy_pct": 51.53333333333333,
+   "safety_pct": 61.06666666666667,
+   "combined_attainment_pct": 31.866666666666667,
+   "predose_auroc_xgb": 0.8378286765774055,
+   "predose_auroc_xgb_ci": [
+    0.7901869240237264,
+    0.8805907426238886
+   ],
+   "predose_auroc_lr": 0.8514841896276208,
+   "seconds": 114.25351190567017
+  },
+  {
+   "seed": 333,
+   "parameters": "Augmented renal clearance (prevalence) | low | 0.15",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 98.2368,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 64.8,
+   "icu_mortality_pct": 31.8,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 59.46666666666667,
+   "combined_attainment_pct": 29.4,
+   "predose_auroc_xgb": 0.857663878622836,
+   "predose_auroc_xgb_ci": [
+    0.8153542296492021,
+    0.8988047854173121
+   ],
+   "predose_auroc_lr": 0.8512448939894962,
+   "seconds": 139.92157793045044
+  },
+  {
+   "seed": 444,
+   "parameters": "Augmented renal clearance (prevalence) | low | 0.15",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 96.20639999999999,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 38.06666666666666,
+   "cure_pct": 64.13333333333333,
+   "icu_mortality_pct": 33.53333333333333,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 57.4,
+   "combined_attainment_pct": 26.866666666666667,
+   "predose_auroc_xgb": 0.816213921901528,
+   "predose_auroc_xgb_ci": [
+    0.7656443458499448,
+    0.86051375
+   ],
+   "predose_auroc_lr": 0.8217789096396907,
+   "seconds": 136.87432193756104
+  },
+  {
+   "seed": 12345,
+   "parameters": "Augmented renal clearance (prevalence) | high | 0.4",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 115.502,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 29.666666666666668,
+   "cure_pct": 61.93333333333333,
+   "icu_mortality_pct": 32.266666666666666,
+   "efficacy_pct": 49.8,
+   "safety_pct": 65.60000000000001,
+   "combined_attainment_pct": 32.2,
+   "predose_auroc_xgb": 0.8625592417061612,
+   "predose_auroc_xgb_ci": [
+    0.8156618799397165,
+    0.9037991193570452
+   ],
+   "predose_auroc_lr": 0.8745407103679642,
+   "seconds": 125.90112018585205
+  },
+  {
+   "seed": 111,
+   "parameters": "Augmented renal clearance (prevalence) | high | 0.4",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 114.01293333333334,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 64.13333333333333,
+   "icu_mortality_pct": 31.333333333333336,
+   "efficacy_pct": 52.53333333333333,
+   "safety_pct": 63.46666666666667,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.8469772350369366,
+   "predose_auroc_xgb_ci": [
+    0.7984511798118588,
+    0.8882024424353074
+   ],
+   "predose_auroc_lr": 0.8624051459872355,
+   "seconds": 160.95491003990173
+  },
+  {
+   "seed": 222,
+   "parameters": "Augmented renal clearance (prevalence) | high | 0.4",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 114.41893333333333,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 30.666666666666664,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 30.8,
+   "efficacy_pct": 51.03402268178786,
+   "safety_pct": 66.51100733822548,
+   "combined_attainment_pct": 34.02268178785857,
+   "predose_auroc_xgb": 0.8082148829431438,
+   "predose_auroc_xgb_ci": [
+    0.7515872479468905,
+    0.860220539016165
+   ],
+   "predose_auroc_lr": 0.8266095317725751,
+   "seconds": 125.0007426738739
+  },
+  {
+   "seed": 333,
+   "parameters": "Augmented renal clearance (prevalence) | high | 0.4",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 116.63166666666666,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 29.533333333333335,
+   "cure_pct": 62.46666666666667,
+   "icu_mortality_pct": 31.0,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 65.73333333333333,
+   "combined_attainment_pct": 32.06666666666666,
+   "predose_auroc_xgb": 0.8120240694392673,
+   "predose_auroc_xgb_ci": [
+    0.7586907965686275,
+    0.8595928366110284
+   ],
+   "predose_auroc_lr": 0.8378507907769317,
+   "seconds": 185.04867029190063
+  },
+  {
+   "seed": 444,
+   "parameters": "Augmented renal clearance (prevalence) | high | 0.4",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 113.28533333333333,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 34.4,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.2,
+   "efficacy_pct": 49.86666666666667,
+   "safety_pct": 64.4,
+   "combined_attainment_pct": 30.333333333333336,
+   "predose_auroc_xgb": 0.8392390715095362,
+   "predose_auroc_xgb_ci": [
+    0.7951497263917575,
+    0.8782632401687229
+   ],
+   "predose_auroc_lr": 0.8487999605736533,
+   "seconds": 119.61747717857361
+  },
+  {
+   "seed": 12345,
+   "parameters": "Augmented renal clearance (mean CrCL) | low | 140",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 99.52120000000001,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 34.266666666666666,
+   "cure_pct": 64.06666666666668,
+   "icu_mortality_pct": 32.46666666666667,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.4,
+   "combined_attainment_pct": 30.133333333333333,
+   "predose_auroc_xgb": 0.8303681435119018,
+   "predose_auroc_xgb_ci": [
+    0.7854062490120167,
+    0.870760625985903
+   ],
+   "predose_auroc_lr": 0.8529890099058696,
+   "seconds": 136.01742839813232
+  },
+  {
+   "seed": 111,
+   "parameters": "Augmented renal clearance (mean CrCL) | low | 140",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 97.84873333333334,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 36.266666666666666,
+   "cure_pct": 63.800000000000004,
+   "icu_mortality_pct": 30.599999999999998,
+   "efficacy_pct": 52.46666666666666,
+   "safety_pct": 57.599999999999994,
+   "combined_attainment_pct": 29.533333333333335,
+   "predose_auroc_xgb": 0.8154570344396945,
+   "predose_auroc_xgb_ci": [
+    0.7662952599486521,
+    0.8630917055302854
+   ],
+   "predose_auroc_lr": 0.8127671838224698,
+   "seconds": 120.13091921806335
+  },
+  {
+   "seed": 222,
+   "parameters": "Augmented renal clearance (mean CrCL) | low | 140",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 97.823,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 32.53333333333333,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 61.73333333333333,
+   "combined_attainment_pct": 32.06666666666666,
+   "predose_auroc_xgb": 0.84855,
+   "predose_auroc_xgb_ci": [
+    0.8043017687122854,
+    0.8929734185377057
+   ],
+   "predose_auroc_lr": 0.86405,
+   "seconds": 123.44656348228455
+  },
+  {
+   "seed": 333,
+   "parameters": "Augmented renal clearance (mean CrCL) | low | 140",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 100.53313333333334,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 35.8,
+   "cure_pct": 63.13333333333333,
+   "icu_mortality_pct": 32.13333333333333,
+   "efficacy_pct": 49.266666666666666,
+   "safety_pct": 60.46666666666667,
+   "combined_attainment_pct": 30.2,
+   "predose_auroc_xgb": 0.8221877875163429,
+   "predose_auroc_xgb_ci": [
+    0.772710018182805,
+    0.867686631548941
+   ],
+   "predose_auroc_lr": 0.8181201878843639,
+   "seconds": 139.12414932250977
+  },
+  {
+   "seed": 444,
+   "parameters": "Augmented renal clearance (mean CrCL) | low | 140",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 97.23386666666666,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 38.13333333333333,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 31.4,
+   "efficacy_pct": 50.06666666666667,
+   "safety_pct": 59.4,
+   "combined_attainment_pct": 27.933333333333334,
+   "predose_auroc_xgb": 0.8242784380305603,
+   "predose_auroc_xgb_ci": [
+    0.7768573530487307,
+    0.8656410999240122
+   ],
+   "predose_auroc_lr": 0.8296547821165818,
+   "seconds": 162.64610123634338
+  },
+  {
+   "seed": 12345,
+   "parameters": "Augmented renal clearance (mean CrCL) | high | 180",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 109.72319999999999,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.33333333333333,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 34.06666666666667,
+   "efficacy_pct": 50.06666666666667,
+   "safety_pct": 63.26666666666667,
+   "combined_attainment_pct": 31.133333333333336,
+   "predose_auroc_xgb": 0.8006703570158956,
+   "predose_auroc_xgb_ci": [
+    0.7454435286935287,
+    0.8494772503713323
+   ],
+   "predose_auroc_lr": 0.8238281448377431,
+   "seconds": 140.56772685050964
+  },
+  {
+   "seed": 111,
+   "parameters": "Augmented renal clearance (mean CrCL) | high | 180",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 107.57260000000001,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 34.53333333333333,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.133333333333333,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 60.53333333333333,
+   "combined_attainment_pct": 31.133333333333336,
+   "predose_auroc_xgb": 0.8207417582417582,
+   "predose_auroc_xgb_ci": [
+    0.7725234073050435,
+    0.8695011567236453
+   ],
+   "predose_auroc_lr": 0.8268249607535322,
+   "seconds": 116.07302522659302
+  },
+  {
+   "seed": 222,
+   "parameters": "Augmented renal clearance (mean CrCL) | high | 180",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 106.8858,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 32.46666666666667,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 33.06666666666666,
+   "efficacy_pct": 51.6,
+   "safety_pct": 63.46666666666667,
+   "combined_attainment_pct": 33.0,
+   "predose_auroc_xgb": 0.8484586867096644,
+   "predose_auroc_xgb_ci": [
+    0.7997110354356943,
+    0.8887838901237063
+   ],
+   "predose_auroc_lr": 0.8528261642374689,
+   "seconds": 124.10676860809326
+  },
+  {
+   "seed": 333,
+   "parameters": "Augmented renal clearance (mean CrCL) | high | 180",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 110.67426666666667,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.266666666666666,
+   "cure_pct": 62.866666666666674,
+   "icu_mortality_pct": 31.6,
+   "efficacy_pct": 49.2,
+   "safety_pct": 62.33333333333333,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.8113859123457416,
+   "predose_auroc_xgb_ci": [
+    0.7625293074217013,
+    0.8594885276916086
+   ],
+   "predose_auroc_lr": 0.8298715149052867,
+   "seconds": 120.868905544281
+  },
+  {
+   "seed": 444,
+   "parameters": "Augmented renal clearance (mean CrCL) | high | 180",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 106.43460000000002,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 36.733333333333334,
+   "cure_pct": 64.13333333333333,
+   "icu_mortality_pct": 30.866666666666664,
+   "efficacy_pct": 50.06666666666667,
+   "safety_pct": 62.33333333333333,
+   "combined_attainment_pct": 29.2,
+   "predose_auroc_xgb": 0.820956937799043,
+   "predose_auroc_xgb_ci": [
+    0.7726768507638073,
+    0.8643119899285884
+   ],
+   "predose_auroc_lr": 0.8485167464114832,
+   "seconds": 146.4631769657135
+  },
+  {
+   "seed": 12345,
+   "parameters": "Pneumonia share of infection sites | low | 0.2",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 32.53333333333333,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.7961204080607065,
+   "predose_auroc_xgb_ci": [
+    0.7449110407439212,
+    0.8447193426696827
+   ],
+   "predose_auroc_lr": 0.8059701492537313,
+   "seconds": 164.06654858589172
+  },
+  {
+   "seed": 111,
+   "parameters": "Pneumonia share of infection sites | low | 0.2",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.266666666666666,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8197335148803735,
+   "predose_auroc_xgb_ci": [
+    0.7723298065100628,
+    0.8659017956575501
+   ],
+   "predose_auroc_lr": 0.8316475393892238,
+   "seconds": 123.097820520401
+  },
+  {
+   "seed": 222,
+   "parameters": "Pneumonia share of infection sites | low | 0.2",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 32.86666666666667,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.8378,
+   "predose_auroc_xgb_ci": [
+    0.7905497351223565,
+    0.8796663226406882
+   ],
+   "predose_auroc_lr": 0.87425,
+   "seconds": 141.50621914863586
+  },
+  {
+   "seed": 333,
+   "parameters": "Pneumonia share of infection sites | low | 0.2",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 63.0,
+   "icu_mortality_pct": 31.6,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.8240553647201455,
+   "predose_auroc_xgb_ci": [
+    0.7759545404982503,
+    0.8684413947399668
+   ],
+   "predose_auroc_lr": 0.8353202667205497,
+   "seconds": 116.09827542304993
+  },
+  {
+   "seed": 444,
+   "parameters": "Pneumonia share of infection sites | low | 0.2",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 31.466666666666665,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.8324468085106382,
+   "predose_auroc_xgb_ci": [
+    0.7878992203985191,
+    0.8767471098307381
+   ],
+   "predose_auroc_lr": 0.8307370820668692,
+   "seconds": 119.91327691078186
+  },
+  {
+   "seed": 12345,
+   "parameters": "Pneumonia share of infection sites | high | 0.5",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 32.53333333333333,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.7899894467058646,
+   "predose_auroc_xgb_ci": [
+    0.7367388298326488,
+    0.8405253596651967
+   ],
+   "predose_auroc_lr": 0.804914819840193,
+   "seconds": 172.16135120391846
+  },
+  {
+   "seed": 111,
+   "parameters": "Pneumonia share of infection sites | high | 0.5",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.266666666666666,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8211437463528497,
+   "predose_auroc_xgb_ci": [
+    0.7743631561367598,
+    0.8674787374944557
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 128.51845479011536
+  },
+  {
+   "seed": 222,
+   "parameters": "Pneumonia share of infection sites | high | 0.5",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 32.86666666666667,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.84245,
+   "predose_auroc_xgb_ci": [
+    0.7961314747973657,
+    0.8856848049286229
+   ],
+   "predose_auroc_lr": 0.87745,
+   "seconds": 157.771094083786
+  },
+  {
+   "seed": 333,
+   "parameters": "Pneumonia share of infection sites | high | 0.5",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 63.0,
+   "icu_mortality_pct": 31.6,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.8156698322893514,
+   "predose_auroc_xgb_ci": [
+    0.7691318549871181,
+    0.8612068809386855
+   ],
+   "predose_auroc_lr": 0.8333501717518691,
+   "seconds": 126.68540978431702
+  },
+  {
+   "seed": 444,
+   "parameters": "Pneumonia share of infection sites | high | 0.5",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 31.466666666666665,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.8323518237082066,
+   "predose_auroc_xgb_ci": [
+    0.7883683812654484,
+    0.8762991223860938
+   ],
+   "predose_auroc_lr": 0.8329692249240122,
+   "seconds": 125.68338060379028
+  },
+  {
+   "seed": 12345,
+   "parameters": "Acinetobacter share of pathogens | low | 0.05",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 66.60000000000001,
+   "icu_mortality_pct": 32.266666666666666,
+   "efficacy_pct": 51.866666666666674,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.866666666666667,
+   "predose_auroc_xgb": 0.7954168551183476,
+   "predose_auroc_xgb_ci": [
+    0.743603706195912,
+    0.8446199028990642
+   ],
+   "predose_auroc_lr": 0.8063219257249108,
+   "seconds": 157.54458808898926
+  },
+  {
+   "seed": 111,
+   "parameters": "Acinetobacter share of pathogens | low | 0.05",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 68.60000000000001,
+   "icu_mortality_pct": 30.4,
+   "efficacy_pct": 56.39999999999999,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 32.666666666666664,
+   "predose_auroc_xgb": 0.8214841470531025,
+   "predose_auroc_xgb_ci": [
+    0.7735155311758134,
+    0.8667888282960459
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 125.20449376106262
+  },
+  {
+   "seed": 222,
+   "parameters": "Acinetobacter share of pathogens | low | 0.05",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 67.66666666666666,
+   "icu_mortality_pct": 31.6,
+   "efficacy_pct": 55.2,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 34.13333333333333,
+   "predose_auroc_xgb": 0.8532000000000001,
+   "predose_auroc_xgb_ci": [
+    0.8075331133240875,
+    0.8945104150009208
+   ],
+   "predose_auroc_lr": 0.87585,
+   "seconds": 131.73817205429077
+  },
+  {
+   "seed": 333,
+   "parameters": "Acinetobacter share of pathogens | low | 0.05",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 66.93333333333334,
+   "icu_mortality_pct": 29.599999999999998,
+   "efficacy_pct": 52.93333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 33.33333333333333,
+   "predose_auroc_xgb": 0.8189028086482117,
+   "predose_auroc_xgb_ci": [
+    0.7708924668352188,
+    0.8643760605352024
+   ],
+   "predose_auroc_lr": 0.834107900585977,
+   "seconds": 119.22836494445801
+  },
+  {
+   "seed": 444,
+   "parameters": "Acinetobacter share of pathogens | low | 0.05",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 68.0,
+   "icu_mortality_pct": 30.2,
+   "efficacy_pct": 52.6,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 30.8,
+   "predose_auroc_xgb": 0.8319718844984803,
+   "predose_auroc_xgb_ci": [
+    0.7887880697349109,
+    0.8750988378316334
+   ],
+   "predose_auroc_lr": 0.8328267477203648,
+   "seconds": 120.02523040771484
+  },
+  {
+   "seed": 12345,
+   "parameters": "Acinetobacter share of pathogens | high | 0.25",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 59.599999999999994,
+   "icu_mortality_pct": 33.2,
+   "efficacy_pct": 46.6,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 28.26666666666667,
+   "predose_auroc_xgb": 0.7954168551183476,
+   "predose_auroc_xgb_ci": [
+    0.743603706195912,
+    0.8446199028990642
+   ],
+   "predose_auroc_lr": 0.8063219257249108,
+   "seconds": 151.9749298095703
+  },
+  {
+   "seed": 111,
+   "parameters": "Acinetobacter share of pathogens | high | 0.25",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 59.66666666666667,
+   "icu_mortality_pct": 31.333333333333336,
+   "efficacy_pct": 47.46666666666667,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 28.133333333333333,
+   "predose_auroc_xgb": 0.8214841470531025,
+   "predose_auroc_xgb_ci": [
+    0.7735155311758134,
+    0.8667888282960459
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 124.2765142917633
+  },
+  {
+   "seed": 222,
+   "parameters": "Acinetobacter share of pathogens | high | 0.25",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 59.46666666666667,
+   "icu_mortality_pct": 34.8,
+   "efficacy_pct": 47.8,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 30.333333333333336,
+   "predose_auroc_xgb": 0.8532000000000001,
+   "predose_auroc_xgb_ci": [
+    0.8075331133240875,
+    0.8945104150009208
+   ],
+   "predose_auroc_lr": 0.87585,
+   "seconds": 131.0136387348175
+  },
+  {
+   "seed": 333,
+   "parameters": "Acinetobacter share of pathogens | high | 0.25",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 60.6,
+   "icu_mortality_pct": 31.4,
+   "efficacy_pct": 47.0,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 29.933333333333334,
+   "predose_auroc_xgb": 0.8189028086482117,
+   "predose_auroc_xgb_ci": [
+    0.7708924668352188,
+    0.8643760605352024
+   ],
+   "predose_auroc_lr": 0.834107900585977,
+   "seconds": 120.35518074035645
+  },
+  {
+   "seed": 444,
+   "parameters": "Acinetobacter share of pathogens | high | 0.25",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 61.0,
+   "icu_mortality_pct": 32.800000000000004,
+   "efficacy_pct": 46.2,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 26.066666666666666,
+   "predose_auroc_xgb": 0.8319718844984803,
+   "predose_auroc_xgb_ci": [
+    0.7887880697349109,
+    0.8750988378316334
+   ],
+   "predose_auroc_lr": 0.8328267477203648,
+   "seconds": 121.63230299949646
+  },
+  {
+   "seed": 12345,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | low | 0.7",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 70.19999999999999,
+   "icu_mortality_pct": 30.933333333333334,
+   "efficacy_pct": 57.53333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 37.666666666666664,
+   "predose_auroc_xgb": 0.7954168551183476,
+   "predose_auroc_xgb_ci": [
+    0.743603706195912,
+    0.8446199028990642
+   ],
+   "predose_auroc_lr": 0.8063219257249108,
+   "seconds": 153.14229583740234
+  },
+  {
+   "seed": 111,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | low | 0.7",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 69.8,
+   "icu_mortality_pct": 30.133333333333333,
+   "efficacy_pct": 59.06666666666667,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 36.733333333333334,
+   "predose_auroc_xgb": 0.8214841470531025,
+   "predose_auroc_xgb_ci": [
+    0.7735155311758134,
+    0.8667888282960459
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 124.6036958694458
+  },
+  {
+   "seed": 222,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | low | 0.7",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 67.93333333333334,
+   "icu_mortality_pct": 32.86666666666667,
+   "efficacy_pct": 56.8,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 37.4,
+   "predose_auroc_xgb": 0.8532000000000001,
+   "predose_auroc_xgb_ci": [
+    0.8075331133240875,
+    0.8945104150009208
+   ],
+   "predose_auroc_lr": 0.87585,
+   "seconds": 131.1261110305786
+  },
+  {
+   "seed": 333,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | low | 0.7",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 67.60000000000001,
+   "icu_mortality_pct": 30.599999999999998,
+   "efficacy_pct": 54.6,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 36.0,
+   "predose_auroc_xgb": 0.8189028086482117,
+   "predose_auroc_xgb_ci": [
+    0.7708924668352188,
+    0.8643760605352024
+   ],
+   "predose_auroc_lr": 0.834107900585977,
+   "seconds": 118.04548788070679
+  },
+  {
+   "seed": 444,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | low | 0.7",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 69.8,
+   "icu_mortality_pct": 29.86666666666667,
+   "efficacy_pct": 57.13333333333333,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 35.199999999999996,
+   "predose_auroc_xgb": 0.8319718844984803,
+   "predose_auroc_xgb_ci": [
+    0.7887880697349109,
+    0.8750988378316334
+   ],
+   "predose_auroc_lr": 0.8328267477203648,
+   "seconds": 119.99232959747314
+  },
+  {
+   "seed": 12345,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | high | 1.3",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 60.53333333333333,
+   "icu_mortality_pct": 32.666666666666664,
+   "efficacy_pct": 44.93333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 25.933333333333337,
+   "predose_auroc_xgb": 0.7954168551183476,
+   "predose_auroc_xgb_ci": [
+    0.743603706195912,
+    0.8446199028990642
+   ],
+   "predose_auroc_lr": 0.8063219257249108,
+   "seconds": 152.49485564231873
+  },
+  {
+   "seed": 111,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | high | 1.3",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 60.4,
+   "icu_mortality_pct": 31.533333333333335,
+   "efficacy_pct": 47.266666666666666,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 25.4,
+   "predose_auroc_xgb": 0.8214841470531025,
+   "predose_auroc_xgb_ci": [
+    0.7735155311758134,
+    0.8667888282960459
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 123.92705655097961
+  },
+  {
+   "seed": 222,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | high | 1.3",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 58.93333333333334,
+   "icu_mortality_pct": 33.93333333333333,
+   "efficacy_pct": 44.666666666666664,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 25.8,
+   "predose_auroc_xgb": 0.8532000000000001,
+   "predose_auroc_xgb_ci": [
+    0.8075331133240875,
+    0.8945104150009208
+   ],
+   "predose_auroc_lr": 0.87585,
+   "seconds": 130.35821866989136
+  },
+  {
+   "seed": 333,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | high | 1.3",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 57.733333333333334,
+   "icu_mortality_pct": 33.266666666666666,
+   "efficacy_pct": 42.0,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 24.133333333333333,
+   "predose_auroc_xgb": 0.8189028086482117,
+   "predose_auroc_xgb_ci": [
+    0.7708924668352188,
+    0.8643760605352024
+   ],
+   "predose_auroc_lr": 0.834107900585977,
+   "seconds": 119.63246297836304
+  },
+  {
+   "seed": 444,
+   "parameters": "Gentamicin resistance (all pathogens, multiplier) | high | 1.3",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 59.199999999999996,
+   "icu_mortality_pct": 33.0,
+   "efficacy_pct": 44.333333333333336,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 23.200000000000003,
+   "predose_auroc_xgb": 0.8319718844984803,
+   "predose_auroc_xgb_ci": [
+    0.7887880697349109,
+    0.8750988378316334
+   ],
+   "predose_auroc_lr": 0.8328267477203648,
+   "seconds": 121.70734524726868
+  },
+  {
+   "seed": 12345,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | low | 0.5",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 72.6,
+   "icu_mortality_pct": 30.466666666666665,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.066666666666663,
+   "predose_auroc_xgb": 0.7954168551183476,
+   "predose_auroc_xgb_ci": [
+    0.743603706195912,
+    0.8446199028990642
+   ],
+   "predose_auroc_lr": 0.8063219257249108,
+   "seconds": 154.40183115005493
+  },
+  {
+   "seed": 111,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | low | 0.5",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 75.0,
+   "icu_mortality_pct": 28.666666666666668,
+   "efficacy_pct": 53.800000000000004,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.933333333333334,
+   "predose_auroc_xgb": 0.8214841470531025,
+   "predose_auroc_xgb_ci": [
+    0.7735155311758134,
+    0.8667888282960459
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 128.2035448551178
+  },
+  {
+   "seed": 222,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | low | 0.5",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 72.93333333333332,
+   "icu_mortality_pct": 30.733333333333334,
+   "efficacy_pct": 52.93333333333333,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 33.2,
+   "predose_auroc_xgb": 0.8532000000000001,
+   "predose_auroc_xgb_ci": [
+    0.8075331133240875,
+    0.8945104150009208
+   ],
+   "predose_auroc_lr": 0.87585,
+   "seconds": 131.40652775764465
+  },
+  {
+   "seed": 333,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | low | 0.5",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 72.6,
+   "icu_mortality_pct": 27.866666666666667,
+   "efficacy_pct": 50.8,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.666666666666664,
+   "predose_auroc_xgb": 0.8189028086482117,
+   "predose_auroc_xgb_ci": [
+    0.7708924668352188,
+    0.8643760605352024
+   ],
+   "predose_auroc_lr": 0.834107900585977,
+   "seconds": 118.75281119346619
+  },
+  {
+   "seed": 444,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | low | 0.5",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 72.26666666666667,
+   "icu_mortality_pct": 29.46666666666667,
+   "efficacy_pct": 51.2,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.799999999999997,
+   "predose_auroc_xgb": 0.8319718844984803,
+   "predose_auroc_xgb_ci": [
+    0.7887880697349109,
+    0.8750988378316334
+   ],
+   "predose_auroc_lr": 0.8328267477203648,
+   "seconds": 121.25116157531738
+  },
+  {
+   "seed": 12345,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | high | 2.0",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 57.599999999999994,
+   "icu_mortality_pct": 33.733333333333334,
+   "efficacy_pct": 49.8,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.7954168551183476,
+   "predose_auroc_xgb_ci": [
+    0.743603706195912,
+    0.8446199028990642
+   ],
+   "predose_auroc_lr": 0.8063219257249108,
+   "seconds": 153.32554292678833
+  },
+  {
+   "seed": 111,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | high | 2.0",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 57.99999999999999,
+   "icu_mortality_pct": 31.933333333333337,
+   "efficacy_pct": 52.33333333333333,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8214841470531025,
+   "predose_auroc_xgb_ci": [
+    0.7735155311758134,
+    0.8667888282960459
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 123.9141857624054
+  },
+  {
+   "seed": 222,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | high | 2.0",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 58.266666666666666,
+   "icu_mortality_pct": 34.266666666666666,
+   "efficacy_pct": 51.4,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.46666666666667,
+   "predose_auroc_xgb": 0.8532000000000001,
+   "predose_auroc_xgb_ci": [
+    0.8075331133240875,
+    0.8945104150009208
+   ],
+   "predose_auroc_lr": 0.87585,
+   "seconds": 130.06947946548462
+  },
+  {
+   "seed": 333,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | high | 2.0",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 57.199999999999996,
+   "icu_mortality_pct": 33.13333333333333,
+   "efficacy_pct": 49.0,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.8189028086482117,
+   "predose_auroc_xgb_ci": [
+    0.7708924668352188,
+    0.8643760605352024
+   ],
+   "predose_auroc_lr": 0.834107900585977,
+   "seconds": 118.46846294403076
+  },
+  {
+   "seed": 444,
+   "parameters": "Resistant MIC mode (both drugs, multiplier) | high | 2.0",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 57.86666666666667,
+   "icu_mortality_pct": 33.33333333333333,
+   "efficacy_pct": 49.86666666666667,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.333333333333332,
+   "predose_auroc_xgb": 0.8319718844984803,
+   "predose_auroc_xgb_ci": [
+    0.7887880697349109,
+    0.8750988378316334
+   ],
+   "predose_auroc_lr": 0.8328267477203648,
+   "seconds": 121.15713405609131
+  },
+  {
+   "seed": 12345,
+   "parameters": "Septic-shock effect on CL (log scale) | low | 0.0",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 31.133333333333336,
+   "cure_pct": 64.13333333333333,
+   "icu_mortality_pct": 31.933333333333337,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 65.13333333333333,
+   "combined_attainment_pct": 31.933333333333337,
+   "predose_auroc_xgb": 0.8063477221962495,
+   "predose_auroc_xgb_ci": [
+    0.7561147047402393,
+    0.8547736805788838
+   ],
+   "predose_auroc_lr": 0.8241649784426783,
+   "seconds": 147.73657965660095
+  },
+  {
+   "seed": 111,
+   "parameters": "Septic-shock effect on CL (log scale) | low | 0.0",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 32.733333333333334,
+   "cure_pct": 63.93333333333333,
+   "icu_mortality_pct": 30.2,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 62.73333333333333,
+   "combined_attainment_pct": 32.53333333333333,
+   "predose_auroc_xgb": 0.8509547383309759,
+   "predose_auroc_xgb_ci": [
+    0.8061653607149932,
+    0.8924300997834065
+   ],
+   "predose_auroc_lr": 0.8665892099414022,
+   "seconds": 126.1111364364624
+  },
+  {
+   "seed": 222,
+   "parameters": "Septic-shock effect on CL (log scale) | low | 0.0",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 30.0,
+   "cure_pct": 63.2,
+   "icu_mortality_pct": 32.666666666666664,
+   "efficacy_pct": 51.6,
+   "safety_pct": 65.93333333333334,
+   "combined_attainment_pct": 34.4,
+   "predose_auroc_xgb": 0.8423809523809523,
+   "predose_auroc_xgb_ci": [
+    0.7963211946439415,
+    0.8846366758332198
+   ],
+   "predose_auroc_lr": 0.8542857142857143,
+   "seconds": 127.55339479446411
+  },
+  {
+   "seed": 333,
+   "parameters": "Septic-shock effect on CL (log scale) | low | 0.0",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 30.06666666666667,
+   "cure_pct": 62.53333333333333,
+   "icu_mortality_pct": 31.333333333333336,
+   "efficacy_pct": 49.06666666666666,
+   "safety_pct": 65.93333333333334,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.7933862433862434,
+   "predose_auroc_xgb_ci": [
+    0.7349138132169064,
+    0.8440568150871458
+   ],
+   "predose_auroc_lr": 0.8159788359788359,
+   "seconds": 139.7101593017578
+  },
+  {
+   "seed": 444,
+   "parameters": "Septic-shock effect on CL (log scale) | low | 0.0",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 35.333333333333336,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 31.066666666666663,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 64.06666666666668,
+   "combined_attainment_pct": 29.666666666666668,
+   "predose_auroc_xgb": 0.8128768722038514,
+   "predose_auroc_xgb_ci": [
+    0.7611218626794476,
+    0.8616524402006173
+   ],
+   "predose_auroc_lr": 0.8342248589768528,
+   "seconds": 131.20642471313477
+  },
+  {
+   "seed": 12345,
+   "parameters": "Septic-shock effect on CL (log scale) | high | -0.3",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 36.199999999999996,
+   "cure_pct": 64.4,
+   "icu_mortality_pct": 33.06666666666666,
+   "efficacy_pct": 50.0,
+   "safety_pct": 59.599999999999994,
+   "combined_attainment_pct": 29.333333333333332,
+   "predose_auroc_xgb": 0.8014794178394735,
+   "predose_auroc_xgb_ci": [
+    0.750867467075756,
+    0.8514660666863147
+   ],
+   "predose_auroc_lr": 0.7987415341755129,
+   "seconds": 117.96500301361084
+  },
+  {
+   "seed": 111,
+   "parameters": "Septic-shock effect on CL (log scale) | high | -0.3",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 38.333333333333336,
+   "cure_pct": 64.4,
+   "icu_mortality_pct": 30.06666666666667,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 55.86666666666667,
+   "combined_attainment_pct": 28.26666666666667,
+   "predose_auroc_xgb": 0.8235487661574619,
+   "predose_auroc_xgb_ci": [
+    0.7777141171630761,
+    0.8668010156471138
+   ],
+   "predose_auroc_lr": 0.8385898942420682,
+   "seconds": 137.7569682598114
+  },
+  {
+   "seed": 222,
+   "parameters": "Septic-shock effect on CL (log scale) | high | -0.3",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 36.333333333333336,
+   "cure_pct": 64.4,
+   "icu_mortality_pct": 32.86666666666667,
+   "efficacy_pct": 51.733333333333334,
+   "safety_pct": 59.4,
+   "combined_attainment_pct": 31.2,
+   "predose_auroc_xgb": 0.8427398049858302,
+   "predose_auroc_xgb_ci": [
+    0.7940183764357186,
+    0.8868977323551529
+   ],
+   "predose_auroc_lr": 0.8533070752677843,
+   "seconds": 122.90481233596802
+  },
+  {
+   "seed": 333,
+   "parameters": "Septic-shock effect on CL (log scale) | high | -0.3",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 35.06666666666667,
+   "cure_pct": 63.4,
+   "icu_mortality_pct": 31.866666666666667,
+   "efficacy_pct": 49.333333333333336,
+   "safety_pct": 59.13333333333334,
+   "combined_attainment_pct": 29.666666666666668,
+   "predose_auroc_xgb": 0.8242246642246643,
+   "predose_auroc_xgb_ci": [
+    0.7710115593613638,
+    0.870882487670337
+   ],
+   "predose_auroc_lr": 0.8155311355311357,
+   "seconds": 133.36485648155212
+  },
+  {
+   "seed": 444,
+   "parameters": "Septic-shock effect on CL (log scale) | high | -0.3",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 40.400000000000006,
+   "cure_pct": 63.93333333333333,
+   "icu_mortality_pct": 32.33333333333333,
+   "efficacy_pct": 50.06666666666667,
+   "safety_pct": 57.333333333333336,
+   "combined_attainment_pct": 26.333333333333332,
+   "predose_auroc_xgb": 0.8055311879588162,
+   "predose_auroc_xgb_ci": [
+    0.754396915387653,
+    0.8527755734532738
+   ],
+   "predose_auroc_lr": 0.8200286255136433,
+   "seconds": 120.01032257080078
+  },
+  {
+   "seed": 12345,
+   "parameters": "Pathogen mix, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 58.93333333333334,
+   "icu_mortality_pct": 34.0,
+   "efficacy_pct": 45.53333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 28.26666666666667,
+   "predose_auroc_xgb": 0.7954168551183476,
+   "predose_auroc_xgb_ci": [
+    0.743603706195912,
+    0.8446199028990642
+   ],
+   "predose_auroc_lr": 0.8063219257249108,
+   "seconds": 152.45204782485962
+  },
+  {
+   "seed": 111,
+   "parameters": "Pathogen mix, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 59.0,
+   "icu_mortality_pct": 32.6,
+   "efficacy_pct": 46.86666666666667,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 27.53333333333333,
+   "predose_auroc_xgb": 0.8214841470531025,
+   "predose_auroc_xgb_ci": [
+    0.7735155311758134,
+    0.8667888282960459
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 128.7217345237732
+  },
+  {
+   "seed": 222,
+   "parameters": "Pathogen mix, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 58.13333333333334,
+   "icu_mortality_pct": 32.46666666666667,
+   "efficacy_pct": 47.266666666666666,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 29.86666666666667,
+   "predose_auroc_xgb": 0.8532000000000001,
+   "predose_auroc_xgb_ci": [
+    0.8075331133240875,
+    0.8945104150009208
+   ],
+   "predose_auroc_lr": 0.87585,
+   "seconds": 135.08149027824402
+  },
+  {
+   "seed": 333,
+   "parameters": "Pathogen mix, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 57.666666666666664,
+   "icu_mortality_pct": 33.4,
+   "efficacy_pct": 45.53333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 28.199999999999996,
+   "predose_auroc_xgb": 0.8189028086482117,
+   "predose_auroc_xgb_ci": [
+    0.7708924668352188,
+    0.8643760605352024
+   ],
+   "predose_auroc_lr": 0.834107900585977,
+   "seconds": 122.35840845108032
+  },
+  {
+   "seed": 444,
+   "parameters": "Pathogen mix, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 57.53333333333334,
+   "icu_mortality_pct": 33.93333333333333,
+   "efficacy_pct": 43.8,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 25.666666666666664,
+   "predose_auroc_xgb": 0.8319718844984803,
+   "predose_auroc_xgb_ci": [
+    0.7887880697349109,
+    0.8750988378316334
+   ],
+   "predose_auroc_lr": 0.8328267477203648,
+   "seconds": 124.6208028793335
+  },
+  {
+   "seed": 12345,
+   "parameters": "Gentamicin resistance, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.86666666666667,
+   "cure_pct": 61.33333333333333,
+   "icu_mortality_pct": 32.4,
+   "efficacy_pct": 46.0,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 26.93333333333333,
+   "predose_auroc_xgb": 0.7954168551183476,
+   "predose_auroc_xgb_ci": [
+    0.743603706195912,
+    0.8446199028990642
+   ],
+   "predose_auroc_lr": 0.8063219257249108,
+   "seconds": 155.20544266700745
+  },
+  {
+   "seed": 111,
+   "parameters": "Gentamicin resistance, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 35.199999999999996,
+   "cure_pct": 60.73333333333333,
+   "icu_mortality_pct": 30.8,
+   "efficacy_pct": 48.199999999999996,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 26.266666666666666,
+   "predose_auroc_xgb": 0.8214841470531025,
+   "predose_auroc_xgb_ci": [
+    0.7735155311758134,
+    0.8667888282960459
+   ],
+   "predose_auroc_lr": 0.831453024703365,
+   "seconds": 128.6464500427246
+  },
+  {
+   "seed": 222,
+   "parameters": "Gentamicin resistance, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 33.33333333333333,
+   "cure_pct": 60.199999999999996,
+   "icu_mortality_pct": 33.733333333333334,
+   "efficacy_pct": 46.666666666666664,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 27.73333333333333,
+   "predose_auroc_xgb": 0.8532000000000001,
+   "predose_auroc_xgb_ci": [
+    0.8075331133240875,
+    0.8945104150009208
+   ],
+   "predose_auroc_lr": 0.87585,
+   "seconds": 135.9511296749115
+  },
+  {
+   "seed": 333,
+   "parameters": "Gentamicin resistance, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 32.6,
+   "cure_pct": 59.13333333333334,
+   "icu_mortality_pct": 32.33333333333333,
+   "efficacy_pct": 44.266666666666666,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 26.400000000000002,
+   "predose_auroc_xgb": 0.8189028086482117,
+   "predose_auroc_xgb_ci": [
+    0.7708924668352188,
+    0.8643760605352024
+   ],
+   "predose_auroc_lr": 0.834107900585977,
+   "seconds": 125.50604486465454
+  },
+  {
+   "seed": 444,
+   "parameters": "Gentamicin resistance, ICMR 2024 ICU bloodstream isolates | published",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 37.46666666666666,
+   "cure_pct": 60.6,
+   "icu_mortality_pct": 32.46666666666667,
+   "efficacy_pct": 46.13333333333333,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 24.666666666666668,
+   "predose_auroc_xgb": 0.8319718844984803,
+   "predose_auroc_xgb_ci": [
+    0.7887880697349109,
+    0.8750988378316334
+   ],
+   "predose_auroc_lr": 0.8328267477203648,
+   "seconds": 127.46233677864075
+  },
+  {
+   "seed": 12345,
+   "parameters": "Mechanical ventilation, SEPSIS INDIA | published",
+   "mean_age": 57.68353333333332,
+   "mean_sofa": 9.07,
+   "mean_apache": 21.998666666666665,
+   "mean_crcl": 104.65453333333335,
+   "pct_septic_shock": 39.93333333333333,
+   "nephrotoxicity_pct": 32.13333333333333,
+   "cure_pct": 64.33333333333333,
+   "icu_mortality_pct": 32.666666666666664,
+   "efficacy_pct": 49.93333333333334,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 30.533333333333335,
+   "predose_auroc_xgb": 0.8245506535947712,
+   "predose_auroc_xgb_ci": [
+    0.7743286518008412,
+    0.8702405749763548
+   ],
+   "predose_auroc_lr": 0.8477839052287581,
+   "seconds": 124.07850003242493
+  },
+  {
+   "seed": 111,
+   "parameters": "Mechanical ventilation, SEPSIS INDIA | published",
+   "mean_age": 58.16386666666667,
+   "mean_sofa": 9.200666666666667,
+   "mean_apache": 21.941333333333333,
+   "mean_crcl": 102.74086666666666,
+   "pct_septic_shock": 40.400000000000006,
+   "nephrotoxicity_pct": 34.06666666666667,
+   "cure_pct": 64.0,
+   "icu_mortality_pct": 30.533333333333335,
+   "efficacy_pct": 52.400000000000006,
+   "safety_pct": 59.66666666666667,
+   "combined_attainment_pct": 30.466666666666665,
+   "predose_auroc_xgb": 0.8308080808080808,
+   "predose_auroc_xgb_ci": [
+    0.781629560105601,
+    0.8756872400535388
+   ],
+   "predose_auroc_lr": 0.8181818181818182,
+   "seconds": 114.41507339477539
+  },
+  {
+   "seed": 222,
+   "parameters": "Mechanical ventilation, SEPSIS INDIA | published",
+   "mean_age": 57.98319999999999,
+   "mean_sofa": 9.097333333333333,
+   "mean_apache": 22.254,
+   "mean_crcl": 102.36939999999998,
+   "pct_septic_shock": 40.86666666666667,
+   "nephrotoxicity_pct": 32.0,
+   "cure_pct": 63.66666666666667,
+   "icu_mortality_pct": 32.93333333333333,
+   "efficacy_pct": 51.66666666666667,
+   "safety_pct": 62.53333333333333,
+   "combined_attainment_pct": 32.6,
+   "predose_auroc_xgb": 0.8622855392156863,
+   "predose_auroc_xgb_ci": [
+    0.8166663783433287,
+    0.9048579451677976
+   ],
+   "predose_auroc_lr": 0.863970588235294,
+   "seconds": 117.0887975692749
+  },
+  {
+   "seed": 333,
+   "parameters": "Mechanical ventilation, SEPSIS INDIA | published",
+   "mean_age": 57.300799999999995,
+   "mean_sofa": 8.995333333333333,
+   "mean_apache": 21.953333333333333,
+   "mean_crcl": 105.63139999999999,
+   "pct_septic_shock": 38.800000000000004,
+   "nephrotoxicity_pct": 33.0,
+   "cure_pct": 63.0,
+   "icu_mortality_pct": 31.666666666666664,
+   "efficacy_pct": 49.13333333333333,
+   "safety_pct": 62.4,
+   "combined_attainment_pct": 31.0,
+   "predose_auroc_xgb": 0.8236092265943014,
+   "predose_auroc_xgb_ci": [
+    0.777847921899529,
+    0.8667025468088533
+   ],
+   "predose_auroc_lr": 0.8384340921654354,
+   "seconds": 94.5910336971283
+  },
+  {
+   "seed": 444,
+   "parameters": "Mechanical ventilation, SEPSIS INDIA | published",
+   "mean_age": 58.05173333333334,
+   "mean_sofa": 8.988,
+   "mean_apache": 21.910666666666668,
+   "mean_crcl": 101.86913333333334,
+   "pct_septic_shock": 38.46666666666667,
+   "nephrotoxicity_pct": 36.266666666666666,
+   "cure_pct": 64.26666666666667,
+   "icu_mortality_pct": 31.466666666666665,
+   "efficacy_pct": 50.0,
+   "safety_pct": 61.199999999999996,
+   "combined_attainment_pct": 28.4,
+   "predose_auroc_xgb": 0.8359191123492963,
+   "predose_auroc_xgb_ci": [
+    0.7885217574345179,
+    0.8802997938414605
+   ],
+   "predose_auroc_lr": 0.8421153753782603,
+   "seconds": 96.18624949455261
+  }
+ ],
+ "max_abs_mean_change": {
+  "nephrotoxicity_pct": 2.9733333333333376,
+  "cure_pct": 9.226666666666663,
+  "combined_attainment_pct": 5.999999999999998,
+  "predose_auroc_xgb": 0.02222674886194238,
+  "predose_auroc_lr": 0.022445940271809663
+ }
+}
