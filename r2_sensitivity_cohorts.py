@@ -45,6 +45,7 @@ os.environ.setdefault('OMP_NUM_THREADS', '1')
 
 import argparse
 import contextlib
+import re
 import inspect
 import io
 import json
@@ -73,17 +74,32 @@ BASE = ['age', 'sex', 'weight', 'height', 'bmi', 'apache_ii', 'sofa_score', 'bas
         'drug']
 
 
-def simulate(seed, aligned):
-    """Generate one cohort in this (fresh) process; returns patient, concentration, outcome tables."""
+ALIGNED_SPEC = {
+    'params': {**SOURCE_ALIGNED, 'ami_resistance': AMI_RESISTANCE_SOURCE},
+    'patches': [('generate_patient_demographics', 'p=[0.25, 0.35, 0.40]', 'p=' + repr(SEPSIS_PROBS_SOURCE))],
+}
+
+
+def apply_spec(g, spec):
+    """Modify the freshly imported simulator module: 'params' updates
+    INDIAN_ICU_PARAMS (dict-valued entries are merged), 'patches' replace a
+    literal in a simulator function's source (the function is recompiled)."""
+    for k, v in spec.get('params', {}).items():
+        if isinstance(v, dict) and isinstance(g.INDIAN_ICU_PARAMS.get(k), dict):
+            g.INDIAN_ICU_PARAMS[k] = {**g.INDIAN_ICU_PARAMS[k], **v}
+        else:
+            g.INDIAN_ICU_PARAMS[k] = v
+    for func, old, new in spec.get('patches', []):
+        src = inspect.getsource(getattr(g, func))
+        assert src.count(old) == 1, (func, old)
+        exec(compile(src.replace(old, new), g.__file__, 'exec'), g.__dict__)
+
+
+def simulate(seed, spec=None):
+    """Generate one cohort in this (fresh) process; returns patient, dosing, concentration, outcome tables."""
     import generate_synthetic_data_python as g
-    if aligned:
-        g.INDIAN_ICU_PARAMS.update(SOURCE_ALIGNED)
-        g.INDIAN_ICU_PARAMS['ami_resistance'] = {**g.INDIAN_ICU_PARAMS['ami_resistance'], **AMI_RESISTANCE_SOURCE}
-        src = inspect.getsource(g.generate_patient_demographics)
-        old = 'p=[0.25, 0.35, 0.40]'
-        assert old in src
-        src = src.replace(old, 'p=' + repr(SEPSIS_PROBS_SOURCE))
-        exec(compile(src, g.__file__, 'exec'), g.__dict__)
+    if spec:
+        apply_spec(g, spec)
     np.random.seed(seed)
     with contextlib.redirect_stdout(io.StringIO()):
         pat = g.generate_patient_demographics(N)
@@ -113,6 +129,12 @@ def predose_matrix(pat):
 
 def run_one(job):
     seed, aligned = job
+    return run_spec((seed, 'source-aligned' if aligned else 'primary', ALIGNED_SPEC if aligned else None))
+
+
+def run_spec(job):
+    """Simulate one cohort under a parameter specification and evaluate it."""
+    seed, label, spec = job
     warnings.filterwarnings('ignore')
     t0 = time.time()
     import pandas as pd
@@ -123,7 +145,7 @@ def run_one(job):
     from phase4_machine_learning_enhanced import EnhancedMLPipeline
     from r2_ml_analyses import boot_auc_ci
 
-    pat, dose, conc, out = simulate(seed, aligned)
+    pat, dose, conc, out = simulate(seed, spec)
     df = pat.merge(out[['patient_id', 'nephrotoxicity', 'clinical_cure', 'icu_mortality']], on='patient_id')
     y = df['nephrotoxicity'].astype(int).to_numpy()
     X = predose_matrix(df)
@@ -134,7 +156,7 @@ def run_one(job):
     a, b, ya, yb = train_test_split(Xtr, y[tr], test_size=0.2, random_state=42, stratify=y[tr])
 
     pipe = EnhancedMLPipeline.__new__(EnhancedMLPipeline)    # only results_dir is used
-    pipe.results_dir = REPO / 'results' / 'revision2' / '_optuna_scratch' / f'sens_{seed}_{int(aligned)}'
+    pipe.results_dir = REPO / 'results' / 'revision2' / '_optuna_scratch' / 'sens_{}_{}'.format(seed, re.sub(r'[^A-Za-z0-9._-]+', '_', label))
     pipe.results_dir.mkdir(parents=True, exist_ok=True)
     with contextlib.redirect_stdout(io.StringIO()):
         model, params, _ = pipe.optimize_hyperparameters_optuna(a, ya, b, yb, scale_pos_weight=spw, n_trials=100)
@@ -152,7 +174,7 @@ def run_one(job):
     safe = ex['Cmin'].to_numpy() < np.where(ami, 2.5, 2.0)
 
     return {
-        'seed': seed, 'parameters': 'source-aligned' if aligned else 'primary',
+        'seed': seed, 'parameters': label,
         'mean_age': float(pat['age'].mean()), 'mean_sofa': float(pat['sofa_score'].mean()),
         'mean_apache': float(pat['apache_ii'].mean()), 'mean_crcl': float(pat['baseline_crcl'].mean()),
         'pct_septic_shock': float(100 * (pat['sepsis_type'] == 'septic shock').mean()),
@@ -193,7 +215,9 @@ def main():
     args = ap.parse_args()
     jobs = [(s, a) for a in (False, True) for s in SEEDS]
     t0 = time.time()
-    with ProcessPoolExecutor(max_workers=args.workers) as ex:
+    # max_tasks_per_child=1: every cohort runs in a fresh process, because the
+    # simulator module is modified in place for each parameter specification
+    with ProcessPoolExecutor(max_workers=args.workers, max_tasks_per_child=1) as ex:
         rows = list(ex.map(run_one, jobs))
     for r in rows:
         print(f"{r['parameters']:<15} seed {r['seed']:>5}: AUROC {r['predose_auroc_xgb']:.3f} (LR {r['predose_auroc_lr']:.3f}) | "

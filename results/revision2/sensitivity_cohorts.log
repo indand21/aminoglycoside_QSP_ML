@@ -1,13 +1,13 @@
-primary         seed 12345: AUROC 0.795 (LR 0.806) | neph 32.9% | cure 64.3% | combined 30.5% | 97s
-primary         seed   111: AUROC 0.821 (LR 0.831) | neph 35.2% | cure 64.0% | combined 30.5% | 85s
-primary         seed   222: AUROC 0.853 (LR 0.876) | neph 33.3% | cure 63.7% | combined 32.6% | 88s
-primary         seed   333: AUROC 0.819 (LR 0.834) | neph 32.6% | cure 63.0% | combined 31.0% | 82s
-primary         seed   444: AUROC 0.832 (LR 0.833) | neph 37.5% | cure 64.3% | combined 28.4% | 83s
-source-aligned  seed 12345: AUROC 0.811 (LR 0.817) | neph 35.7% | cure 66.7% | combined 31.6% | 92s
-source-aligned  seed   111: AUROC 0.825 (LR 0.828) | neph 36.8% | cure 69.0% | combined 32.3% | 83s
-source-aligned  seed   222: AUROC 0.848 (LR 0.845) | neph 32.5% | cure 66.8% | combined 33.4% | 82s
-source-aligned  seed   333: AUROC 0.835 (LR 0.847) | neph 37.0% | cure 68.5% | combined 32.5% | 96s
-source-aligned  seed   444: AUROC 0.847 (LR 0.848) | neph 38.1% | cure 66.5% | combined 29.0% | 85s
+primary         seed 12345: AUROC 0.795 (LR 0.806) | neph 32.9% | cure 64.3% | combined 30.5% | 89s
+primary         seed   111: AUROC 0.821 (LR 0.831) | neph 35.2% | cure 64.0% | combined 30.5% | 77s
+primary         seed   222: AUROC 0.853 (LR 0.876) | neph 33.3% | cure 63.7% | combined 32.6% | 80s
+primary         seed   333: AUROC 0.819 (LR 0.834) | neph 32.6% | cure 63.0% | combined 31.0% | 74s
+primary         seed   444: AUROC 0.832 (LR 0.833) | neph 37.5% | cure 64.3% | combined 28.4% | 75s
+source-aligned  seed 12345: AUROC 0.811 (LR 0.817) | neph 35.7% | cure 66.7% | combined 31.6% | 84s
+source-aligned  seed   111: AUROC 0.825 (LR 0.828) | neph 36.8% | cure 69.0% | combined 32.3% | 75s
+source-aligned  seed   222: AUROC 0.848 (LR 0.845) | neph 32.5% | cure 66.8% | combined 33.4% | 73s
+source-aligned  seed   333: AUROC 0.835 (LR 0.847) | neph 37.0% | cure 68.5% | combined 32.5% | 88s
+source-aligned  seed   444: AUROC 0.847 (LR 0.848) | neph 38.1% | cure 66.5% | combined 29.0% | 77s
 {
  "primary": {
   "mean_age": {
@@ -143,4 +143,4 @@ source-aligned  seed   444: AUROC 0.847 (LR 0.848) | neph 38.1% | cure 66.5% | c
    "sd": 1.224911356183106,
    "min": 52.86666666666666,
    "max": 55.73333333333333
-Wall time 1.7 min
+Wall time 1.5 min

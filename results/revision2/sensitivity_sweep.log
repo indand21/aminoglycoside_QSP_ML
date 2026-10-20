@@ -1,0 +1,27 @@
+Weight (mean)                                low  52     nephro +1.893 | cure -0.387 | combin -0.747 | predos-xgb +0.011 | predos-lr +0.001
+Weight (mean)                                high 72     nephro -0.267 | cure +0.880 | combin +0.640 | predos-xgb -0.003 | predos-lr -0.006
+Mechanical ventilation                       low  0.45   nephro -1.013 | cure +0.000 | combin +0.000 | predos-xgb +0.005 | predos-lr +0.012
+Mechanical ventilation                       high 0.85   nephro +1.573 | cure +0.000 | combin +0.000 | predos-xgb -0.006 | predos-lr -0.011
+Vasopressor use                              low  0.3    nephro -0.773 | cure +0.547 | combin +0.000 | predos-xgb +0.011 | predos-lr +0.011
+Vasopressor use                              high 0.7    nephro +1.080 | cure +0.293 | combin +0.000 | predos-xgb -0.003 | predos-lr +0.001
+Diabetes                                     low  0.2    nephro -1.373 | cure +0.000 | combin +0.000 | predos-xgb +0.001 | predos-lr -0.004
+Diabetes                                     high 0.5    nephro +1.867 | cure +0.000 | combin +0.000 | predos-xgb -0.022 | predos-lr -0.022
+Augmented renal clearance (prevalence)       low  0.15   nephro +2.680 | cure +0.627 | combin -1.147 | predos-xgb +0.000 | predos-lr -0.002
+Augmented renal clearance (prevalence)       high 0.4    nephro -2.867 | cure -0.493 | combin +1.645 | predos-xgb +0.010 | predos-lr +0.014
+Augmented renal clearance (mean CrCL)        low  140    nephro +1.267 | cure +0.000 | combin -0.627 | predos-xgb +0.004 | predos-lr -0.001
+Augmented renal clearance (mean CrCL)        high 180    nephro -0.627 | cure -0.053 | combin +0.493 | predos-xgb -0.004 | predos-lr +0.000
+Pneumonia share of infection sites           low  0.2    nephro +0.000 | cure +0.000 | combin +0.000 | predos-xgb -0.002 | predos-lr -0.001
+Pneumonia share of infection sites           high 0.5    nephro +0.000 | cure +0.000 | combin +0.000 | predos-xgb -0.004 | predos-lr -0.000
+Acinetobacter share of pathogens             low  0.05   nephro +0.000 | cure +3.707 | combin +1.960 | predos-xgb +0.000 | predos-lr +0.000
+Acinetobacter share of pathogens             high 0.25   nephro +0.000 | cure -3.787 | combin -2.053 | predos-xgb +0.000 | predos-lr +0.000
+Gentamicin resistance (all pathogens, multip low  0.7    nephro +0.000 | cure +5.213 | combin +6.000 | predos-xgb +0.000 | predos-lr +0.000
+Gentamicin resistance (all pathogens, multip high 1.3    nephro +0.000 | cure -4.493 | combin -5.707 | predos-xgb +0.000 | predos-lr +0.000
+Resistant MIC mode (both drugs, multiplier)  low  0.5    nephro +0.000 | cure +9.227 | combin +0.533 | predos-xgb +0.000 | predos-lr +0.000
+Resistant MIC mode (both drugs, multiplier)  high 2.0    nephro +0.000 | cure -6.067 | combin -0.040 | predos-xgb +0.000 | predos-lr +0.000
+Septic-shock effect on CL (log scale)        low  0.0    nephro -2.440 | cure -0.293 | combin +1.627 | predos-xgb -0.003 | predos-lr +0.003
+Septic-shock effect on CL (log scale)        high -0.3   nephro +2.973 | cure +0.253 | combin -1.640 | predos-xgb -0.005 | predos-lr -0.011
+Pathogen mix, ICMR 2024 ICU bloodstream isol published Klebsiella 36.0%, Pseudomonas 9.5%, E. coli 8.7%, Acinetobacter 31.3%, other 14.5% nephro +0.000 | cure -5.600 | combin -2.693 | predos-xgb +0.000 | predos-lr +0.000
+Gentamicin resistance, ICMR 2024 ICU bloodst published Klebsiella 0.691, Pseudomonas 0.510, E. coli 0.487, Acinetobacter 0.845 nephro +0.000 | cure -3.453 | combin -4.200 | predos-xgb +0.000 | predos-lr +0.000
+Mechanical ventilation, SEPSIS INDIA         published 0.48   nephro -0.800 | cure +0.000 | combin +0.000 | predos-xgb +0.011 | predos-lr +0.006
+max |mean change|: {'nephrotoxicity_pct': 2.973, 'cure_pct': 9.227, 'combined_attainment_pct': 6.0, 'predose_auroc_xgb': 0.022, 'predose_auroc_lr': 0.022}
+Wall time 26.0 min for 130 cohorts

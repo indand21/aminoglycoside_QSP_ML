@@ -73,6 +73,7 @@ def main():
     run(base, 'r2_dose_optimization.py')                      # Table 8 inputs, Figure 7, Table S3
     run(base, 'r2_table8.py')
     run(base, 'r2_sensitivity_cohorts.py')                    # Table S2 (10 cohorts in parallel)
+    run(base, 'r2_sensitivity_sweep.py')                      # Table S4 (130 cohorts in parallel, slow)
     run(a.pymc, 'r2_figure2_popk.py')                         # Figure 2, Figure S1
     run(base, 'r2_figures_main.py')                           # Figures 1, 3-7, Graphical Abstract
     run(base, 'r2_figures_supp.py')                           # Figures S2-S7
