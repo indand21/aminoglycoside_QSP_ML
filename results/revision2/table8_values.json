@@ -1,0 +1,500 @@
+{
+ "grids_mg": {
+  "gentamicin": [
+   50.0,
+   800.0,
+   10.0
+  ],
+  "amikacin": [
+   250.0,
+   3000.0,
+   25.0
+  ]
+ },
+ "amikacin": {
+  "all": {
+   "n": 939,
+   "baseline_mg": [
+    1695.0,
+    326.0
+   ],
+   "baseline_mgkg": [
+    27.5,
+    1.5
+   ],
+   "optimal_mg": [
+    1292.0,
+    1094.0
+   ],
+   "optimal_mgkg": [
+    21.6,
+    18.9
+   ],
+   "optimal_mgkg_median_iqr": [
+    13.2,
+    5.0,
+    39.1
+   ],
+   "oracle_mgkg": [
+    17.2,
+    16.6
+   ],
+   "pct_change_mean": -21.2,
+   "pct_change_median": -51.8,
+   "n_reduced": 616,
+   "n_unchanged": 5,
+   "n_increased": 318,
+   "n_at_grid_min": 212,
+   "n_at_grid_max": 139,
+   "pred_aki_change_pp": -20.4,
+   "true_aki_change_pp": -22.9,
+   "pred_cure_change_pp": 1.3,
+   "true_cure_change_pp": -1.6,
+   "pct_true_objective_worse": 17.1
+  },
+  "q24h": {
+   "n": 785,
+   "baseline_mg": [
+    1681.0,
+    323.0
+   ],
+   "baseline_mgkg": [
+    27.5,
+    1.5
+   ],
+   "optimal_mg": [
+    1303.0,
+    1087.0
+   ],
+   "optimal_mgkg": [
+    21.9,
+    18.9
+   ],
+   "optimal_mgkg_median_iqr": [
+    14.1,
+    5.1,
+    39.3
+   ],
+   "oracle_mgkg": [
+    17.3,
+    16.3
+   ],
+   "pct_change_mean": -20.1,
+   "pct_change_median": -50.0,
+   "n_reduced": 513,
+   "n_unchanged": 5,
+   "n_increased": 267,
+   "n_at_grid_min": 172,
+   "n_at_grid_max": 111,
+   "pred_aki_change_pp": -19.7,
+   "true_aki_change_pp": -21.5,
+   "pred_cure_change_pp": 1.9,
+   "true_cure_change_pp": -1.2,
+   "pct_true_objective_worse": 17.7
+  },
+  "q36h": {
+   "n": 91,
+   "baseline_mg": [
+    1746.0,
+    352.0
+   ],
+   "baseline_mgkg": [
+    27.5,
+    1.7
+   ],
+   "optimal_mg": [
+    1221.0,
+    1095.0
+   ],
+   "optimal_mgkg": [
+    19.8,
+    18.4
+   ],
+   "optimal_mgkg_median_iqr": [
+    11.5,
+    4.5,
+    35.7
+   ],
+   "oracle_mgkg": [
+    15.8,
+    16.6
+   ],
+   "pct_change_mean": -27.8,
+   "pct_change_median": -60.7,
+   "n_reduced": 61,
+   "n_unchanged": 0,
+   "n_increased": 30,
+   "n_at_grid_min": 22,
+   "n_at_grid_max": 14,
+   "pred_aki_change_pp": -22.5,
+   "true_aki_change_pp": -30.5,
+   "pred_cure_change_pp": -0.6,
+   "true_cure_change_pp": -3.0,
+   "pct_true_objective_worse": 18.7
+  },
+  "q48h": {
+   "n": 63,
+   "baseline_mg": [
+    1798.0,
+    306.0
+   ],
+   "baseline_mgkg": [
+    27.4,
+    1.5
+   ],
+   "optimal_mg": [
+    1263.0,
+    1192.0
+   ],
+   "optimal_mgkg": [
+    20.4,
+    20.4
+   ],
+   "optimal_mgkg_median_iqr": [
+    6.6,
+    4.3,
+    41.1
+   ],
+   "oracle_mgkg": [
+    18.1,
+    20.4
+   ],
+   "pct_change_mean": -25.3,
+   "pct_change_median": -76.5,
+   "n_reduced": 42,
+   "n_unchanged": 0,
+   "n_increased": 21,
+   "n_at_grid_min": 18,
+   "n_at_grid_max": 14,
+   "pred_aki_change_pp": -26.0,
+   "true_aki_change_pp": -28.5,
+   "pred_cure_change_pp": -2.5,
+   "true_cure_change_pp": -3.9,
+   "pct_true_objective_worse": 7.9
+  },
+  "target_attainable_at_baseline": {
+   "n": 495,
+   "baseline_mg": [
+    1699.0,
+    330.0
+   ],
+   "baseline_mgkg": [
+    27.5,
+    1.5
+   ],
+   "optimal_mg": [
+    1131.0,
+    882.0
+   ],
+   "optimal_mgkg": [
+    18.6,
+    14.7
+   ],
+   "optimal_mgkg_median_iqr": [
+    13.6,
+    6.7,
+    26.1
+   ],
+   "oracle_mgkg": [
+    14.3,
+    12.5
+   ],
+   "pct_change_mean": -32.2,
+   "pct_change_median": -51.3,
+   "n_reduced": 376,
+   "n_unchanged": 4,
+   "n_increased": 115,
+   "n_at_grid_min": 42,
+   "n_at_grid_max": 30,
+   "pred_aki_change_pp": -18.4,
+   "true_aki_change_pp": -22.6,
+   "pred_cure_change_pp": -1.1,
+   "true_cure_change_pp": -0.8,
+   "pct_true_objective_worse": 17.2
+  },
+  "target_not_attainable_at_baseline": {
+   "n": 444,
+   "baseline_mg": [
+    1692.0,
+    322.0
+   ],
+   "baseline_mgkg": [
+    27.5,
+    1.5
+   ],
+   "optimal_mg": [
+    1473.0,
+    1268.0
+   ],
+   "optimal_mgkg": [
+    24.9,
+    22.3
+   ],
+   "optimal_mgkg_median_iqr": [
+    8.4,
+    4.2,
+    45.8
+   ],
+   "oracle_mgkg": [
+    20.4,
+    19.7
+   ],
+   "pct_change_mean": -9.0,
+   "pct_change_median": -69.5,
+   "n_reduced": 240,
+   "n_unchanged": 1,
+   "n_increased": 203,
+   "n_at_grid_min": 170,
+   "n_at_grid_max": 109,
+   "pred_aki_change_pp": -22.6,
+   "true_aki_change_pp": -23.2,
+   "pred_cure_change_pp": 4.0,
+   "true_cure_change_pp": -2.5,
+   "pct_true_objective_worse": 17.1
+  }
+ },
+ "gentamicin": {
+  "all": {
+   "n": 561,
+   "baseline_mg": [
+    375.0,
+    80.0
+   ],
+   "baseline_mgkg": [
+    6.0,
+    0.6
+   ],
+   "optimal_mg": [
+    521.0,
+    288.0
+   ],
+   "optimal_mgkg": [
+    8.6,
+    5.1
+   ],
+   "optimal_mgkg_median_iqr": [
+    9.6,
+    4.1,
+    12.6
+   ],
+   "oracle_mgkg": [
+    8.7,
+    5.2
+   ],
+   "pct_change_mean": 46.0,
+   "pct_change_median": 60.0,
+   "n_reduced": 203,
+   "n_unchanged": 12,
+   "n_increased": 346,
+   "n_at_grid_min": 61,
+   "n_at_grid_max": 192,
+   "pred_aki_change_pp": -3.7,
+   "true_aki_change_pp": -2.5,
+   "pred_cure_change_pp": 6.5,
+   "true_cure_change_pp": 6.9,
+   "pct_true_objective_worse": 23.9
+  },
+  "q24h": {
+   "n": 477,
+   "baseline_mg": [
+    373.0,
+    80.0
+   ],
+   "baseline_mgkg": [
+    6.0,
+    0.6
+   ],
+   "optimal_mg": [
+    532.0,
+    282.0
+   ],
+   "optimal_mgkg": [
+    8.9,
+    5.1
+   ],
+   "optimal_mgkg_median_iqr": [
+    9.9,
+    4.4,
+    12.7
+   ],
+   "oracle_mgkg": [
+    8.9,
+    5.2
+   ],
+   "pct_change_mean": 49.7,
+   "pct_change_median": 60.0,
+   "n_reduced": 165,
+   "n_unchanged": 10,
+   "n_increased": 302,
+   "n_at_grid_min": 46,
+   "n_at_grid_max": 167,
+   "pred_aki_change_pp": -3.0,
+   "true_aki_change_pp": -1.7,
+   "pred_cure_change_pp": 6.8,
+   "true_cure_change_pp": 6.9,
+   "pct_true_objective_worse": 23.9
+  },
+  "q36h": {
+   "n": 58,
+   "baseline_mg": [
+    388.0,
+    81.0
+   ],
+   "baseline_mgkg": [
+    5.9,
+    0.7
+   ],
+   "optimal_mg": [
+    475.0,
+    307.0
+   ],
+   "optimal_mgkg": [
+    7.6,
+    5.2
+   ],
+   "optimal_mgkg_median_iqr": [
+    6.8,
+    2.6,
+    11.9
+   ],
+   "oracle_mgkg": [
+    8.3,
+    5.3
+   ],
+   "pct_change_mean": 29.3,
+   "pct_change_median": 20.8,
+   "n_reduced": 25,
+   "n_unchanged": 1,
+   "n_increased": 32,
+   "n_at_grid_min": 10,
+   "n_at_grid_max": 18,
+   "pred_aki_change_pp": -7.2,
+   "true_aki_change_pp": -5.8,
+   "pred_cure_change_pp": 4.6,
+   "true_cure_change_pp": 7.3,
+   "pct_true_objective_worse": 22.4
+  },
+  "q48h": {
+   "n": 26,
+   "baseline_mg": [
+    390.0,
+    74.0
+   ],
+   "baseline_mgkg": [
+    5.9,
+    0.7
+   ],
+   "optimal_mg": [
+    424.0,
+    335.0
+   ],
+   "optimal_mgkg": [
+    6.4,
+    5.0
+   ],
+   "optimal_mgkg_median_iqr": [
+    5.1,
+    1.9,
+    11.0
+   ],
+   "oracle_mgkg": [
+    5.2,
+    4.9
+   ],
+   "pct_change_mean": 14.2,
+   "pct_change_median": -14.4,
+   "n_reduced": 13,
+   "n_unchanged": 1,
+   "n_increased": 12,
+   "n_at_grid_min": 5,
+   "n_at_grid_max": 7,
+   "pred_aki_change_pp": -8.6,
+   "true_aki_change_pp": -8.6,
+   "pred_cure_change_pp": 5.7,
+   "true_cure_change_pp": 5.2,
+   "pct_true_objective_worse": 26.9
+  },
+  "target_attainable_at_baseline": {
+   "n": 254,
+   "baseline_mg": [
+    373.0,
+    78.0
+   ],
+   "baseline_mgkg": [
+    6.0,
+    0.6
+   ],
+   "optimal_mg": [
+    425.0,
+    220.0
+   ],
+   "optimal_mgkg": [
+    6.9,
+    3.6
+   ],
+   "optimal_mgkg_median_iqr": [
+    5.9,
+    4.0,
+    10.0
+   ],
+   "oracle_mgkg": [
+    6.4,
+    4.2
+   ],
+   "pct_change_mean": 17.3,
+   "pct_change_median": 0.0,
+   "n_reduced": 125,
+   "n_unchanged": 12,
+   "n_increased": 117,
+   "n_at_grid_min": 0,
+   "n_at_grid_max": 13,
+   "pred_aki_change_pp": -4.3,
+   "true_aki_change_pp": -3.5,
+   "pred_cure_change_pp": 0.6,
+   "true_cure_change_pp": 0.6,
+   "pct_true_objective_worse": 29.1
+  },
+  "target_not_attainable_at_baseline": {
+   "n": 307,
+   "baseline_mg": [
+    377.0,
+    82.0
+   ],
+   "baseline_mgkg": [
+    6.0,
+    0.6
+   ],
+   "optimal_mg": [
+    601.0,
+    312.0
+   ],
+   "optimal_mgkg": [
+    10.1,
+    5.7
+   ],
+   "optimal_mgkg_median_iqr": [
+    11.7,
+    5.8,
+    13.7
+   ],
+   "oracle_mgkg": [
+    10.6,
+    5.3
+   ],
+   "pct_change_mean": 69.7,
+   "pct_change_median": 100.0,
+   "n_reduced": 78,
+   "n_unchanged": 0,
+   "n_increased": 229,
+   "n_at_grid_min": 61,
+   "n_at_grid_max": 179,
+   "pred_aki_change_pp": -3.2,
+   "true_aki_change_pp": -1.6,
+   "pred_cure_change_pp": 11.4,
+   "true_cure_change_pp": 12.0,
+   "pct_true_objective_worse": 19.5
+  }
+ },
+ "n_at_grid_boundary_total": 604,
+ "pct_at_grid_boundary_total": 40.3
+}

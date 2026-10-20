@@ -1,0 +1,1092 @@
+{
+ "S2": {
+  "A": {
+   "amikacin_n": 939,
+   "amikacin_cfr_cmax8_pct": 52.6,
+   "amikacin_cfr_auc80_pct": 49.7,
+   "amikacin_rows": [
+    {
+     "mic": 0.25,
+     "fraction": 0.0096,
+     "pta_cmax8": 1.0,
+     "pta_auc80": 0.9531
+    },
+    {
+     "mic": 0.5,
+     "fraction": 0.0596,
+     "pta_cmax8": 1.0,
+     "pta_auc80": 0.9489
+    },
+    {
+     "mic": 1,
+     "fraction": 0.1278,
+     "pta_cmax8": 1.0,
+     "pta_auc80": 0.9414
+    },
+    {
+     "mic": 2,
+     "fraction": 0.1821,
+     "pta_cmax8": 1.0,
+     "pta_auc80": 0.9286
+    },
+    {
+     "mic": 4,
+     "fraction": 0.1193,
+     "pta_cmax8": 1.0,
+     "pta_auc80": 0.9191
+    },
+    {
+     "mic": 8,
+     "fraction": 0.033,
+     "pta_cmax8": 0.7827,
+     "pta_auc80": 0.7891
+    },
+    {
+     "mic": 16,
+     "fraction": 0.0298,
+     "pta_cmax8": 0.0724,
+     "pta_auc80": 0.1949
+    },
+    {
+     "mic": 32,
+     "fraction": 0.1278,
+     "pta_cmax8": 0.0,
+     "pta_auc80": 0.0021
+    },
+    {
+     "mic": 64,
+     "fraction": 0.1949,
+     "pta_cmax8": 0.0,
+     "pta_auc80": 0.0
+    },
+    {
+     "mic": 128,
+     "fraction": 0.1161,
+     "pta_cmax8": 0.0,
+     "pta_auc80": 0.0
+    }
+   ],
+   "gentamicin_n": 561,
+   "gentamicin_cfr_cmax8_pct": 45.4,
+   "gentamicin_cfr_auc80_pct": 42.4,
+   "gentamicin_rows": [
+    {
+     "mic": 0.25,
+     "fraction": 0.1729,
+     "pta_cmax8": 1.0,
+     "pta_auc80": 0.9412
+    },
+    {
+     "mic": 0.5,
+     "fraction": 0.1604,
+     "pta_cmax8": 1.0,
+     "pta_auc80": 0.9305
+    },
+    {
+     "mic": 1,
+     "fraction": 0.0891,
+     "pta_cmax8": 1.0,
+     "pta_auc80": 0.9144
+    },
+    {
+     "mic": 2,
+     "fraction": 0.0392,
+     "pta_cmax8": 0.7914,
+     "pta_auc80": 0.7433
+    },
+    {
+     "mic": 4,
+     "fraction": 0.0125,
+     "pta_cmax8": 0.0499,
+     "pta_auc80": 0.1141
+    },
+    {
+     "mic": 8,
+     "fraction": 0.0303,
+     "pta_cmax8": 0.0,
+     "pta_auc80": 0.0018
+    },
+    {
+     "mic": 16,
+     "fraction": 0.1266,
+     "pta_cmax8": 0.0,
+     "pta_auc80": 0.0
+    },
+    {
+     "mic": 32,
+     "fraction": 0.2335,
+     "pta_cmax8": 0.0,
+     "pta_auc80": 0.0
+    },
+    {
+     "mic": 64,
+     "fraction": 0.1176,
+     "pta_cmax8": 0.0,
+     "pta_auc80": 0.0
+    },
+    {
+     "mic": 128,
+     "fraction": 0.0178,
+     "pta_cmax8": 0.0,
+     "pta_auc80": 0.0
+    }
+   ]
+  },
+  "B": {
+   "amikacin_q24h_cmax_mic_8_pct": 53.2,
+   "amikacin_q24h_cmin_drug_pct": 47.6,
+   "amikacin_q24h_combined_pct": 26.6,
+   "amikacin_q24h_n": 785,
+   "amikacin_q36h_cmax_mic_8_pct": 47.3,
+   "amikacin_q36h_cmin_drug_pct": 29.7,
+   "amikacin_q36h_combined_pct": 8.8,
+   "amikacin_q36h_n": 91,
+   "amikacin_q48h_cmax_mic_8_pct": 54.0,
+   "amikacin_q48h_cmin_drug_pct": 15.9,
+   "amikacin_q48h_combined_pct": 9.5,
+   "amikacin_q48h_n": 63,
+   "gentamicin_q24h_cmax_mic_8_pct": 45.9,
+   "gentamicin_q24h_cmin_drug_pct": 95.4,
+   "gentamicin_q24h_combined_pct": 43.4,
+   "gentamicin_q24h_n": 477,
+   "gentamicin_q36h_cmax_mic_8_pct": 44.8,
+   "gentamicin_q36h_cmin_drug_pct": 86.2,
+   "gentamicin_q36h_combined_pct": 37.9,
+   "gentamicin_q36h_n": 58,
+   "gentamicin_q48h_cmax_mic_8_pct": 34.6,
+   "gentamicin_q48h_cmin_drug_pct": 76.9,
+   "gentamicin_q48h_combined_pct": 23.1,
+   "gentamicin_q48h_n": 26
+  },
+  "C": {
+   "gentamicin_q24h": {
+    "patient_id": "IND_0782",
+    "CL_bayes_L_per_h": 4.8057,
+    "category_median_CL_bayes": 4.8116,
+    "n_in_category_with_CL": 476,
+    "n_observations": 6,
+    "n_bloq": 1,
+    "n_doses": 3,
+    "trough_limit_mg_per_L": 2.0
+   },
+   "amikacin_q24h": {
+    "patient_id": "IND_0472",
+    "CL_bayes_L_per_h": 3.6958,
+    "category_median_CL_bayes": 3.695,
+    "n_in_category_with_CL": 770,
+    "n_observations": 11,
+    "n_bloq": 0,
+    "n_doses": 6,
+    "trough_limit_mg_per_L": 2.5
+   },
+   "amikacin_q48h": {
+    "patient_id": "IND_0856",
+    "CL_bayes_L_per_h": 1.3801,
+    "category_median_CL_bayes": 1.4114,
+    "n_in_category_with_CL": 44,
+    "n_observations": 4,
+    "n_bloq": 0,
+    "n_doses": 2,
+    "trough_limit_mg_per_L": 2.5
+   },
+   "lloq_mg_per_L": 0.5
+  },
+  "D": {
+   "amikacin_n": 939,
+   "amikacin_pct_below_trough_limit": 43.8,
+   "amikacin_median_cmin": 3.12,
+   "amikacin_n_at_minimum_value": 66,
+   "amikacin_minimum_cmin": 0.1,
+   "gentamicin_n": 561,
+   "gentamicin_pct_below_trough_limit": 93.6,
+   "gentamicin_median_cmin": 0.1,
+   "gentamicin_n_at_minimum_value": 338,
+   "gentamicin_minimum_cmin": 0.1
+  }
+ },
+ "S3": {
+  "A": {
+   "shap_pct_top15": {
+    "Cmax_MIC": 51.8205,
+    "Cmax_MIC_x_baseline_crcl": 14.3763,
+    "severity_composite": 7.6884,
+    "apache_ii": 5.815,
+    "pk_composite": 4.413,
+    "target_score": 3.0104,
+    "baseline_albumin": 1.5443,
+    "AUC_MIC": 1.31,
+    "sofa_score": 1.2331,
+    "t_half_beta": 0.8675,
+    "pk_ratio": 0.8433,
+    "age_x_baseline_scr": 0.7715,
+    "renal_score": 0.6422,
+    "baseline_crcl": 0.4459,
+    "AUC_above_MIC": 0.428
+   }
+  },
+  "B": {
+   "features": [
+    "Cmax_MIC",
+    "Cmax_MIC_x_baseline_crcl",
+    "severity_composite",
+    "apache_ii",
+    "pk_composite",
+    "target_score",
+    "baseline_albumin",
+    "AUC_MIC",
+    "sofa_score",
+    "t_half_beta"
+   ],
+   "n_patients": 1500
+  },
+  "C": {
+   "amikacin_spearman_rho": 0.939,
+   "amikacin_n": 939,
+   "gentamicin_spearman_rho": 0.948,
+   "gentamicin_n": 561,
+   "mean_shap_below_8": -0.9483,
+   "mean_shap_at_or_above_8": 2.0685
+  },
+  "D": {
+   "spearman_rho_shap_vs_gain_all_features": 0.631,
+   "n_features": 55,
+   "top15_overlap_shap_vs_gain": 10,
+   "top15": {
+    "Cmin": {
+     "shap_pct": 26.0847,
+     "gain_pct": 13.3117,
+     "gain_rank": 1
+    },
+    "age": {
+     "shap_pct": 9.5452,
+     "gain_pct": 2.2485,
+     "gain_rank": 7
+    },
+    "k10_bayes": {
+     "shap_pct": 8.7138,
+     "gain_pct": 4.8601,
+     "gain_rank": 2
+    },
+    "CL_bayes": {
+     "shap_pct": 4.6846,
+     "gain_pct": 1.9766,
+     "gain_rank": 10
+    },
+    "fluctuation_index": {
+     "shap_pct": 4.5085,
+     "gain_pct": 2.8061,
+     "gain_rank": 4
+    },
+    "mechanical_ventilation": {
+     "shap_pct": 4.1531,
+     "gain_pct": 1.7842,
+     "gain_rank": 14
+    },
+    "CL_cv": {
+     "shap_pct": 2.8874,
+     "gain_pct": 1.5074,
+     "gain_rank": 26
+    },
+    "age_x_baseline_scr": {
+     "shap_pct": 2.6829,
+     "gain_pct": 2.4891,
+     "gain_rank": 6
+    },
+    "t_half_beta": {
+     "shap_pct": 2.2751,
+     "gain_pct": 2.0833,
+     "gain_rank": 9
+    },
+    "t_half_alpha": {
+     "shap_pct": 2.2296,
+     "gain_pct": 2.144,
+     "gain_rank": 8
+    },
+    "Vp_bayes": {
+     "shap_pct": 2.1932,
+     "gain_pct": 1.6945,
+     "gain_rank": 17
+    },
+    "diabetes_x_baseline_crcl": {
+     "shap_pct": 2.1932,
+     "gain_pct": 1.6158,
+     "gain_rank": 21
+    },
+    "baseline_albumin": {
+     "shap_pct": 1.6563,
+     "gain_pct": 1.606,
+     "gain_rank": 22
+    },
+    "Vc_cv": {
+     "shap_pct": 1.5932,
+     "gain_pct": 1.3494,
+     "gain_rank": 41
+    },
+    "k21_bayes": {
+     "shap_pct": 1.5766,
+     "gain_pct": 1.9081,
+     "gain_rank": 12
+    }
+   }
+  }
+ },
+ "S4": {
+  "A": {
+   "nephrotoxicity_postdose": {
+    "average_precision": 0.796,
+    "prevalence": 0.33,
+    "n_test": 300,
+    "n_events": 99
+   },
+   "nephrotoxicity_predose": {
+    "average_precision": 0.6609,
+    "prevalence": 0.33,
+    "n_test": 300,
+    "n_events": 99
+   },
+   "clinical_cure": {
+    "average_precision": 0.9831,
+    "prevalence": 0.6433,
+    "n_test": 300,
+    "n_events": 193
+   }
+  },
+  "B": {
+   "Post-dose nephrotoxicity (55 vs 42 features)": {
+    "With engineered": 0.9111,
+    "With engineered_ci": [
+     0.878,
+     0.943
+    ],
+    "Without engineered": 0.9182,
+    "Without engineered_ci": [
+     0.886,
+     0.948
+    ],
+    "difference": -0.0071,
+    "difference_95ci": [
+     -0.0183,
+     0.0032
+    ],
+    "delong_p": 0.1846
+   },
+   "Pre-dose nephrotoxicity (26 vs 19 features)": {
+    "With engineered": 0.7913,
+    "With engineered_ci": [
+     0.738,
+     0.841
+    ],
+    "Without engineered": 0.7911,
+    "Without engineered_ci": [
+     0.737,
+     0.842
+    ],
+    "difference": 0.0003,
+    "difference_95ci": [
+     -0.0222,
+     0.0223
+    ],
+    "delong_p": 0.9819
+   },
+   "Clinical cure (55 vs 42 features)": {
+    "With engineered": 0.9617,
+    "With engineered_ci": [
+     0.94,
+     0.979
+    ],
+    "Without engineered": 0.9596,
+    "Without engineered_ci": [
+     0.937,
+     0.977
+    ],
+    "difference": 0.0021,
+    "difference_95ci": [
+     -0.0012,
+     0.0057
+    ],
+    "delong_p": 0.1997
+   },
+   "status": "computed from results/revision2/feature_ablation.json"
+  },
+  "C": {
+   "Cmin + AUC24 (fixed XGBoost)": {
+    "XGBoost": 0.8608,
+    "XGBoost_ci": [
+     0.815,
+     0.9
+    ],
+    "Logistic regression": 0.84,
+    "Logistic regression_ci": [
+     0.79,
+     0.883
+    ],
+    "difference": 0.0209,
+    "difference_95ci": [
+     -0.0129,
+     0.056
+    ],
+    "delong_p": 0.2499
+   },
+   "Post-dose (55 features)": {
+    "XGBoost": 0.9149,
+    "XGBoost_ci": [
+     0.883,
+     0.945
+    ],
+    "Logistic regression": 0.9085,
+    "Logistic regression_ci": [
+     0.874,
+     0.94
+    ],
+    "difference": 0.0064,
+    "difference_95ci": [
+     -0.0101,
+     0.0239
+    ],
+    "delong_p": 0.4613
+   },
+   "Pre-dose (26 features)": {
+    "XGBoost": 0.7991,
+    "XGBoost_ci": [
+     0.748,
+     0.848
+    ],
+    "Logistic regression": 0.8063,
+    "Logistic regression_ci": [
+     0.755,
+     0.853
+    ],
+    "difference": -0.0072,
+    "difference_95ci": [
+     -0.0337,
+     0.0186
+    ],
+    "delong_p": 0.5925
+   },
+   "n_test": 300,
+   "n_events": 99
+  },
+  "D": {
+   "xgboost": {
+    "brier": 0.1107,
+    "ece": 0.0758,
+    "test_auc": 0.9164
+   },
+   "lightgbm": {
+    "brier": 0.1194,
+    "ece": 0.0842,
+    "test_auc": 0.909
+   },
+   "catboost": {
+    "brier": 0.1141,
+    "ece": 0.0793,
+    "test_auc": 0.9178
+   },
+   "stacking": {
+    "brier": 0.1087,
+    "ece": 0.0565,
+    "test_auc": 0.9107
+   },
+   "source_model": "nephrotoxicity_postdose",
+   "n_trials": 30
+  }
+ },
+ "S5": {
+  "A": {
+   "shap_pct_top15": {
+    "drug": 33.3262,
+    "baseline_crcl": 10.6835,
+    "age": 10.4909,
+    "age_x_baseline_scr": 7.2084,
+    "baseline_egfr": 5.0989,
+    "height": 3.607,
+    "mechanical_ventilation": 3.0682,
+    "weight": 2.8419,
+    "renal_score": 2.8256,
+    "baseline_albumin": 2.7626,
+    "baseline_bilirubin": 2.3764,
+    "baseline_scr": 2.036,
+    "severity_composite": 1.9691,
+    "diabetes_x_baseline_crcl": 1.7126,
+    "vasopressor_use": 1.6207
+   }
+  },
+  "B": {
+   "auroc": 0.7991,
+   "auroc_95ci": [
+    0.7481,
+    0.8485
+   ],
+   "n_boot_used": 2000,
+   "n_test": 300,
+   "n_events": 99
+  },
+  "C": {
+   "brier": 0.1752,
+   "ece_10bins": 0.0883,
+   "bins": [
+    {
+     "mean_pred": 0.0881,
+     "observed": 0.0,
+     "n": 9
+    },
+    {
+     "mean_pred": 0.1475,
+     "observed": 0.0462,
+     "n": 65
+    },
+    {
+     "mean_pred": 0.2489,
+     "observed": 0.25,
+     "n": 40
+    },
+    {
+     "mean_pred": 0.3517,
+     "observed": 0.2093,
+     "n": 43
+    },
+    {
+     "mean_pred": 0.4527,
+     "observed": 0.3143,
+     "n": 35
+    },
+    {
+     "mean_pred": 0.551,
+     "observed": 0.5172,
+     "n": 29
+    },
+    {
+     "mean_pred": 0.6508,
+     "observed": 0.5484,
+     "n": 31
+    },
+    {
+     "mean_pred": 0.7543,
+     "observed": 0.6207,
+     "n": 29
+    },
+    {
+     "mean_pred": 0.8388,
+     "observed": 0.8421,
+     "n": 19
+    }
+   ]
+  },
+  "D": {
+   "Low": {
+    "n": 288,
+    "events": 18,
+    "rate_pct": 6.2,
+    "rate_ci_pct": [
+     4.0,
+     9.7
+    ],
+    "mean_predicted_pct": 9.2
+   },
+   "Medium": {
+    "n": 391,
+    "events": 60,
+    "rate_pct": 15.3,
+    "rate_ci_pct": [
+     12.1,
+     19.3
+    ],
+    "mean_predicted_pct": 25.1
+   },
+   "High": {
+    "n": 821,
+    "events": 415,
+    "rate_pct": 50.5,
+    "rate_ci_pct": [
+     47.1,
+     54.0
+    ],
+    "mean_predicted_pct": 63.1
+   },
+   "oof_auroc": 0.8065
+  }
+ },
+ "S6": {
+  "A": {
+   "nephrotoxicity_postdose": {
+    "tertile_cutoffs": [
+     0.0453,
+     0.6199
+    ],
+    "groups": {
+     "Low": {
+      "n": 500,
+      "events": 14,
+      "rate_pct": 2.8,
+      "rate_ci_pct": [
+       1.7,
+       4.6
+      ]
+     },
+     "Medium": {
+      "n": 500,
+      "events": 94,
+      "rate_pct": 18.8,
+      "rate_ci_pct": [
+       15.6,
+       22.5
+      ]
+     },
+     "High": {
+      "n": 500,
+      "events": 385,
+      "rate_pct": 77.0,
+      "rate_ci_pct": [
+       73.1,
+       80.5
+      ]
+     }
+    }
+   },
+   "nephrotoxicity_predose": {
+    "tertile_cutoffs": [
+     0.2557,
+     0.5905
+    ],
+    "groups": {
+     "Low": {
+      "n": 500,
+      "events": 40,
+      "rate_pct": 8.0,
+      "rate_ci_pct": [
+       5.9,
+       10.7
+      ]
+     },
+     "Medium": {
+      "n": 500,
+      "events": 145,
+      "rate_pct": 29.0,
+      "rate_ci_pct": [
+       25.2,
+       33.1
+      ]
+     },
+     "High": {
+      "n": 500,
+      "events": 308,
+      "rate_pct": 61.6,
+      "rate_ci_pct": [
+       57.3,
+       65.8
+      ]
+     }
+    }
+   },
+   "clinical_cure": {
+    "tertile_cutoffs": [
+     0.2424,
+     0.9707
+    ],
+    "groups": {
+     "Low": {
+      "n": 500,
+      "events": 57,
+      "rate_pct": 11.4,
+      "rate_ci_pct": [
+       8.9,
+       14.5
+      ]
+     },
+     "Medium": {
+      "n": 500,
+      "events": 412,
+      "rate_pct": 82.4,
+      "rate_ci_pct": [
+       78.8,
+       85.5
+      ]
+     },
+     "High": {
+      "n": 500,
+      "events": 496,
+      "rate_pct": 99.2,
+      "rate_ci_pct": [
+       98.0,
+       99.7
+      ]
+     }
+    }
+   }
+  },
+  "B": {
+   "Age <65 years": {
+    "n": 1043,
+    "rr": 17.5321,
+    "rr_ci": [
+     11.556,
+     26.5986
+    ],
+    "high_n": 361,
+    "high_events": 236,
+    "low_n": 590,
+    "low_events": 22
+   },
+   "Age >=65 years": {
+    "n": 457,
+    "rr": 7.0603,
+    "rr_ci": [
+     4.417,
+     11.2855
+    ],
+    "high_n": 257,
+    "high_events": 191,
+    "low_n": 152,
+    "low_events": 16
+   },
+   "CrCL >80 mL/min": {
+    "n": 1014,
+    "rr": 13.0021,
+    "rr_ci": [
+     9.0245,
+     18.7327
+    ],
+    "high_n": 314,
+    "high_events": 197,
+    "low_n": 601,
+    "low_events": 29
+   },
+   "CrCL <=80 mL/min": {
+    "n": 486,
+    "rr": 11.8531,
+    "rr_ci": [
+     6.2792,
+     22.3748
+    ],
+    "high_n": 304,
+    "high_events": 230,
+    "low_n": 141,
+    "low_events": 9
+   },
+   "Diabetes present": {
+    "n": 535,
+    "rr": 11.7,
+    "rr_ci": [
+     7.228,
+     18.9389
+    ],
+    "high_n": 225,
+    "high_events": 162,
+    "low_n": 260,
+    "low_events": 16
+   },
+   "No diabetes": {
+    "n": 965,
+    "rr": 14.7733,
+    "rr_ci": [
+     9.7655,
+     22.3492
+    ],
+    "high_n": 393,
+    "high_events": 265,
+    "low_n": 482,
+    "low_events": 22
+   },
+   "APACHE II <20": {
+    "n": 588,
+    "rr": 14.7458,
+    "rr_ci": [
+     8.7716,
+     24.7888
+    ],
+    "high_n": 229,
+    "high_events": 155,
+    "low_n": 305,
+    "low_events": 14
+   },
+   "APACHE II >=20": {
+    "n": 912,
+    "rr": 12.7318,
+    "rr_ci": [
+     8.5826,
+     18.8869
+    ],
+    "high_n": 389,
+    "high_events": 272,
+    "low_n": 437,
+    "low_events": 24
+   },
+   "Amikacin": {
+    "n": 939,
+    "rr": 8.2533,
+    "rr_ci": [
+     5.6097,
+     12.1428
+    ],
+    "high_n": 562,
+    "high_events": 399,
+    "low_n": 279,
+    "low_events": 24
+   },
+   "Gentamicin": {
+    "n": 561,
+    "rr": 16.5357,
+    "rr_ci": [
+     9.2719,
+     29.4902
+    ],
+    "high_n": 56,
+    "high_events": 28,
+    "low_n": 463,
+    "low_events": 14
+   }
+  },
+  "C": {
+   "Age <65 years": {
+    "auroc": 0.9146,
+    "n": 1043,
+    "events": 274
+   },
+   "Age >=65 years": {
+    "auroc": 0.8839,
+    "n": 457,
+    "events": 219
+   },
+   "CrCL >80 mL/min": {
+    "auroc": 0.895,
+    "n": 1014,
+    "events": 245
+   },
+   "CrCL <=80 mL/min": {
+    "auroc": 0.906,
+    "n": 486,
+    "events": 248
+   },
+   "Diabetes present": {
+    "auroc": 0.9016,
+    "n": 535,
+    "events": 193
+   },
+   "No diabetes": {
+    "auroc": 0.913,
+    "n": 965,
+    "events": 300
+   },
+   "APACHE II <20": {
+    "auroc": 0.92,
+    "n": 588,
+    "events": 180
+   },
+   "APACHE II >=20": {
+    "auroc": 0.9004,
+    "n": 912,
+    "events": 313
+   },
+   "Amikacin": {
+    "auroc": 0.8737,
+    "n": 939,
+    "events": 443
+   },
+   "Gentamicin": {
+    "auroc": 0.8618,
+    "n": 561,
+    "events": 50
+   },
+   "overall_oof_auroc": 0.9082
+  },
+  "D": {
+   "Low": {
+    "n": 633,
+    "events": 136,
+    "rate_pct": 21.5,
+    "rate_ci_pct": [
+     18.5,
+     24.9
+    ],
+    "mean_predicted_pct": 15.0
+   },
+   "Medium": {
+    "n": 54,
+    "events": 36,
+    "rate_pct": 66.7,
+    "rate_ci_pct": [
+     53.4,
+     77.8
+    ],
+    "mean_predicted_pct": 64.5,
+    "rr_vs_low": 3.1029
+   },
+   "High": {
+    "n": 813,
+    "events": 793,
+    "rate_pct": 97.5,
+    "rate_ci_pct": [
+     96.2,
+     98.4
+    ],
+    "mean_predicted_pct": 95.9,
+    "rr_vs_low": 4.5399
+   },
+   "oof_auroc": 0.9561
+  }
+ },
+ "S7": {
+  "A": {
+   "Baseline (0.40/0.30/0.20/0.10)": {
+    "weights": {
+     "cure": 0.4,
+     "safety": 0.3,
+     "cmax_target": 0.2,
+     "trough_safety": 0.1
+    },
+    "dose_change_pct": [
+     3.9014,
+     -0.5261,
+     7.8387
+    ],
+    "true_aki_change_pp": [
+     -15.2368,
+     -16.6862,
+     -13.8138
+    ],
+    "true_cure_change_pp": [
+     1.5883,
+     0.8588,
+     2.2704
+    ],
+    "pct_improved_true_objective": 79.2
+   },
+   "Safety-weighted": {
+    "weights": {
+     "cure": 0.25,
+     "safety": 0.45,
+     "cmax_target": 0.15,
+     "trough_safety": 0.15
+    },
+    "dose_change_pct": [
+     -17.7962,
+     -21.9988,
+     -13.7196
+    ],
+    "true_aki_change_pp": [
+     -21.5532,
+     -23.0246,
+     -20.0614
+    ],
+    "true_cure_change_pp": [
+     -2.4387,
+     -3.3123,
+     -1.592
+    ],
+    "pct_improved_true_objective": 82.3333
+   },
+   "Efficacy-weighted": {
+    "weights": {
+     "cure": 0.55,
+     "safety": 0.2,
+     "cmax_target": 0.2,
+     "trough_safety": 0.05
+    },
+    "dose_change_pct": [
+     23.9909,
+     19.7378,
+     28.2376
+    ],
+    "true_aki_change_pp": [
+     -9.2742,
+     -10.7065,
+     -7.8555
+    ],
+    "true_cure_change_pp": [
+     5.289,
+     4.6485,
+     5.9059
+    ],
+    "pct_improved_true_objective": 81.2
+   },
+   "Equal weights": {
+    "weights": {
+     "cure": 0.25,
+     "safety": 0.25,
+     "cmax_target": 0.25,
+     "trough_safety": 0.25
+    },
+    "dose_change_pct": [
+     -15.479,
+     -19.6044,
+     -11.7541
+    ],
+    "true_aki_change_pp": [
+     -20.0522,
+     -21.5196,
+     -18.5737
+    ],
+    "true_cure_change_pp": [
+     -1.651,
+     -2.4885,
+     -0.8654
+    ],
+    "pct_improved_true_objective": 81.5333
+   },
+   "Cmax-weighted": {
+    "weights": {
+     "cure": 0.3,
+     "safety": 0.25,
+     "cmax_target": 0.35,
+     "trough_safety": 0.1
+    },
+    "dose_change_pct": [
+     5.271,
+     0.9784,
+     9.2711
+    ],
+    "true_aki_change_pp": [
+     -14.5161,
+     -15.9294,
+     -13.0594
+    ],
+    "true_cure_change_pp": [
+     1.7138,
+     0.9993,
+     2.393
+    ],
+    "pct_improved_true_objective": 79.8667
+   }
+  },
+  "B": {
+   "pearson_r_all": 0.8528,
+   "n": 1500,
+   "pearson_r_amikacin": 0.8397,
+   "pearson_r_gentamicin": 0.7684
+  },
+  "C": {
+   "pearson_r_all": 0.7826,
+   "n": 1500,
+   "pearson_r_amikacin": 0.7727,
+   "pearson_r_gentamicin": 0.777
+  },
+  "D": {
+   "all": {
+    "n": 1500,
+    "pct_improved": 79.2,
+    "pct_worse": 19.7,
+    "pct_unchanged": 1.1,
+    "median_change": 0.0447
+   },
+   "amikacin": {
+    "n": 939,
+    "pct_improved": 82.3,
+    "pct_worse": 17.1,
+    "pct_unchanged": 0.5,
+    "median_change": 0.0656
+   },
+   "gentamicin": {
+    "n": 561,
+    "pct_improved": 74.0,
+    "pct_worse": 23.9,
+    "pct_unchanged": 2.1,
+    "median_change": 0.0128
+   }
+  }
+ },
+ "_meta": {
+  "script": "r2_figures_supp.py",
+  "figure_dir": "Manuscript_AAPS_Journal/Revision2_Submission/Supplementary/figure_png",
+  "feature_ablation_available": true
+ }
+}

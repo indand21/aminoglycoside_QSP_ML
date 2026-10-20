@@ -1,0 +1,47 @@
+{
+ "nephrotoxicity_predose": {
+  "n": 300,
+  "events": 99,
+  "auroc": 0.799,
+  "ci": [
+   0.748,
+   0.848
+  ],
+  "brier": 0.175,
+  "ece": 0.088,
+  "sens": 0.67,
+  "spec": 0.79,
+  "ppv": 0.61,
+  "npv": 0.83
+ },
+ "nephrotoxicity_postdose": {
+  "n": 300,
+  "events": 99,
+  "auroc": 0.915,
+  "ci": [
+   0.883,
+   0.945
+  ],
+  "brier": 0.111,
+  "ece": 0.073,
+  "sens": 0.83,
+  "spec": 0.86,
+  "ppv": 0.74,
+  "npv": 0.91
+ },
+ "clinical_cure": {
+  "n": 300,
+  "events": 193,
+  "auroc": 0.964,
+  "ci": [
+   0.943,
+   0.98
+  ],
+  "brier": 0.072,
+  "ece": 0.062,
+  "sens": 0.89,
+  "spec": 0.93,
+  "ppv": 0.96,
+  "npv": 0.82
+ }
+}

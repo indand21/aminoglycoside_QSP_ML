@@ -1,0 +1,15 @@
+{
+ "divergent_fraction_by_chain": [
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "chains_kept": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "chains_excluded": []
+}

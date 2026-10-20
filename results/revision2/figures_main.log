@@ -1,0 +1,20 @@
+2026-10-07 13:51:41.602627: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Warning: SHAP not available.
+Font: Arial
+Reproducing production feature matrices (r2_ml_common.production_setup)...
+Figure 1
+  wrote Figure1_Framework_Overview.tiff (4320x3030 px, 600 dpi) + .png
+Figure 3
+  wrote Figure3_Target_Attainment.tiff (2100x1830 px, 300 dpi) + .png
+Figure 4
+  wrote Figure4_ML_Performance.tiff (2100x1920 px, 300 dpi) + .png
+Figure 5
+  wrote Figure5_SHAP_Analysis.tiff (2100x2280 px, 300 dpi) + .png
+Figure 6
+  wrote Figure6_Risk_Stratification.tiff (2100x1920 px, 300 dpi) + .png
+Figure 7
+  wrote Figure7_Dose_Optimization.tiff (2100x1980 px, 300 dpi) + .png
+Graphical abstract
+  wrote Graphical_Abstract.tiff (3990x1650 px, 300 dpi) + .png
+Consistency checks: 67/67 match
+Wrote C:\Users\indan\OneDrive - aiimsbhubaneswar.edu.in\Aminoglycosides_QSP\aminoglycoside_QSP_ML\results\revision2\figure_values.json
