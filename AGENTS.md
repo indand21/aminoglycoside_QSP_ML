@@ -5,7 +5,7 @@ This guide provides essential information for AI agents working in this reposito
 ## Project Overview
 
 - **Objective**: Combine mechanistic PK/PD modeling with machine learning to optimize aminoglycoside dosing for Indian ICU patients, balancing efficacy (clinical cure) and safety (nephrotoxicity).
-- **Language**: Python 3.10+ (shebang `#!/usr/bin/env python3`). The project started with R documentation but all production code is Python.
+- **Language**: Python 3.12, as declared in `requirements.txt` (shebang `#!/usr/bin/env python3`). The Revision 2 scripts need at least Python 3.11 (`ProcessPoolExecutor(max_tasks_per_child=...)`). The project started with R documentation but all production code is Python.
 - **Key Libraries**: PyMC (Bayesian PK), XGBoost, scikit-learn, Optuna, Plotly, pandas, NumPy, SciPy, imbalanced-learn, TensorFlow (optional), LightGBM/CatBoost (optional).
 - **Workflow**: Five sequential phases (preprocessing → population PK → PK/PD modeling → ML → dose optimization), each implemented as a standalone Python script.
 - **Data**: Synthetic patient data stored in `data/` (CSV, PKL). Processed data in `data/processed/`. Results in `results/`. Models in `models/`.
@@ -14,21 +14,16 @@ This guide provides essential information for AI agents working in this reposito
 
 ### Dependency Installation
 
-No `requirements.txt` or `pyproject.toml` exists; dependencies are installed via pip commands documented in `DEPENDENCY_INSTALLATION_AND_RESULTS.md`. The following commands install the required packages:
+`requirements.txt` is the pinned dependency manifest; its versions match those reported in the manuscript Methods. Install from it rather than from unpinned commands:
 
 ```bash
-# Core dependencies (run in order)
-python -m pip install pymc arviz optuna plotly
-python -m pip install --upgrade --force-reinstall scipy scikit-learn
-python -m pip install --upgrade pandas pyarrow xgboost
-python -m pip install --upgrade imbalanced-learn
-python -m pip install optuna-integration[xgboost]
+python -m pip install -r requirements.txt
 
-# Optional (deep learning, other ML libraries)
-python -m pip install tensorflow lightgbm catboost
+# Optional (deep learning)
+python -m pip install tensorflow
 ```
 
-**Note**: NumPy 2.x is incompatible; ensure NumPy 1.26.4 is used. PyMC 5.16.2 with PyTensor 2.25.5 is required.
+**Note**: `requirements.txt` pins NumPy 1.26.4, PyMC 5.16.2 and PyTensor 2.25.5; NumPy 2.x cannot import this PyMC. `r2_run_all.py` (Revision 2) instead uses two environments, a main one for the ML scripts and a pinned PyMC environment passed with `--pymc`; see its docstring.
 
 ### Running the Pipeline
 
@@ -216,7 +211,7 @@ All scripts assume the working directory is the project root. Relative paths lik
 
 ## Quick Checklist for Agents
 
-1. **Install dependencies** using the pip commands above.
+1. **Install dependencies** with `python -m pip install -r requirements.txt`.
 2. **Run phases sequentially** (Phase 1 → Phase 5).
 3. **Check for output files** after each phase (e.g., `models/phase2_popk_trace.nc`).
 4. **Run tests** to verify improvements.
