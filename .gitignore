@@ -64,5 +64,7 @@ github_release/
 
 # --- Revision 2 scratch output (Optuna plots from re-tuning runs) ---
 results/revision2/_optuna_scratch/
+# Output of a failed r2_run_all.py step (the previous log is kept)
+results/revision2/*.log.partial
 # Literature-verification working notes (manuscript/peer-review material)
 results/revision2/literature_verification.md
